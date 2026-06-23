@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sixhen Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{background:#f5f3f0;padding:20px;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.card{max-width:480px;width:100%;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.1)}
+.banner{height:180px;background:url('https://cdn.phototourl.com/free/2026-06-23-d58156df-e343-40e6-a041-737f66390034.jpg') center/cover}
+.profile{padding:20px}
+.avatar{width:110px;height:110px;border-radius:50%;border:5px solid #fff;margin-top:-75px;object-fit:cover}
+h1{margin-top:10px}
+.bio{color:#666;margin:10px 0}
+.btn{display:block;text-decoration:none;color:#111;background:#f1f1f1;padding:12px;border-radius:14px;margin:8px 0}
+.qr{width:170px;border-radius:12px;margin:15px auto;display:block}
+#loader{position:fixed;inset:0;background:#f5f3f0;display:flex;align-items:center;justify-content:center;z-index:9999}
+#cursorGlow{position:fixed;width:220px;height:220px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(192,192,192,.2),transparent 70%);transform:translate(-50%,-50%)}
+</style>
+</head>
+<body>
+<div id="loader"><h1>sixhen</h1></div>
+<div id="cursorGlow"></div>
+
+<div class="card">
+<div class="banner"></div>
+<div class="profile">
+<img class="avatar" src="https://cdn.phototourl.com/free/2026-06-23-89ab042a-e8ad-4433-9547-ddaf116d7a98.jpg">
+<h1>sixhen</h1>
+<p>17 tuổi • Việt Nam</p>
+<p class="bio" id="typing"></p>
+
+<a class="btn" href="https://www.facebook.com/S1xHen" target="_blank">Facebook</a>
+<a class="btn" href="https://github.com/sixhen" target="_blank">GitHub</a>
+<a class="btn" href="https://www.tiktok.com/@six.hen?_r=1&_t=ZS-97S7QPRbsWI" target="_blank">TikTok</a>
+<a class="btn" href="https://discord.com/users/1518231904887771147" target="_blank">Discord</a>
+
+<img class="qr" src="https://cdn.phototourl.com/free/2026-06-23-9e1f781d-1363-4878-9069-26ed0eadcf83.jpg">
+<center><p>Lượt xem: <span id="views">0</span></p></center>
+</div>
+</div>
+
+<script>
+window.onload=()=>setTimeout(()=>loader.remove(),1000);
+document.addEventListener('mousemove',e=>{
+cursorGlow.style.left=e.clientX+'px';
+cursorGlow.style.top=e.clientY+'px';
+});
+const texts=['I just want to be happy','Ultra Instinct','Learning HTML CSS JS'];
+let t=0,c=0;
+function type(){
+const el=document.getElementById('typing');
+if(c<texts[t].length){el.textContent+=texts[t][c++];setTimeout(type,80);}
+else setTimeout(()=>{el.textContent='';c=0;t=(t+1)%texts.length;type();},1500);
+}
+type();
+let v=localStorage.getItem('sixhen_views')||0;
+v++;localStorage.setItem('sixhen_views',v);
+document.getElementById('views').textContent=v;
+</script>
+</body>
+</html>
