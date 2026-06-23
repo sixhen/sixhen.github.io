@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sixhen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:url('bg.jpg') center center/cover no-repeat fixed;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.72);
+backdrop-filter:blur(8px);
+}
+
+.card{
+position:relative;
+z-index:5;
+width:430px;
+max-width:100%;
+background:#111827dd;
+border:1px solid rgba(255,255,255,.08);
+border-radius:28px;
+overflow:hidden;
+backdrop-filter:blur(25px);
+box-shadow:0 0 50px rgba(0,0,0,.5);
+animation:show .6s ease;
+}
+
+@keyframes show{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.banner{
+height:160px;
+background:url('bg.jpg') center/cover;
+}
+
+.profile{
+padding:0 24px 24px;
+position:relative;
+}
+
+.avatar-box{
+position:relative;
+width:120px;
+margin-top:-60px;
+}
+
+.avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+border:6px solid #111827;
+object-fit:cover;
+}
+
+.online{
+position:absolute;
+right:10px;
+bottom:10px;
+width:22px;
+height:22px;
+background:#23a55a;
+border-radius:50%;
+border:4px solid #111827;
+}
+
+.name{
+font-size:34px;
+font-weight:800;
+color:white;
+margin-top:12px;
+}
+
+.tag{
+color:#9ca3af;
+font-size:14px;
+margin-top:2px;
+}
+
+.bio{
+margin-top:18px;
+background:#0b1220;
+padding:15px;
+border-radius:16px;
+color:#d1d5db;
+line-height:1.6;
+}
+
+.title{
+font-size:12px;
+font-weight:700;
+letter-spacing:1px;
+color:white;
+margin-bottom:8px;
+}
+
+.btn{
+display:block;
+text-decoration:none;
+text-align:center;
+padding:14px;
+margin-top:12px;
+border-radius:14px;
+background:#5865f2;
+color:white;
+font-weight:700;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.spotify{
+margin-top:18px;
+background:#121212;
+border-radius:18px;
+padding:15px;
+}
+
+.spotify-head{
+color:#1db954;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.song{
+color:white;
+font-weight:600;
+}
+
+.artist{
+color:#9ca3af;
+font-size:13px;
+margin-top:2px;
+margin-bottom:12px;
+}
+
+audio{
+width:100%;
+}
+
+.footer{
+text-align:center;
+color:#9ca3af;
+font-size:12px;
+margin-top:18px;
+}
+
+.particle{
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:.5;
+animation:fly linear infinite;
+}
+
+@keyframes fly{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-120px);
+}
+}
+</style>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<div class="card">
+
+<div class="banner"></div>
+
+<div class="profile">
+
+<div class="avatar-box">
+<img src="avatar.jpg" class="avatar">
+<div class="online"></div>
+</div>
+
+<div class="name">sixhen</div>
+<div class="tag">@six.hen</div>
+
+<div class="bio">
+<div class="title">ABOUT ME</div>
+loyalty means everything to me.
+</div>
+
+<a class="btn"
+target="_blank"
+href="https://www.facebook.com/share/14h5dUjwCdJ/">
+📘 Facebook
+</a>
+
+<a class="btn"
+target="_blank"
+href="https://discord.com/users/1518231904887771147">
+🎮 Discord
+</a>
+
+<a class="btn"
+target="_blank"
+href="https://www.tiktok.com/@six.hen?_r=1&_t=ZS-97RWKFdywpW">
+🎵 TikTok
+</a>
+
+<a class="btn"
+target="_blank"
+href="https://github.com/sixhen">
+💻 GitHub
+</a>
+
+<div class="spotify">
+<div class="spotify-head">🎧 NOW PLAYING</div>
+
+<div class="song">bg.mp3</div>
+<div class="artist">sixhen playlist</div>
+
+<audio controls autoplay loop>
+<source src="bg.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="footer">
+© sixhen
+</div>
+
+</div>
+</div>
+
+<script>
+const box=document.getElementById("particles");
+
+for(let i=0;i<70;i++){
+const p=document.createElement("div");
+
+p.className="particle";
+
+let s=Math.random()*4+1;
+
+p.style.width=s+"px";
+p.style.height=s+"px";
+p.style.left=Math.random()*100+"vw";
+p.style.animationDuration=(Math.random()*12+8)+"s";
+
+box.appendChild(p);
+}
+</script>
+
+</body>
+</html>
