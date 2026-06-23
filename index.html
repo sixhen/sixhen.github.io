@@ -37,7 +37,38 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow-x: hidden;
+            overflow: hidden;
+        }
+
+        /* ===== VIDEO BACKGROUND ===== */
+        .video-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .video-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: rgba(10, 10, 15, 0.6);
+            pointer-events: none;
+        }
+
+        /* Gradient overlay bổ sung */
+        .video-gradient {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 10% 20%, rgba(88, 101, 242, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 60%);
+            pointer-events: none;
         }
 
         /* ===== LOADING SCREEN ===== */
@@ -81,85 +112,6 @@
             letter-spacing: 2px;
         }
 
-        /* ===== BACKGROUND ===== */
-        .bg-container {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background:
-                radial-gradient(ellipse at 10% 20%, rgba(88, 101, 242, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 60%),
-                #0a0a0f;
-            overflow: hidden;
-        }
-
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            animation: orbFloat 25s ease-in-out infinite;
-        }
-
-        .orb-1 {
-            width: 400px;
-            height: 400px;
-            background: rgba(88, 101, 242, 0.05);
-            top: -150px;
-            left: -80px;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 350px;
-            height: 350px;
-            background: rgba(236, 72, 153, 0.04);
-            bottom: -100px;
-            right: -80px;
-            animation-delay: -8s;
-        }
-
-        .orb-3 {
-            width: 250px;
-            height: 250px;
-            background: rgba(139, 92, 246, 0.03);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -16s;
-        }
-
-        @keyframes orbFloat {
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(60px, -40px) scale(1.15);
-            }
-            66% {
-                transform: translate(-30px, 40px) scale(0.85);
-            }
-        }
-
-        .grid-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background-image:
-                linear-gradient(rgba(88, 101, 242, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(88, 101, 242, 0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-        }
-
-        .grid-overlay::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at center, transparent 30%, #0a0a0f 70%);
-        }
-
         /* ===== PARTICLES ===== */
         #particles {
             position: fixed;
@@ -173,7 +125,7 @@
             position: absolute;
             border-radius: 50%;
             animation: floatParticle linear infinite;
-            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.2), transparent);
+            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.3), transparent);
         }
 
         @keyframes floatParticle {
@@ -182,10 +134,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.5;
+                opacity: 0.6;
             }
             90% {
-                opacity: 0.5;
+                opacity: 0.6;
             }
             100% {
                 transform: translateY(-10vh) translateX(30px) scale(1);
@@ -208,17 +160,27 @@
             z-index: 10;
             width: 480px;
             max-width: 100%;
+            max-height: 95vh;
+            overflow-y: auto;
             background: rgba(10, 10, 20, 0.7);
-            backdrop-filter: blur(40px) saturate(1.4);
-            -webkit-backdrop-filter: blur(40px) saturate(1.4);
+            backdrop-filter: blur(30px) saturate(1.4);
+            -webkit-backdrop-filter: blur(30px) saturate(1.4);
             border-radius: 40px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow:
-                0 30px 100px rgba(0, 0, 0, 0.7),
+                0 30px 100px rgba(0, 0, 0, 0.8),
                 0 0 0 1px rgba(88, 101, 242, 0.05) inset,
-                0 0 40px rgba(88, 101, 242, 0.02);
-            overflow: hidden;
+                0 0 60px rgba(88, 101, 242, 0.03);
             animation: fadeUp 0.8s ease;
+            scroll-behavior: smooth;
+        }
+
+        .card::-webkit-scrollbar {
+            width: 3px;
+        }
+        .card::-webkit-scrollbar-thumb {
+            background: rgba(88, 101, 242, 0.2);
+            border-radius: 10px;
         }
 
         @keyframes fadeUp {
@@ -238,6 +200,7 @@
             position: relative;
             overflow: hidden;
             background: linear-gradient(135deg, #1a1a2e, #16213e, #0a0a0f);
+            border-radius: 40px 40px 0 0;
         }
 
         .banner-img {
@@ -249,10 +212,6 @@
 
         .banner-img.loaded {
             transform: scale(1.05);
-        }
-
-        .banner-img:not([src]) {
-            display: none;
         }
 
         .banner-fallback {
@@ -269,7 +228,7 @@
             inset: 0;
             background: linear-gradient(180deg,
                     rgba(10, 10, 20, 0.1) 0%,
-                    rgba(10, 10, 20, 0.8) 100%);
+                    rgba(10, 10, 20, 0.85) 100%);
             pointer-events: none;
         }
 
@@ -500,16 +459,6 @@
         .contact-item .value {
             color: #cbd5e1;
             word-break: break-all;
-        }
-
-        .contact-item .value a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item .value a:hover {
-            color: #5865f2;
         }
 
         .copy-btn {
@@ -801,10 +750,6 @@
             font-size: 11px;
             color: #475569;
             font-weight: 400;
-        }
-
-        .visitor-counter .stat-group .count {
-            font-size: 18px;
         }
 
         /* ===== BUTTONS ===== */
@@ -1172,6 +1117,7 @@
             }
             .card {
                 border-radius: 28px;
+                max-height: 92vh;
             }
             .banner {
                 height: 120px;
@@ -1264,6 +1210,9 @@
                 font-size: 10px;
                 min-width: 30px;
             }
+            .video-bg {
+                object-fit: cover;
+            }
         }
 
         @media (max-width: 380px) {
@@ -1323,8 +1272,11 @@
             .particle {
                 display: none;
             }
-            .orb {
+            .video-bg {
                 display: none;
+            }
+            .video-overlay {
+                background: #0a0a0f;
             }
         }
 
@@ -1339,6 +1291,14 @@
 </head>
 <body>
 
+    <!-- ===== VIDEO BACKGROUND ===== -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="assets/bg.mp4" type="video/mp4" />
+        <!-- Fallback nếu không có video -->
+    </video>
+    <div class="video-overlay"></div>
+    <div class="video-gradient"></div>
+
     <!-- ===== LOADING ===== -->
     <div id="loading" role="status" aria-label="Đang tải">
         <div class="loader"></div>
@@ -1351,13 +1311,7 @@
         <span id="toastMessage">Đã sao chép!</span>
     </div>
 
-    <!-- ===== BACKGROUND ===== -->
-    <div class="bg-container" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
-    <div class="grid-overlay" aria-hidden="true"></div>
+    <!-- ===== PARTICLES ===== -->
     <div id="particles" aria-hidden="true"></div>
 
     <!-- ===== CARD ===== -->
@@ -1579,12 +1533,12 @@
 
     <script>
         // ============================================================
-        // 1. PARTICLES (reduced for performance)
+        // 1. PARTICLES
         // ============================================================
         (function initParticles() {
             const container = document.getElementById('particles');
             const isMobile = window.innerWidth < 520;
-            const count = isMobile ? 25 : 35;
+            const count = isMobile ? 20 : 30;
 
             for (let i = 0; i < count; i++) {
                 const p = document.createElement('div');
@@ -1667,7 +1621,6 @@
                         this.classList.remove('copied');
                     }, 2000);
                 }).catch(() => {
-                    // Fallback
                     const textArea = document.createElement('textarea');
                     textArea.value = text;
                     document.body.appendChild(textArea);
@@ -1712,7 +1665,6 @@
         let isPlaying = false;
         let isMuted = false;
 
-        // Play/Pause
         playBtn.addEventListener('click', () => {
             if (isPlaying) {
                 audio.pause();
@@ -1735,24 +1687,18 @@
             audioStatus.className = 'status-text paused';
         });
 
-        // Mute
         muteBtn.addEventListener('click', () => {
             isMuted = !isMuted;
             audio.muted = isMuted;
             muteIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
         });
 
-        // Progress
         audio.addEventListener('timeupdate', () => {
             if (audio.duration) {
                 const percent = (audio.currentTime / audio.duration) * 100;
                 progressBar.style.width = percent + '%';
                 currentTimeEl.textContent = formatTime(audio.currentTime);
             }
-        });
-
-        audio.addEventListener('loadedmetadata', () => {
-            // duration loaded
         });
 
         progressContainer.addEventListener('click', (e) => {
@@ -1770,7 +1716,6 @@
             return mins + ':' + (secs < 10 ? '0' : '') + secs;
         }
 
-        // Auto-play on user interaction
         let audioInitialized = false;
 
         function initAudio() {
@@ -1783,7 +1728,7 @@
         document.addEventListener('touchstart', initAudio, { once: true });
 
         // ============================================================
-        // 9. VISITOR COUNTER (CountAPI)
+        // 9. VISITOR COUNTER
         // ============================================================
         async function updateVisitorCount() {
             try {
@@ -1797,7 +1742,6 @@
                     document.getElementById('todayViews').textContent = formatNumber(today);
                 }
             } catch (error) {
-                console.warn('Visitor counter fallback to local');
                 let count = parseInt(localStorage.getItem('totalVisitors')) || 0;
                 const hasVisited = sessionStorage.getItem('hasVisited') === 'true';
                 if (!hasVisited) {
@@ -1823,19 +1767,17 @@
         updateVisitorCount();
 
         // ============================================================
-        // 10. CONSOLE CLEAN
-        // ============================================================
-        console.log('🚀 sixhen · Developer Portfolio');
-        console.log('💰 Tiền là số 1, code là số 2');
-
-        // ============================================================
-        // 11. REDUCED MOTION
+        // 10. REDUCED MOTION
         // ============================================================
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.querySelectorAll('.particle').forEach(el => el.remove());
             document.querySelectorAll('.orb').forEach(el => el.remove());
         }
+
+        console.log('🚀 sixhen · Developer Portfolio');
+        console.log('💰 Tiền là số 1, code là số 2');
+        console.log('🎬 Video background đang chạy');
     </script>
 
 </body>
-                        </html>
+    </html>
