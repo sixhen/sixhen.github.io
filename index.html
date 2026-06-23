@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>sixhen · learning</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 20px;
+            background: #0a0a0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bg-container {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 10% 20%, rgba(88, 101, 242, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+                #0a0a0f;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: orbFloat 25s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(88, 101, 242, 0.06);
+            top: -200px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(236, 72, 153, 0.05);
+            bottom: -150px;
+            right: -100px;
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.04);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -16s;
+        }
+
+        @keyframes orbFloat {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(80px, -50px) scale(1.2);
+            }
+            66% {
+                transform: translate(-40px, 60px) scale(0.8);
+            }
+        }
+
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(rgba(88, 101, 242, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(88, 101, 242, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+
+        .grid-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 30%, #0a0a0f 70%);
+        }
+
+        #particles {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: floatParticle linear infinite;
+            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.3), transparent);
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(110vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(50px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(88, 101, 242, 0.3);
+            border-radius: 10px;
+        }
+
+        .card {
+            position: relative;
+            z-index: 10;
+            width: 480px;
+            max-width: 100%;
+            background: rgba(10, 10, 20, 0.75);
+            backdrop-filter: blur(50px) saturate(1.6);
+            -webkit-backdrop-filter: blur(50px) saturate(1.6);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow:
+                0 40px 120px rgba(0, 0, 0, 0.8),
+                0 0 0 1px rgba(88, 101, 242, 0.05) inset,
+                0 0 60px rgba(88, 101, 242, 0.03);
+            overflow: visible;
+            animation: fadeUp 0.8s ease;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .banner {
+            height: 150px;
+            background: url('bg.jpg') center/cover no-repeat;
+            position: relative;
+            border-radius: 40px 40px 0 0;
+            overflow: hidden;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(10, 10, 20, 0.1) 0%,
+                    rgba(10, 10, 20, 0.85) 100%);
+        }
+
+        .banner-glow {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 80px;
+            background: radial-gradient(ellipse at center, rgba(88, 101, 242, 0.2), transparent 70%);
+            filter: blur(30px);
+            z-index: 1;
+        }
+
+        .banner-status {
+            position: absolute;
+            bottom: 18px;
+            right: 20px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px 6px 10px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .banner-status .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #23a55a;
+            animation: pulseDot 1.5s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .banner-status span {
+            color: #94a3b8;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .profile {
+            padding: 0 28px 28px;
+            position: relative;
+            margin-top: -40px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 120px;
+            margin-top: -50px;
+            z-index: 5;
+        }
+
+        .avatar-ring {
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5865f2, #8b5cf6);
+            padding: 3px;
+        }
+
+        .avatar-ring-inner {
+            border-radius: 50%;
+            overflow: hidden;
+            background: #0a0a0f;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .online-badge {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            width: 28px;
+            height: 28px;
+            background: #23a55a;
+            border-radius: 50%;
+            border: 3px solid #0a0a0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(35, 165, 90, 0.2);
+        }
+
+        .online-badge i {
+            font-size: 12px;
+            color: white;
+        }
+
+        .name-section {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #f1f5f9;
+            letter-spacing: -0.5px;
+        }
+
+        .badge-learning {
+            background: rgba(88, 101, 242, 0.12);
+            font-size: 10px;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #8b9cf7;
+            border: 1px solid rgba(88, 101, 242, 0.08);
+            letter-spacing: 0.5px;
+        }
+
+        .tag {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag .divider {
+            color: #334155;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #94a3b8;
+            font-size: 13px;
+            padding: 4px 0;
+            transition: color 0.3s;
+        }
+
+        .contact-item:hover {
+            color: #e2e8f0;
+        }
+
+        .contact-item i {
+            width: 20px;
+            color: #5865f2;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .contact-item .value {
+            color: #cbd5e1;
+        }
+
+        .contact-item .value a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item .value a:hover {
+            color: #5865f2;
+        }
+
+        .status-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            flex-wrap: wrap;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #23a55a;
+            animation: pulseDot 2s infinite;
+            flex-shrink: 0;
+        }
+
+        .status-text {
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .status-text span {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .status-activity {
+            margin-left: auto;
+            color: #475569;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            background: rgba(88, 101, 242, 0.06);
+            border-radius: 20px;
+        }
+
+        .status-activity i {
+            color: #5865f2;
+            font-size: 11px;
+        }
+
+        .bio {
+            margin-top: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 18px 22px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .bio:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .bio .title {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #475569;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bio .title i {
+            color: #5865f2;
+            font-size: 11px;
+        }
+
+        .bio-text {
+            font-size: 15px;
+            font-weight: 400;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .bio-text .money-icon {
+            color: #f59e0b;
+            font-size: 16px;
+            animation: moneyGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes moneyGlow {
+            0%,
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+            }
+            50% {
+                transform: scale(1.15);
+                text-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+            }
+        }
+
+        .bio-text .highlight-money {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 17px;
+            background-size: 200% 200%;
+            animation: moneyGradient 3s ease-in-out infinite;
+        }
+
+        @keyframes moneyGradient {
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .bio-sub {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .bio-sub i {
+            color: #5865f2;
+        }
+
+        .bio-sub .emoji {
+            font-size: 16px;
+        }
+
+        .learning-text {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .learning-text i {
+            color: #5865f2;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .skill-tag {
+            padding: 3px 12px;
+            border-radius: 16px;
+            font-size: 10px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(88, 101, 242, 0.08);
+            color: #e2e8f0;
+            transform: translateY(-1px);
+        }
+
+        .skill-tag i {
+            margin-right: 4px;
+            font-size: 10px;
+        }
+
+        .visitor-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .visitor-counter i {
+            color: #5865f2;
+            font-size: 16px;
+        }
+
+        .visitor-counter .count {
+            font-size: 20px;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .visitor-counter .label {
+            font-size: 12px;
+            color: #475569;
+            font-weight: 400;
+        }
+
+        .visitor-counter .unique-badge {
+            font-size: 9px;
+            background: rgba(88, 101, 242, 0.1);
+            padding: 2px 10px;
+            border-radius: 20px;
+            color: #8b9cf7;
+            border: 1px solid rgba(88, 101, 242, 0.06);
+            margin-left: 4px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 13px 20px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #f1f5f9;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn i {
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .btn-facebook i {
+            color: #4b8bf5;
+        }
+        .btn-facebook:hover {
+            background: rgba(24, 119, 242, 0.08);
+            border-color: rgba(24, 119, 242, 0.12);
+        }
+
+        .btn-discord i {
+            color: #8b9cf7;
+        }
+        .btn-discord:hover {
+            background: rgba(88, 101, 242, 0.08);
+            border-color: rgba(88, 101, 242, 0.12);
+        }
+
+        .btn-tiktok i {
+            color: #ff3b6f;
+        }
+        .btn-tiktok:hover {
+            background: rgba(255, 0, 80, 0.06);
+            border-color: rgba(255, 0, 80, 0.08);
+        }
+
+        .btn-github i {
+            color: #cbd5e1;
+        }
+        .btn-github:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .btn .btn-label small {
+            font-weight: 400;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .btn-discord-server {
+            background: rgba(88, 101, 242, 0.06);
+            border-color: rgba(88, 101, 242, 0.08);
+        }
+
+        .btn-discord-server i {
+            color: #8b9cf7;
+        }
+
+        .btn-discord-server:hover {
+            background: rgba(88, 101, 242, 0.12);
+            border-color: rgba(88, 101, 242, 0.15);
+        }
+
+        .spotify {
+            margin-top: 20px;
+            background: rgba(18, 18, 30, 0.6);
+            border-radius: 28px;
+            padding: 18px 22px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .spotify-head {
+            color: #1db954;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .spotify-head i {
+            font-size: 18px;
+        }
+
+        .spotify-head .live-dot {
+            width: 5px;
+            height: 5px;
+            background: #1db954;
+            border-radius: 50%;
+            animation: pulseDot 1.5s infinite;
+            display: inline-block;
+        }
+
+        .song {
+            color: white;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .artist {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 50px;
+            background: #12121f;
+            outline: none;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background: #12121f;
+            border-radius: 50px;
+        }
+        audio::-webkit-media-controls-play-button {
+            background: #1db954;
+            border-radius: 50%;
+        }
+        audio::-webkit-media-controls-timeline {
+            background: #2a2a3a;
+            border-radius: 10px;
+            height: 3px;
+        }
+
+        .qr-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            text-align: center;
+        }
+
+        .qr-section .qr-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #475569;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .qr-section .qr-title i {
+            color: #5865f2;
+            font-size: 14px;
+        }
+
+        .qr-code {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-label {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .qr-label .highlight {
+            color: #5865f2;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            color: #334155;
+            font-size: 12px;
+            margin-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding-top: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer .heart {
+            color: #ef4444;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .footer .text-muted {
+            color: #475569;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                border-radius: 28px;
+            }
+            .banner {
+                height: 120px;
+                border-radius: 28px 28px 0 0;
+            }
+            .profile {
+                padding: 0 16px 20px;
+                margin-top: -32px;
+            }
+            .avatar-wrapper {
+                width: 100px;
+                margin-top: -42px;
+            }
+            .online-badge {
+                width: 24px;
+                height: 24px;
+            }
+            .online-badge i {
+                font-size: 10px;
+            }
+            .name {
+                font-size: 30px;
+            }
+            .contact-info {
+                padding: 12px 16px;
+            }
+            .contact-item {
+                font-size: 12px;
+            }
+            .btn {
+                padding: 12px 16px;
+                font-size: 13px;
+                gap: 10px;
+            }
+            .btn i {
+                font-size: 16px;
+                width: 20px;
+            }
+            .spotify {
+                padding: 14px 16px 18px;
+            }
+            .song {
+                font-size: 15px;
+            }
+            .bio {
+                padding: 14px 16px;
+            }
+            .bio-text {
+                font-size: 14px;
+            }
+            .bio-text .highlight-money {
+                font-size: 15px;
+            }
+            .status-bar {
+                padding: 10px 14px;
+                gap: 8px;
+            }
+            .status-activity {
+                margin-left: 0;
+                width: 100%;
+            }
+            .visitor-counter .count {
+                font-size: 17px;
+            }
+            .qr-code {
+                width: 130px;
+                height: 130px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .name {
+                font-size: 26px;
+            }
+            .avatar-wrapper {
+                width: 85px;
+                margin-top: -36px;
+            }
+            .contact-item {
+                font-size: 11px;
+            }
+            .contact-item i {
+                width: 16px;
+                font-size: 12px;
+            }
+            .qr-code {
+                width: 110px;
+                height: 110px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+    <div id="particles"></div>
+
+    <div class="card">
+
+        <div class="banner">
+            <div class="banner-glow"></div>
+            <div class="banner-status">
+                <span class="dot"></span>
+                <span>⚡ learning to code</span>
+            </div>
+        </div>
+
+        <div class="profile">
+
+            <div class="avatar-wrapper">
+                <div class="avatar-ring">
+                    <div class="avatar-ring-inner">
+                        <img src="avatar.jpg" alt="sixhen" class="avatar" id="avatarImg" />
+                    </div>
+                </div>
+                <div class="online-badge">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+
+            <div class="name-section">
+                <span class="name">sixhen</span>
+                <span class="badge-learning">✦ học code</span>
+            </div>
+
+            <div class="tag">
+                <i class="fas fa-at"></i> @six.hen
+                <span class="divider">·</span>
+                <i class="fas fa-map-pin"></i> Việt Nam
+                <span class="divider">·</span>
+                <i class="fas fa-calendar"></i> 21
+                <span class="divider">·</span>
+                <i class="fas fa-graduation-cap"></i> mới bắt đầu
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="value">0328 981 323</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="value">sixhen.dev@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-discord"></i>
+                    <span class="value">@sixhen</span>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-dot"></div>
+                <div class="status-text">
+                    <span>Đang học</span> · từng ngày
+                </div>
+                <div class="status-activity">
+                    <i class="fas fa-terminal"></i> VS Code
+                </div>
+            </div>
+
+            <!-- ===== BIO MỚI ===== -->
+            <div class="bio">
+                <div class="title">
+                    <i class="fas fa-quote-left"></i> về tôi
+                </div>
+                <div class="bio-text">
+                    <span class="money-icon">💰</span>
+                    <span class="highlight-money">tiền là số 1</span>
+                    <span style="color:#94a3b8; font-weight:300;">·</span>
+                    <span style="color:#64748b; font-size:14px;">code là số 2</span>
+                </div>
+                <div class="bio-sub">
+                    <i class="fas fa-bullseye"></i>
+                    <span>mục tiêu: </span>
+                    <span style="color:#e2e8f0; font-weight:500;">giàu từ code</span>
+                    <span class="emoji">🚀</span>
+                </div>
+                <div class="learning-text">
+                    <i class="fas fa-code"></i> đang học: <span style="color:#e2e8f0;">HTML · CSS · JS</span>
+                    <span style="color:#334155;">|</span>
+                    <span style="color:#f59e0b;">💎 kiếm tiền</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fab fa-html5" style="color:#e34f26;"></i> HTML</span>
+                    <span class="skill-tag"><i class="fab fa-css3-alt" style="color:#1572b6;"></i> CSS</span>
+                    <span class="skill-tag"><i class="fab fa-js" style="color:#f7df1e;"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="fas fa-coins" style="color:#f59e0b;"></i> kiếm tiền</span>
+                    <span class="skill-tag">⚡ đang học thêm</span>
+                </div>
+            </div>
+
+            <div class="visitor-counter">
+                <i class="fas fa-eye"></i>
+                <span class="count" id="visitorCount">0</span>
+                <span class="label">lượt xem</span>
+                <span class="unique-badge">✨ 1/IP</span>
+                <span style="color:#334155; font-size:11px;">·</span>
+                <span style="color:#475569; font-size:11px;">👀</span>
+            </div>
+
+            <div class="btn-group">
+
+                <a class="btn btn-facebook" target="_blank" href="https://www.facebook.com/share/14h5dUjwCdJ/">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="btn-label">Facebook <small>· sixhen</small></span>
+                </a>
+
+                <a class="btn btn-discord-server" target="_blank" href="https://discord.gg/FQKwukeP6x">
+                    <i class="fab fa-discord"></i>
+                    <span class="btn-label">Discord Server <small>· tham gia</small></span>
+                </a>
+
+                <a class="btn btn-tiktok" target="_blank" href="https://www.tiktok.com/@six.hen?_r=1&_t=ZS-97RWKFdywpW">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="btn-label">TikTok <small>· @six.hen</small></span>
+                </a>
+
+                <a class="btn btn-github" target="_blank" href="https://github.com/sixhen">
+                    <i class="fab fa-github"></i>
+                    <span class="btn-label">GitHub <small>· sixhen</small></span>
+                </a>
+
+            </div>
+
+            <div class="spotify">
+                <div class="spotify-head">
+                    <i class="fas fa-headphones"></i>
+                    đang nghe
+                    <span class="live-dot"></span>
+                </div>
+                <div class="song">bg.mp3</div>
+                <div class="artist">✦ playlist của sixhen</div>
+                <audio controls autoplay loop id="bgAudio">
+                    <source src="bg.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+
+            <!-- ===== QR CODE TỰ ĐỘNG ===== -->
+            <div class="qr-section">
+                <div class="qr-title">
+                    <i class="fas fa-qrcode"></i>
+                    MÃ QR
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0328981323&bgcolor=ffffff&color=0a0a0f&margin=10" alt="QR Code" />
+                </div>
+                <div class="qr-label">
+                    <span class="highlight">DINH MINH HIEN</span> · <span style="color:#475569;">0328 981 323</span>
+                </div>
+                <div class="qr-label" style="margin-top:4px; font-size:11px; color:#334155;">
+                    <i class="fas fa-credit-card" style="color:#5865f2;"></i> VIETQR · MB · napas 247
+                </div>
+            </div>
+
+            <div class="footer">
+                <i class="fas fa-crown"></i>
+                <span class="text-muted">sixhen</span>
+                <span class="heart"><i class="fas fa-heart"></i></span>
+                <span class="text-muted">·</span>
+                <i class="fas fa-code"></i>
+                <span class="text-muted">2026</span>
+                <span class="text-muted">·</span>
+                <span style="color:#f59e0b;">💰</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const container = document.getElementById('particles');
+            const count = 80;
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                const size = Math.random() * 4 + 2;
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.animationDuration = (Math.random() * 25 + 15) + 's';
+                p.style.animationDelay = (Math.random() * 20) + 's';
+                p.style.opacity = Math.random() * 0.3 + 0.05;
+                container.appendChild(p);
+            }
+        })();
+
+        // ===== VISITOR COUNTER =====
+        function getVisitorCount() {
+            let count = parseInt(localStorage.getItem('totalVisitors')) || 0;
+            const hasVisited = sessionStorage.getItem('hasVisited') === 'true';
+            if (!hasVisited) {
+                count++;
+                localStorage.setItem('totalVisitors', count);
+                sessionStorage.setItem('hasVisited', 'true');
+            }
+            return count;
+        }
+
+        const visitorCount = getVisitorCount();
+        document.getElementById('visitorCount').textContent = visitorCount;
+
+        const avatar = document.getElementById('avatarImg');
+        avatar.addEventListener('error', function() {
+            this.style.display = 'none';
+            const parent = this.parentElement;
+            const fallback = document.createElement('div');
+            fallback.style.cssText = `
+                width: 100%; height: 100%;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #5865f2, #8b5cf6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+                font-weight: 700;
+                color: white;
+            `;
+            fallback.textContent = 'S';
+            parent.appendChild(fallback);
+        });
+
+        document.addEventListener('click', function initAudio() {
+            const audio = document.getElementById('bgAudio');
+            if (audio) audio.play().catch(() => {});
+            document.removeEventListener('click', initAudio);
+        }, { once: true });
+
+        console.log('✧ sixhen · đang học code ✧');
+        console.log('💰 tiền là số 1');
+        console.log('👀 Lượt xem (unique):', visitorCount);
+        console.log('📞 0328 981 323');
+        console.log('📧 sixhen.dev@gmail.com');
+        console.log('🎮 Discord: https://discord.gg/FQKwukeP6x');
+    </script>
+
+</body>
+  </html>
