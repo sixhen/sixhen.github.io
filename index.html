@@ -6,7 +6,7 @@
     <title>sixhen · Developer Portfolio · Nam Định</title>
 
     <!-- SEO -->
-    <meta name="description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
+    <meta name="description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2. Mục tiêu: giàu từ code 🚀" />
     <meta name="keywords" content="sixhen, developer, Nam Định, 17 tuổi, học code, HTML, CSS, JavaScript, portfolio" />
     <meta property="og:title" content="sixhen · Developer Portfolio · Nam Định" />
     <meta property="og:description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ================================================================
+           RESET & BASE - 50 dòng
+           ================================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -57,7 +59,9 @@
             overflow: hidden;
         }
 
-        /* ===== VIDEO BACKGROUND ===== */
+        /* ================================================================
+           VIDEO BACKGROUND - 40 dòng
+           ================================================================ */
         .video-bg {
             position: fixed;
             inset: 0;
@@ -87,7 +91,9 @@
             pointer-events: none;
         }
 
-        /* ===== FLOATING SHAPES ===== */
+        /* ================================================================
+           FLOATING SHAPES - 50 dòng
+           ================================================================ */
         .floating-shapes {
             position: fixed;
             inset: 0;
@@ -138,7 +144,9 @@
             66% { transform: translate(-30px, 40px) scale(0.85); }
         }
 
-        /* ===== FLOATING EMOJI ===== */
+        /* ================================================================
+           FLOATING EMOJI - 30 dòng
+           ================================================================ */
         .floating-emoji {
             position: fixed;
             font-size: 25px;
@@ -161,7 +169,9 @@
             100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
         }
 
-        /* ===== LOADING ===== */
+        /* ================================================================
+           LOADING - 40 dòng
+           ================================================================ */
         #loading {
             position: fixed;
             inset: 0;
@@ -172,7 +182,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
 
         #loading.hidden {
@@ -181,8 +191,8 @@
         }
 
         .loader {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border: 3px solid rgba(88, 101, 242, 0.1);
             border-top: 3px solid var(--primary);
             border-radius: 50%;
@@ -195,11 +205,13 @@
 
         .loader-text {
             color: var(--text-muted);
-            font-size: 13px;
+            font-size: 14px;
             letter-spacing: 2px;
         }
 
-        /* ===== PARTICLES ===== */
+        /* ================================================================
+           PARTICLES - 30 dòng
+           ================================================================ */
         #particles {
             position: fixed;
             inset: 0;
@@ -212,7 +224,7 @@
             position: absolute;
             border-radius: 50%;
             animation: floatParticle linear infinite;
-            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.12), transparent);
+            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.15), transparent);
         }
 
         @keyframes floatParticle {
@@ -222,11 +234,15 @@
             100% { transform: translateY(-10vh) translateX(20px) scale(1); opacity: 0; }
         }
 
-        /* ===== SCROLLBAR ===== */
+        /* ================================================================
+           SCROLLBAR - 10 dòng
+           ================================================================ */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(88, 101, 242, 0.3); border-radius: 10px; }
 
-        /* ===== CARD ===== */
+        /* ================================================================
+           CARD - 60 dòng
+           ================================================================ */
         .card {
             position: relative;
             z-index: 10;
@@ -240,7 +256,7 @@
             border-radius: var(--radius);
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow), 0 0 0 1px rgba(88, 101, 242, 0.08) inset;
-            animation: fadeUp 0.6s ease;
+            animation: fadeUp 0.8s ease;
             scroll-behavior: smooth;
             transition: transform 0.3s ease;
         }
@@ -273,7 +289,9 @@
             100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* ===== BANNER ===== */
+        /* ================================================================
+           BANNER NÂNG CẤP - 80 dòng
+           ================================================================ */
         .banner {
             height: 160px;
             position: relative;
@@ -364,7 +382,32 @@
             z-index: 5;
             display: flex;
             gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
+
+        .banner-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            color: var(--text-primary);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .banner-btn:hover {
+            background: rgba(88, 101, 242, 0.2);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .banner-btn i { font-size: 13px; }
 
         .theme-toggle-btn {
             background: rgba(0, 0, 0, 0.4);
@@ -387,14 +430,15 @@
             transform: rotate(30deg) scale(1.1);
         }
 
-        /* ===== PROFILE ===== */
+        /* ================================================================
+           PROFILE & AVATAR - 100 dòng
+           ================================================================ */
         .profile {
             padding: 0 28px 28px;
             position: relative;
             margin-top: -40px;
         }
 
-        /* ===== AVATAR ===== */
         .avatar-wrapper {
             position: relative;
             width: 120px;
@@ -410,7 +454,7 @@
             position: absolute;
             inset: -20px;
             border-radius: 50%;
-            background: radial-gradient(circle at center, rgba(88, 101, 242, 0.25), transparent 70%);
+            background: radial-gradient(circle at center, rgba(88, 101, 242, 0.2), transparent 70%);
             opacity: 0;
             transition: opacity 0.5s ease;
             filter: blur(30px);
@@ -496,7 +540,9 @@
 
         .online-badge i { font-size: 12px; color: white; }
 
-        /* ===== USERNAME & NAME ===== */
+        /* ================================================================
+           USERNAME & NAME - 80 dòng
+           ================================================================ */
         .username-tag {
             text-align: center;
             margin-top: 8px;
@@ -611,7 +657,9 @@
             border: 1px solid rgba(88, 101, 242, 0.06);
         }
 
-        /* ===== TYPING TEXT ===== */
+        /* ================================================================
+           TYPING TEXT - 20 dòng
+           ================================================================ */
         .typing-text {
             display: inline-block;
             overflow: hidden;
@@ -629,7 +677,9 @@
             50% { border-color: transparent; }
         }
 
-        /* ===== CONTACT ===== */
+        /* ================================================================
+           CONTACT - 60 dòng
+           ================================================================ */
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -689,7 +739,126 @@
 
         .copy-btn.copied { color: #23a55a; }
 
-        /* ===== TOAST ===== */
+        /* ================================================================
+           AUTH SECTION - 80 dòng
+           ================================================================ */
+        .auth-section {
+            margin-top: 12px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .auth-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .auth-title {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .auth-title i { color: var(--primary); margin-right: 6px; }
+
+        .auth-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .auth-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .auth-btn-login {
+            background: rgba(88, 101, 242, 0.2);
+            color: var(--primary);
+        }
+
+        .auth-btn-login:hover {
+            background: rgba(88, 101, 242, 0.3);
+            transform: scale(1.05);
+        }
+
+        .auth-btn-register {
+            background: var(--primary);
+            color: white;
+        }
+
+        .auth-btn-register:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .auth-btn-logout {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        .auth-btn-logout:hover {
+            background: rgba(239, 68, 68, 0.25);
+            transform: scale(1.05);
+        }
+
+        .auth-btn-change-pw {
+            background: rgba(88, 101, 242, 0.1);
+            color: var(--primary);
+        }
+
+        .auth-btn-change-pw:hover {
+            background: rgba(88, 101, 242, 0.2);
+            transform: scale(1.05);
+        }
+
+        .auth-user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .auth-user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .auth-user-name {
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .auth-user-role {
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        /* ================================================================
+           TOAST - 40 dòng
+           ================================================================ */
         .toast-container {
             position: fixed;
             bottom: 30px;
@@ -737,7 +906,9 @@
             to { transform: translateY(100px); opacity: 0; }
         }
 
-        /* ===== STATUS BAR ===== */
+        /* ================================================================
+           STATUS BAR - 50 dòng
+           ================================================================ */
         .status-bar {
             display: flex;
             align-items: center;
@@ -799,7 +970,9 @@
 
         .status-activity i { color: var(--primary); font-size: 11px; }
 
-        /* ===== BIO ===== */
+        /* ================================================================
+           BIO - 70 dòng
+           ================================================================ */
         .bio {
             margin-top: 16px;
             background: rgba(255, 255, 255, 0.02);
@@ -905,7 +1078,9 @@
             border: 1px solid rgba(88, 101, 242, 0.06);
         }
 
-        /* ===== SKILL PROGRESS ===== */
+        /* ================================================================
+           SKILL PROGRESS - 40 dòng
+           ================================================================ */
         .skill-progress {
             margin-top: 12px;
             padding-top: 12px;
@@ -944,7 +1119,9 @@
             0% { width: 0; }
         }
 
-        /* ===== VISITOR COUNTER ===== */
+        /* ================================================================
+           VISITOR COUNTER - GỌN NHẸ - 30 dòng
+           ================================================================ */
         .visitor-counter {
             display: flex;
             align-items: center;
@@ -984,7 +1161,9 @@
             animation: pulseDot 2s infinite;
         }
 
-        /* ===== BUTTONS ===== */
+        /* ================================================================
+           BUTTONS - 80 dòng
+           ================================================================ */
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -1093,7 +1272,9 @@
             background: var(--primary-dark);
         }
 
-        /* ===== RIPPLE ===== */
+        /* ================================================================
+           RIPPLE - 20 dòng
+           ================================================================ */
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -1108,172 +1289,158 @@
         }
 
         /* ================================================================
-           SPOTIFY - NOW PLAYING
+           SPOTIFY - 80 dòng
            ================================================================ */
-        .spotify-now {
+        .spotify {
             margin-top: 16px;
-            padding: 16px 20px;
-            background: linear-gradient(135deg, #1a1a2e, #1db95415, #0a0a0f);
-            border-radius: 24px;
-            border: 1px solid rgba(29, 185, 84, 0.15);
-            transition: all 0.3s ease;
+            background: rgba(18, 18, 30, 0.6);
+            border-radius: 28px;
+            padding: 16px 20px 20px;
+            border: 1px solid var(--border-color);
         }
 
-        .spotify-now:hover {
-            border-color: rgba(29, 185, 84, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(29, 185, 84, 0.05);
-        }
-
-        .spotify-now .spotify-header {
+        .spotify-head {
+            color: #1db954;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
+            gap: 8px;
+            margin-bottom: 4px;
         }
 
-        .spotify-now .spotify-header i {
-            font-size: 20px;
-            color: #1db954;
-        }
+        .spotify-head i { font-size: 16px; }
 
-        .spotify-now .spotify-header span {
-            font-size: 12px;
-            font-weight: 600;
-            color: #1db954;
-            letter-spacing: 1px;
-        }
-
-        .spotify-now .spotify-header .live-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
+        .spotify-head .live-dot {
+            width: 5px;
+            height: 5px;
             background: #1db954;
+            border-radius: 50%;
             animation: pulseDot 1.5s infinite;
             display: inline-block;
         }
 
-        .spotify-track {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+        .song { color: white; font-weight: 600; font-size: 16px; }
+        .artist { color: var(--text-secondary); font-size: 13px; margin-bottom: 10px; }
 
-        .spotify-track .track-artwork {
-            width: 56px;
-            height: 56px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #1db954, #1ed760);
+        /* ===== VISUALIZER ===== */
+        .visualizer {
             display: flex;
             align-items: center;
+            gap: 3px;
+            height: 25px;
+            margin-top: 6px;
             justify-content: center;
-            font-size: 24px;
-            color: white;
-            flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
         }
 
-        .spotify-track .track-info {
-            flex: 1;
+        .visualizer .bar {
+            width: 3px;
+            background: linear-gradient(180deg, #1db954, #1ed760);
+            border-radius: 2px;
+            animation: visualizerAnim 0.8s ease-in-out infinite alternate;
         }
 
-        .spotify-track .track-info .track-name {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
+        .visualizer .bar:nth-child(1) { height: 12px; animation-delay: 0s; }
+        .visualizer .bar:nth-child(2) { height: 20px; animation-delay: 0.1s; }
+        .visualizer .bar:nth-child(3) { height: 16px; animation-delay: 0.2s; }
+        .visualizer .bar:nth-child(4) { height: 25px; animation-delay: 0.3s; }
+        .visualizer .bar:nth-child(5) { height: 14px; animation-delay: 0.4s; }
+        .visualizer .bar:nth-child(6) { height: 22px; animation-delay: 0.5s; }
+        .visualizer .bar:nth-child(7) { height: 18px; animation-delay: 0.6s; }
+        .visualizer .bar:nth-child(8) { height: 10px; animation-delay: 0.7s; }
+
+        .visualizer.paused .bar {
+            animation-play-state: paused;
+            height: 8px !important;
         }
 
-        .spotify-track .track-info .track-artist {
-            font-size: 13px;
-            color: var(--text-secondary);
+        @keyframes visualizerAnim {
+            0% { transform: scaleY(0.3); }
+            100% { transform: scaleY(1); }
         }
 
-        .spotify-track .track-info .track-album {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .spotify-progress {
-            margin-top: 10px;
+        .audio-controls {
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .spotify-progress .progress-track {
-            flex: 1;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: height 0.2s;
-        }
-
-        .spotify-progress .progress-track:hover {
-            height: 5px;
-        }
-
-        .spotify-progress .progress-track .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #1db954, #1ed760);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .spotify-progress .time {
-            font-size: 11px;
-            color: var(--text-secondary);
-            min-width: 35px;
-        }
-
-        .spotify-controls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 10px;
-        }
-
-        .spotify-controls button {
+        .audio-controls button {
             background: none;
             border: none;
             color: var(--text-secondary);
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             transition: all 0.3s;
-            padding: 6px;
+            padding: 4px;
             border-radius: 50%;
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .spotify-controls button:hover {
+        .audio-controls button:hover {
             color: var(--text-primary);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .spotify-controls .play-btn {
-            font-size: 22px;
+        .audio-controls .play-btn {
             color: #1db954;
-            width: 44px;
-            height: 44px;
+            font-size: 24px;
         }
 
-        .spotify-controls .play-btn:hover {
+        .audio-controls .play-btn:hover {
             color: #1ed760;
             background: rgba(29, 185, 84, 0.1);
         }
 
-        .spotify-controls .play-btn.playing {
-            color: #1ed760;
+        .audio-controls .progress-container {
+            flex: 1;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: height 0.2s;
         }
 
-        /* ===== QR CODE ===== */
+        .audio-controls .progress-container:hover { height: 5px; }
+
+        .audio-controls .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .audio-controls .time {
+            color: var(--text-secondary);
+            font-size: 11px;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .audio-status {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .audio-status .status-text { font-size: 11px; }
+        .audio-status .status-text.playing { color: #1db954; }
+        .audio-status .status-text.paused { color: var(--text-secondary); }
+
+        /* ================================================================
+           QR CODE - 40 dòng
+           ================================================================ */
         .qr-section {
             margin-top: 16px;
             padding: 16px;
@@ -1326,7 +1493,9 @@
 
         .qr-label .highlight { color: var(--primary); font-weight: 600; }
 
-        /* ===== PROJECT GALLERY ===== */
+        /* ================================================================
+           PROJECT GALLERY - 50 dòng
+           ================================================================ */
         .gallery-section {
             margin-top: 12px;
             padding: 14px 18px;
@@ -1402,7 +1571,9 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* ===== MODAL ===== */
+        /* ================================================================
+           MODAL - 60 dòng
+           ================================================================ */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -1483,7 +1654,63 @@
             to { transform: translateY(0) scale(1); opacity: 1; }
         }
 
-        /* ===== FOOTER ===== */
+        /* ================================================================
+           FORM - 40 dòng
+           ================================================================ */
+        .form-group { margin-bottom: 14px; }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 14px;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border: none;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ================================================================
+           FOOTER - 30 dòng
+           ================================================================ */
         .footer {
             text-align: center;
             color: #334155;
@@ -1513,7 +1740,7 @@
         .footer .namdinh-flag { color: #f59e0b; }
 
         /* ================================================================
-           LIGHT MODE
+           LIGHT MODE - 100 dòng
            ================================================================ */
         body.light-mode .card {
             background: rgba(255, 255, 255, 0.75);
@@ -1536,9 +1763,10 @@
         body.light-mode .status-bar,
         body.light-mode .visitor-counter,
         body.light-mode .qr-section,
-        body.light-mode .spotify-now,
+        body.light-mode .spotify,
         body.light-mode .gallery-section,
-        body.light-mode .modal-container {
+        body.light-mode .modal-container,
+        body.light-mode .auth-section {
             background: rgba(0, 0, 0, 0.03);
             border-color: rgba(0, 0, 0, 0.05);
         }
@@ -1558,8 +1786,7 @@
         body.light-mode .footer .text-muted,
         body.light-mode .gallery-item span,
         body.light-mode .modal-body,
-        body.light-mode .spotify-track .track-artist,
-        body.light-mode .spotify-track .track-album {
+        body.light-mode .auth-user-role {
             color: #475569;
         }
 
@@ -1569,7 +1796,7 @@
         body.light-mode .username-tag .highlight,
         body.light-mode .typing-text,
         body.light-mode .modal-header h2,
-        body.light-mode .spotify-track .track-name {
+        body.light-mode .auth-user-name {
             color: #0a0a0f;
         }
 
@@ -1578,6 +1805,7 @@
             color: var(--primary);
         }
 
+        body.light-mode .banner-btn,
         body.light-mode .theme-toggle-btn {
             background: rgba(255, 255, 255, 0.8);
             color: #0a0a0f;
@@ -1592,13 +1820,20 @@
             color: var(--primary);
         }
 
+        body.light-mode .form-group input,
+        body.light-mode .form-group textarea,
+        body.light-mode .form-group select {
+            background: rgba(0, 0, 0, 0.03);
+            color: #0a0a0f;
+        }
+
         body.light-mode .toast {
             background: rgba(255, 255, 255, 0.95);
             color: #0a0a0f;
         }
 
         /* ================================================================
-           RESPONSIVE
+           RESPONSIVE - 80 dòng
            ================================================================ */
         @media (max-width: 520px) {
             body { padding: 12px; }
@@ -1614,6 +1849,8 @@
             .contact-item { font-size: 12px; }
             .btn { padding: 10px 14px; font-size: 13px; gap: 8px; }
             .btn i { font-size: 16px; width: 18px; }
+            .spotify { padding: 12px 16px 16px; }
+            .song { font-size: 15px; }
             .bio { padding: 14px 16px; }
             .bio-text { font-size: 14px; }
             .bio-text .highlight-money { font-size: 15px; }
@@ -1621,18 +1858,24 @@
             .status-activity { margin-left: 0; width: 100%; }
             .visitor-counter .count { font-size: 16px; }
             .qr-code { width: 120px; height: 120px; padding: 8px; }
+            .audio-controls button { width: 28px; height: 28px; font-size: 16px; }
+            .audio-controls .play-btn { font-size: 20px; }
+            .audio-controls .time { font-size: 10px; min-width: 30px; }
             .floating-emoji { display: none; }
+            .visualizer .bar { width: 3px; }
             .floating-shapes .shape { display: none; }
             .username-tag { font-size: 12px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .tag .nam-dinh-badge { font-size: 10px; padding: 1px 8px; }
             .modal-container { padding: 20px; margin: 12px; }
-            .banner-top-right { top: 10px; right: 10px; }
+            .banner-top-right { top: 10px; right: 10px; gap: 4px; }
+            .banner-btn { padding: 4px 10px; font-size: 10px; }
+            .auth-section { padding: 12px 14px; }
+            .auth-header { flex-direction: column; align-items: flex-start; }
+            .auth-buttons { width: 100%; }
+            .auth-btn { flex: 1; justify-content: center; font-size: 11px; padding: 5px 10px; }
+            .auth-user-info { width: 100%; }
             .theme-toggle-btn { width: 30px; height: 30px; font-size: 14px; }
-            .spotify-now { padding: 12px 16px; }
-            .spotify-track .track-artwork { width: 44px; height: 44px; font-size: 18px; }
-            .spotify-controls button { width: 30px; height: 30px; font-size: 14px; }
-            .spotify-controls .play-btn { width: 38px; height: 38px; font-size: 18px; }
         }
 
         @media (max-width: 380px) {
@@ -1654,7 +1897,7 @@
         }
 
         /* ================================================================
-           REDUCED MOTION
+           REDUCED MOTION - 30 dòng
            ================================================================ */
         @media (prefers-reduced-motion: reduce) {
             *,
@@ -1667,23 +1910,28 @@
             .particle { display: none; }
             .shape { display: none; }
             .floating-emoji { display: none; }
+            .visualizer .bar { animation: none; height: 12px !important; }
             .name::before,
             .name::after { display: none; }
+            .mouse-trail { display: none; }
             .toast { animation: none !important; }
             .modal-container { animation: none !important; }
             .video-bg { display: none; }
             .video-overlay { background: var(--bg-dark); }
-            .spotify-progress .progress-fill { transition: none !important; }
         }
 
         /* ================================================================
-           FOCUS
+           FOCUS - 10 dòng
            ================================================================ */
         .btn:focus-visible,
         .copy-btn:focus-visible,
+        .audio-controls button:focus-visible,
+        .banner-btn:focus-visible,
+        .auth-btn:focus-visible,
         .theme-toggle-btn:focus-visible,
         .modal-close:focus-visible,
-        .spotify-controls button:focus-visible {
+        .form-group input:focus-visible,
+        .form-group textarea:focus-visible {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
         }
@@ -1691,40 +1939,54 @@
 </head>
 <body>
 
-    <!-- ===== VIDEO BACKGROUND ===== -->
+    <!-- ================================================================
+    VIDEO BACKGROUND
+    ================================================================ -->
     <video class="video-bg" id="videoBg" autoplay muted loop playsinline>
         <source src="assets/bg.mp4" type="video/mp4" />
     </video>
     <div class="video-overlay"></div>
     <div class="video-gradient"></div>
 
-    <!-- ===== FLOATING SHAPES ===== -->
+    <!-- ================================================================
+    FLOATING SHAPES
+    ================================================================ -->
     <div class="floating-shapes" aria-hidden="true">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
     </div>
 
-    <!-- ===== FLOATING EMOJI ===== -->
+    <!-- ================================================================
+    FLOATING EMOJI
+    ================================================================ -->
     <div class="floating-emoji" aria-hidden="true">🚀</div>
     <div class="floating-emoji" aria-hidden="true">💻</div>
     <div class="floating-emoji" aria-hidden="true">⚡</div>
     <div class="floating-emoji" aria-hidden="true">🔥</div>
     <div class="floating-emoji" aria-hidden="true">💰</div>
 
-    <!-- ===== LOADING ===== -->
+    <!-- ================================================================
+    LOADING
+    ================================================================ -->
     <div id="loading" role="status" aria-label="Đang tải">
         <div class="loader"></div>
         <span class="loader-text">Loading...</span>
     </div>
 
-    <!-- ===== TOAST ===== -->
+    <!-- ================================================================
+    TOAST
+    ================================================================ -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ===== PARTICLES ===== -->
+    <!-- ================================================================
+    PARTICLES
+    ================================================================ -->
     <div id="particles" aria-hidden="true"></div>
 
-    <!-- ===== MODAL ===== -->
+    <!-- ================================================================
+    MODAL
+    ================================================================ -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-container" id="modalContainer">
             <div class="modal-header">
@@ -1739,10 +2001,14 @@
         </div>
     </div>
 
-    <!-- ===== CARD ===== -->
+    <!-- ================================================================
+    CARD
+    ================================================================ -->
     <main class="card" role="main" id="mainCard">
 
-        <!-- ===== BANNER ===== -->
+        <!-- ============================================================
+        BANNER NÂNG CẤP
+        ============================================================ -->
         <header class="banner" role="banner">
             <img src="assets/bg.jpg" alt="Banner" class="banner-img" id="bannerImg" />
             <div class="banner-fallback" aria-hidden="true"></div>
@@ -1750,6 +2016,12 @@
             <div class="banner-glow" aria-hidden="true"></div>
 
             <div class="banner-top-right">
+                <button class="banner-btn" onclick="showAuthModal()">
+                    <i class="fas fa-user-plus"></i> Đăng ký
+                </button>
+                <button class="banner-btn" onclick="showLoginModal()">
+                    <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                </button>
                 <button class="theme-toggle-btn" id="themeToggle" aria-label="Đổi theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
@@ -1761,10 +2033,14 @@
             </div>
         </header>
 
-        <!-- ===== PROFILE ===== -->
+        <!-- ============================================================
+        PROFILE
+        ============================================================ -->
         <section class="profile" aria-label="Thông tin cá nhân">
 
-            <!-- ===== AVATAR ===== -->
+            <!-- ========================================================
+            AVATAR
+            ======================================================== -->
             <div class="avatar-wrapper">
                 <div class="avatar-ring" aria-hidden="true">
                     <div class="avatar-ring-inner">
@@ -1777,15 +2053,19 @@
                 </div>
             </div>
 
-            <!-- ===== USERNAME ===== -->
+            <!-- ========================================================
+            USERNAME
+            ======================================================== -->
             <div class="username-tag">
                 <i class="fas fa-at" aria-hidden="true"></i>
-                <span class="highlight">@sixhen</span>
+                <span class="highlight" id="displayUsername">@sixhen</span>
             </div>
 
-            <!-- ===== NAME ===== -->
+            <!-- ========================================================
+            NAME
+            ======================================================== -->
             <div class="name-section">
-                <h1 class="name" data-text="sixhen">sixhen</h1>
+                <h1 class="name" data-text="sixhen" id="displayName">sixhen</h1>
                 <span class="badge-learning">✦ học code</span>
             </div>
 
@@ -1793,37 +2073,73 @@
                 <i class="fas fa-map-pin" aria-hidden="true"></i>
                 <span class="nam-dinh-badge">📍 Nam Định</span>
                 <span class="divider">·</span>
-                <i class="fas fa-calendar" aria-hidden="true"></i> 17
+                <i class="fas fa-calendar" aria-hidden="true"></i> <span id="displayAge">17</span>
                 <span class="divider">·</span>
                 <i class="fas fa-graduation-cap" aria-hidden="true"></i> mới bắt đầu
             </div>
 
-            <!-- ===== CONTACT ===== -->
+            <!-- ========================================================
+            CONTACT
+            ======================================================== -->
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone" aria-hidden="true"></i>
-                    <span class="value">0328 981 323</span>
+                    <span class="value" id="phoneValue">0328 981 323</span>
                     <button class="copy-btn" data-copy="0328 981 323" aria-label="Sao chép số điện thoại">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span class="value">dmh190229@gmail.com</span>
+                    <span class="value" id="emailValue">dmh190229@gmail.com</span>
                     <button class="copy-btn" data-copy="dmh190229@gmail.com" aria-label="Sao chép email">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-discord" aria-hidden="true"></i>
-                    <span class="value">@sixhen</span>
+                    <span class="value" id="discordValue">@sixhen</span>
                     <button class="copy-btn" data-copy="@sixhen" aria-label="Sao chép Discord">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- ===== STATUS BAR ===== -->
+            <!-- ================================================================
+            AUTH SECTION - HỆ THỐNG TÀI KHOẢN
+            ================================================================ -->
+            <div class="auth-section" id="authSection">
+                <div class="auth-header">
+                    <div class="auth-title">
+                        <i class="fas fa-users"></i> Thành viên
+                    </div>
+                    <div class="auth-buttons" id="authButtons">
+                        <button class="auth-btn auth-btn-login" onclick="showLoginModal()">
+                            <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                        </button>
+                        <button class="auth-btn auth-btn-register" onclick="showAuthModal()">
+                            <i class="fas fa-user-plus"></i> Đăng ký
+                        </button>
+                    </div>
+                    <div class="auth-user-info" id="authUserInfo" style="display:none;">
+                        <div class="auth-user-avatar" id="authUserAvatar">S</div>
+                        <div>
+                            <div class="auth-user-name" id="authUserName">sixhen</div>
+                            <div class="auth-user-role" id="authUserRole">👑 Chủ sở hữu</div>
+                        </div>
+                        <button class="auth-btn auth-btn-change-pw" onclick="showChangePasswordModal()" title="Đổi mật khẩu">
+                            <i class="fas fa-key"></i>
+                        </button>
+                        <button class="auth-btn auth-btn-logout" onclick="logoutUser()" title="Đăng xuất">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================
+            STATUS BAR
+            ======================================================== -->
             <div class="status-bar">
                 <div class="status-dot" aria-hidden="true"></div>
                 <div class="status-text">
@@ -1838,7 +2154,9 @@
                 </div>
             </div>
 
-            <!-- ===== BIO ===== -->
+            <!-- ========================================================
+            BIO
+            ======================================================== -->
             <div class="bio">
                 <div class="title">
                     <i class="fas fa-quote-left" aria-hidden="true"></i> về tôi
@@ -1900,7 +2218,9 @@
                 </div>
             </div>
 
-            <!-- ===== PROJECT GALLERY ===== -->
+            <!-- ========================================================
+            PROJECT GALLERY
+            ======================================================== -->
             <div class="gallery-section">
                 <div class="gallery-title">
                     <i class="fas fa-images"></i> Dự án
@@ -1927,7 +2247,9 @@
                 </div>
             </div>
 
-            <!-- ===== VISITOR COUNTER ===== -->
+            <!-- ========================================================
+            VISITOR COUNTER - GỌN NHẸ
+            ======================================================== -->
             <div class="visitor-counter" role="status" aria-label="Lượt xem">
                 <i class="fas fa-eye" aria-hidden="true"></i>
                 <span class="count" id="totalViews">0</span>
@@ -1935,7 +2257,9 @@
                 <span class="label">lượt xem</span>
             </div>
 
-            <!-- ===== BUTTONS ===== -->
+            <!-- ========================================================
+            BUTTONS
+            ======================================================== -->
             <div class="btn-group">
                 <button class="btn btn-facebook" onclick="showModal('Facebook', 'Đang kết nối với Facebook...')">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -1968,50 +2292,47 @@
                 </button>
             </div>
 
-            <!-- ===== SPOTIFY NOW PLAYING ===== -->
-            <div class="spotify-now">
-                <div class="spotify-header">
-                    <i class="fas fa-headphones"></i>
-                    <span>NOW PLAYING</span>
-                    <span class="live-dot"></span>
+            <!-- ========================================================
+            SPOTIFY
+            ======================================================== -->
+            <div class="spotify">
+                <div class="spotify-head">
+                    <i class="fas fa-headphones" aria-hidden="true"></i>
+                    đang nghe
+                    <span class="live-dot" aria-hidden="true"></span>
+                </div>
+                <div class="song">bg.mp3</div>
+                <div class="artist">✦ playlist của sixhen</div>
+
+                <div class="visualizer" id="visualizer">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                    <span class="bar"></span><span class="bar"></span>
                 </div>
 
-                <div class="spotify-track">
-                    <div class="track-artwork">
-                        <i class="fas fa-music"></i>
-                    </div>
-                    <div class="track-info">
-                        <div class="track-name" id="spotifyTrackName">Lofi Chill</div>
-                        <div class="track-artist" id="spotifyArtist">sixhen</div>
-                        <div class="track-album" id="spotifyAlbum">✦ Playlist cá nhân</div>
-                    </div>
-                </div>
-
-                <div class="spotify-progress">
-                    <span class="time" id="spotifyCurrentTime">0:00</span>
-                    <div class="progress-track" id="spotifyProgressTrack">
-                        <div class="progress-fill" id="spotifyProgressFill"></div>
-                    </div>
-                    <span class="time" id="spotifyDuration">3:30</span>
-                </div>
-
-                <div class="spotify-controls">
-                    <button onclick="spotifyPrev()" aria-label="Bài trước">
-                        <i class="fas fa-step-backward"></i>
+                <div class="audio-controls">
+                    <button class="play-btn" id="playBtn" aria-label="Phát/Nhạc">
+                        <i class="fas fa-play" id="playIcon" aria-hidden="true"></i>
                     </button>
-                    <button class="play-btn" id="spotifyPlayBtn" onclick="spotifyToggle()" aria-label="Play/Pause">
-                        <i class="fas fa-play" id="spotifyPlayIcon"></i>
-                    </button>
-                    <button onclick="spotifyNext()" aria-label="Bài tiếp">
-                        <i class="fas fa-step-forward"></i>
-                    </button>
-                    <button onclick="spotifyShuffle()" aria-label="Shuffle" id="spotifyShuffleBtn">
-                        <i class="fas fa-random"></i>
+                    <div class="progress-container" id="progressContainer" role="slider">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="time" id="currentTime">0:00</span>
+                    <button id="muteBtn" aria-label="Tắt/Bật âm thanh">
+                        <i class="fas fa-volume-up" id="muteIcon" aria-hidden="true"></i>
                     </button>
                 </div>
+                <div class="audio-status">
+                    <span class="status-text playing" id="audioStatus">● Đang phát</span>
+                </div>
+                <audio id="bgAudio" loop autoplay>
+                    <source src="assets/bg.mp3" type="audio/mpeg" />
+                </audio>
             </div>
 
-            <!-- ===== QR CODE ===== -->
+            <!-- ========================================================
+            QR CODE
+            ======================================================== -->
             <div class="qr-section">
                 <div class="qr-title">
                     <i class="fas fa-qrcode" aria-hidden="true"></i>
@@ -2026,7 +2347,9 @@
                 </div>
             </div>
 
-            <!-- ===== FOOTER ===== -->
+            <!-- ========================================================
+            FOOTER
+            ======================================================== -->
             <footer class="footer">
                 <i class="fas fa-crown" aria-hidden="true"></i>
                 <span class="text-muted">sixhen</span>
@@ -2043,25 +2366,33 @@
         </section>
     </main>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ================================================================
+    JAVASCRIPT - 700+ dòng
+    ================================================================ -->
     <script>
-        // ===== 1. VIDEO BACKGROUND =====
+        // ================================================================
+        // 1. VIDEO BACKGROUND
+        // ================================================================
         const videoBg = document.getElementById('videoBg');
         videoBg.addEventListener('error', () => console.log('🎬 Video fallback'));
 
-        // ===== 2. LOADING - TĂNG TỐC =====
+        // ================================================================
+        // 2. LOADING
+        // ================================================================
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loading').classList.add('hidden');
                 videoBg.play().catch(() => {});
-            }, 400);
+            }, 600);
         });
 
-        // ===== 3. PARTICLES =====
+        // ================================================================
+        // 3. PARTICLES
+        // ================================================================
         (function initParticles() {
             const container = document.getElementById('particles');
             const isMobile = window.innerWidth < 520;
-            const count = isMobile ? 12 : 20;
+            const count = isMobile ? 15 : 25;
 
             for (let i = 0; i < count; i++) {
                 const p = document.createElement('div');
@@ -2077,7 +2408,9 @@
             }
         })();
 
-        // ===== 4. MOUSE TRAIL =====
+        // ================================================================
+        // 4. MOUSE TRAIL
+        // ================================================================
         let trailTimeout;
         document.addEventListener('mousemove', (e) => {
             if (window.innerWidth < 768) return;
@@ -2090,7 +2423,9 @@
             trailTimeout = setTimeout(() => trail.remove(), 800);
         });
 
-        // ===== 5. 3D CARD =====
+        // ================================================================
+        // 5. 3D CARD
+        // ================================================================
         const card = document.getElementById('mainCard');
         if (window.innerWidth >= 768) {
             card.addEventListener('mousemove', (e) => {
@@ -2104,7 +2439,9 @@
             });
         }
 
-        // ===== 6. AVATAR & BANNER FALLBACK =====
+        // ================================================================
+        // 6. AVATAR & BANNER FALLBACK
+        // ================================================================
         const avatarImg = document.getElementById('avatarImg');
         const avatarFallback = document.getElementById('avatarFallback');
         avatarImg.addEventListener('error', () => {
@@ -2116,8 +2453,10 @@
         bannerImg.addEventListener('error', () => { bannerImg.style.display = 'none'; });
         bannerImg.addEventListener('load', () => { bannerImg.classList.add('loaded'); });
 
-        // ===== 7. TOAST =====
-        function showToast(message, type = 'info', duration = 2500) {
+        // ================================================================
+        // 7. TOAST
+        // ================================================================
+        function showToast(message, type = 'info', duration = 3000) {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             const icons = { success: 'fa-check-circle', error: 'fa-times-circle', warning: 'fa-exclamation-circle',
@@ -2134,7 +2473,9 @@
             }, duration);
         }
 
-        // ===== 8. COPY BUTTONS =====
+        // ================================================================
+        // 8. COPY BUTTONS
+        // ================================================================
         document.querySelectorAll('.copy-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -2163,7 +2504,9 @@
             });
         });
 
-        // ===== 9. RIPPLE =====
+        // ================================================================
+        // 9. RIPPLE
+        // ================================================================
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const rect = this.getBoundingClientRect();
@@ -2178,7 +2521,84 @@
             });
         });
 
-        // ===== 10. TYPING EFFECT =====
+        // ================================================================
+        // 10. AUDIO PLAYER
+        // ================================================================
+        const audio = document.getElementById('bgAudio');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const muteBtn = document.getElementById('muteBtn');
+        const muteIcon = document.getElementById('muteIcon');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const currentTimeEl = document.getElementById('currentTime');
+        const audioStatus = document.getElementById('audioStatus');
+        const visualizer = document.getElementById('visualizer');
+
+        let isPlaying = false,
+            isMuted = false;
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) { audio.pause(); } else { audio.play().catch(() => {}); }
+        });
+
+        audio.addEventListener('play', () => {
+            isPlaying = true;
+            playIcon.className = 'fas fa-pause';
+            audioStatus.textContent = '● Đang phát';
+            audioStatus.className = 'status-text playing';
+            visualizer.classList.remove('paused');
+        });
+
+        audio.addEventListener('pause', () => {
+            isPlaying = false;
+            playIcon.className = 'fas fa-play';
+            audioStatus.textContent = '○ Tạm dừng';
+            audioStatus.className = 'status-text paused';
+            visualizer.classList.add('paused');
+        });
+
+        muteBtn.addEventListener('click', () => {
+            isMuted = !isMuted;
+            audio.muted = isMuted;
+            muteIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = percent + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            if (audio.duration) { audio.currentTime = percent * audio.duration; }
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+
+        let audioInitialized = false;
+
+        function initAudio() {
+            if (audioInitialized) return;
+            audioInitialized = true;
+            audio.play().catch(() => {});
+        }
+        document.addEventListener('DOMContentLoaded', () => { audio.play().catch(() => {}); });
+        document.addEventListener('click', initAudio, { once: true });
+        document.addEventListener('touchstart', initAudio, { once: true });
+
+        // ================================================================
+        // 11. TYPING EFFECT
+        // ================================================================
         function typeWriter() {
             const texts = ['tiền là số 1', 'kiếm tiền là số 1', '💰 là số 1', 'từ Nam Định', '💰 + code = giàu'];
             let textIndex = 0,
@@ -2210,7 +2630,9 @@
         }
         window.addEventListener('load', typeWriter);
 
-        // ===== 11. LIVE CLOCK =====
+        // ================================================================
+        // 12. LIVE CLOCK
+        // ================================================================
         function updateClock() {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
@@ -2221,7 +2643,9 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        // ===== 12. VISITOR COUNTER =====
+        // ================================================================
+        // 13. VISITOR COUNTER - GỌN NHẸ
+        // ================================================================
         async function updateVisitorCount() {
             try {
                 let totalViews = parseInt(localStorage.getItem('sixhen_views_total')) || 0;
@@ -2247,7 +2671,9 @@
 
         updateVisitorCount();
 
-        // ===== 13. THEME TOGGLE =====
+        // ================================================================
+        // 14. THEME TOGGLE
+        // ================================================================
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
 
@@ -2269,7 +2695,9 @@
             themeIcon.className = 'fas fa-sun';
         }
 
-        // ===== 14. MODAL =====
+        // ================================================================
+        // 15. MODAL SYSTEM
+        // ================================================================
         const modalOverlay = document.getElementById('modalOverlay');
         const modalTitle = document.getElementById('modalTitle');
         const modalBody = document.getElementById('modalBody');
@@ -2304,7 +2732,9 @@
         modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-        // ===== 15. PROJECT GALLERY =====
+        // ================================================================
+        // 16. PROJECT GALLERY
+        // ================================================================
         function showProject(name, description) {
             showModal(
                 `📁 ${name}`,
@@ -2320,22 +2750,24 @@
             );
         }
 
-        // ===== 16. CONTACT FORM =====
+        // ================================================================
+        // 17. CONTACT FORM
+        // ================================================================
         function showContactForm() {
             showModal(
                 '📧 Liên hệ',
                 `
-                <div class="form-group" style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Tên</label>
-                    <input type="text" id="contactName" placeholder="Nhập tên..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
+                <div class="form-group">
+                    <label>Tên</label>
+                    <input type="text" id="contactName" placeholder="Nhập tên..." />
                 </div>
-                <div class="form-group" style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Email</label>
-                    <input type="email" id="contactEmail" placeholder="Nhập email..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="contactEmail" placeholder="Nhập email..." />
                 </div>
-                <div class="form-group" style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Nội dung</label>
-                    <textarea id="contactMessage" placeholder="Tin nhắn..." rows="4" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;resize:vertical;min-height:70px;"></textarea>
+                <div class="form-group">
+                    <label>Nội dung</label>
+                    <textarea id="contactMessage" placeholder="Tin nhắn..." rows="4"></textarea>
                 </div>
                 `,
                 'Gửi',
@@ -2357,122 +2789,341 @@
             );
         }
 
-        // ===== 17. SPOTIFY NOW PLAYING =====
-        const spotifyPlaylist = [
-            { name: 'Lofi Chill', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Coding Beats', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Study Focus', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Night Drive', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Dreamy Vibes', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-        ];
+        // ================================================================
+        // 18. HỆ THỐNG TÀI KHOẢN - BẢO MẬT NÂNG CAO
+        // ================================================================
 
-        let spotifyIndex = 0;
-        let spotifyPlaying = false;
-        let spotifyProgress = 0;
-        let spotifyInterval = null;
-        let spotifyShuffle = false;
-
-        function loadSpotifyTrack(index) {
-            const track = spotifyPlaylist[index];
-            document.getElementById('spotifyTrackName').textContent = track.name;
-            document.getElementById('spotifyArtist').textContent = track.artist;
-            document.getElementById('spotifyAlbum').textContent = track.album;
-            spotifyProgress = 0;
-            document.getElementById('spotifyProgressFill').style.width = '0%';
-            document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            document.getElementById('spotifyDuration').textContent = '3:30';
+        // Mã hóa mật khẩu
+        function hashPassword(password) {
+            let hash = 0;
+            for (let i = 0; i < password.length; i++) {
+                const char = password.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return 'hashed_' + Math.abs(hash).toString(36);
         }
 
-        function spotifyToggle() {
-            const btn = document.getElementById('spotifyPlayBtn');
-            const icon = document.getElementById('spotifyPlayIcon');
+        function verifyPassword(input, hashed) {
+            return hashPassword(input) === hashed;
+        }
 
-            spotifyPlaying = !spotifyPlaying;
-            if (spotifyPlaying) {
-                icon.className = 'fas fa-pause';
-                btn.classList.add('playing');
-                spotifyInterval = setInterval(() => {
-                    spotifyProgress += 0.5;
-                    if (spotifyProgress >= 100) {
-                        spotifyProgress = 0;
-                        spotifyNext();
+        // Khởi tạo users
+        let users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
+
+        if (users.length === 0) {
+            const ownerPassword = 'Sixhen@2026';
+            users.push({
+                id: 'admin',
+                username: 'sixhen',
+                password: hashPassword(ownerPassword),
+                name: 'sixhen',
+                email: 'dmh190229@gmail.com',
+                age: '17',
+                role: 'owner',
+                avatar: 'S',
+                created: new Date().toISOString(),
+                lastLogin: null,
+                passwordChanged: false
+            });
+            localStorage.setItem('sixhen_users', JSON.stringify(users));
+            console.log('🔐 Tài khoản owner: sixhen / Sixhen@2026');
+        }
+
+        let currentUser = JSON.parse(sessionStorage.getItem('sixhen_current_user')) || null;
+
+        function loginUser(username, password) {
+            const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
+            const user = users.find(u => u.username === username);
+
+            if (!user) {
+                return { success: false, message: '❌ Tên đăng nhập không tồn tại!' };
+            }
+
+            if (verifyPassword(password, user.password)) {
+                user.lastLogin = new Date().toISOString();
+                localStorage.setItem('sixhen_users', JSON.stringify(users));
+
+                if (!user.passwordChanged && user.role === 'owner') {
+                    return {
+                        success: true,
+                        user: user,
+                        requireChange: true,
+                        message: '🔐 Vui lòng đổi mật khẩu để bảo mật hơn!'
+                    };
+                }
+
+                return { success: true, user: user };
+            }
+
+            return { success: false, message: '❌ Sai mật khẩu!' };
+        }
+
+        function changePassword(username, oldPassword, newPassword) {
+            const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
+            const userIndex = users.findIndex(u => u.username === username);
+
+            if (userIndex === -1) {
+                return { success: false, message: '❌ Không tìm thấy tài khoản!' };
+            }
+
+            const user = users[userIndex];
+
+            if (!verifyPassword(oldPassword, user.password)) {
+                return { success: false, message: '❌ Mật khẩu cũ không đúng!' };
+            }
+
+            if (newPassword.length < 8) {
+                return { success: false, message: '⚠️ Mật khẩu mới phải có ít nhất 8 ký tự!' };
+            }
+
+            users[userIndex].password = hashPassword(newPassword);
+            users[userIndex].passwordChanged = true;
+            localStorage.setItem('sixhen_users', JSON.stringify(users));
+
+            return { success: true, message: '✅ Đổi mật khẩu thành công!' };
+        }
+
+        function updateAuthUI() {
+            const authButtons = document.getElementById('authButtons');
+            const authUserInfo = document.getElementById('authUserInfo');
+            const authUserName = document.getElementById('authUserName');
+            const authUserAvatar = document.getElementById('authUserAvatar');
+            const authUserRole = document.getElementById('authUserRole');
+            const displayUsername = document.getElementById('displayUsername');
+            const displayName = document.getElementById('displayName');
+            const displayAge = document.getElementById('displayAge');
+
+            if (currentUser) {
+                authButtons.style.display = 'none';
+                authUserInfo.style.display = 'flex';
+                authUserName.textContent = currentUser.name || currentUser.username;
+                authUserAvatar.textContent = (currentUser.name || currentUser.username)[0].toUpperCase();
+                authUserRole.textContent = currentUser.role === 'owner' ? '👑 Chủ sở hữu' : '👤 Thành viên';
+                displayUsername.textContent = '@' + currentUser.username;
+                displayName.textContent = currentUser.name || currentUser.username;
+                displayAge.textContent = currentUser.age || '17';
+            } else {
+                authButtons.style.display = 'flex';
+                authUserInfo.style.display = 'none';
+                displayUsername.textContent = '@sixhen';
+                displayName.textContent = 'sixhen';
+                displayAge.textContent = '17';
+            }
+        }
+
+        function showAuthModal() {
+            showModal(
+                '📝 Đăng ký tài khoản',
+                `
+                <div class="form-group">
+                    <label>Tên đăng nhập *</label>
+                    <input type="text" id="regUsername" placeholder="Chọn tên đăng nhập..." />
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu *</label>
+                    <input type="password" id="regPassword" placeholder="Nhập mật khẩu (≥ 8 ký tự)..." />
+                </div>
+                <div class="form-group">
+                    <label>Tên hiển thị</label>
+                    <input type="text" id="regName" placeholder="Tên của bạn..." />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="Email..." />
+                </div>
+                <div class="form-group">
+                    <label>Tuổi</label>
+                    <input type="number" id="regAge" placeholder="Tuổi..." />
+                </div>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
+                    <i class="fas fa-info-circle"></i> Mật khẩu nên có chữ hoa, chữ thường, số và ký tự đặc biệt
+                </div>
+                `,
+                'Đăng ký',
+                'Hủy',
+                () => {
+                    const username = document.getElementById('regUsername')?.value.trim();
+                    const password = document.getElementById('regPassword')?.value.trim();
+                    const name = document.getElementById('regName')?.value.trim() || username;
+                    const email = document.getElementById('regEmail')?.value.trim() || '';
+                    const age = document.getElementById('regAge')?.value.trim() || '';
+
+                    if (!username || !password) {
+                        showToast('⚠️ Vui lòng nhập tên và mật khẩu!', 'warning');
+                        return;
                     }
-                    document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
-                    const seconds = Math.floor((spotifyProgress / 100) * 210);
-                    document.getElementById('spotifyCurrentTime').textContent =
-                        Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
-                }, 300);
-                showToast('🎵 Đang phát: ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
-            } else {
-                icon.className = 'fas fa-play';
-                btn.classList.remove('playing');
-                clearInterval(spotifyInterval);
-            }
+
+                    if (username.length < 3) {
+                        showToast('⚠️ Tên phải có ít nhất 3 ký tự!', 'warning');
+                        return;
+                    }
+
+                    if (password.length < 8) {
+                        showToast('⚠️ Mật khẩu phải có ít nhất 8 ký tự!', 'warning');
+                        return;
+                    }
+
+                    const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
+                    if (users.find(u => u.username === username)) {
+                        showToast('⚠️ Tên đăng nhập đã tồn tại!', 'warning');
+                        return;
+                    }
+
+                    const newUser = {
+                        id: Date.now().toString(),
+                        username,
+                        password: hashPassword(password),
+                        name,
+                        email,
+                        age,
+                        role: 'user',
+                        avatar: (name || username)[0].toUpperCase(),
+                        created: new Date().toISOString(),
+                        lastLogin: null,
+                        passwordChanged: true
+                    };
+
+                    users.push(newUser);
+                    localStorage.setItem('sixhen_users', JSON.stringify(users));
+
+                    currentUser = newUser;
+                    sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    closeModal();
+                    showToast('🎉 Đăng ký thành công!', 'success');
+                }
+            );
         }
 
-        function spotifyNext() {
-            if (spotifyShuffle) {
-                let newIndex;
-                do {
-                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
-                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
-                spotifyIndex = newIndex;
-            } else {
-                spotifyIndex = (spotifyIndex + 1) % spotifyPlaylist.length;
-            }
-            loadSpotifyTrack(spotifyIndex);
-            if (spotifyPlaying) {
-                spotifyProgress = 0;
-                document.getElementById('spotifyProgressFill').style.width = '0%';
-                document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            }
-            showToast('⏭️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
+        function showLoginModal() {
+            showModal(
+                '🔑 Đăng nhập',
+                `
+                <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" id="loginUsername" placeholder="Nhập tên đăng nhập..." />
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="loginPassword" placeholder="Nhập mật khẩu..." />
+                </div>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
+                    <i class="fas fa-info-circle"></i> Tài khoản mặc định: sixhen / Sixhen@2026
+                </div>
+                `,
+                'Đăng nhập',
+                'Hủy',
+                () => {
+                    const username = document.getElementById('loginUsername')?.value.trim();
+                    const password = document.getElementById('loginPassword')?.value.trim();
+
+                    if (!username || !password) {
+                        showToast('⚠️ Vui lòng nhập đầy đủ!', 'warning');
+                        return;
+                    }
+
+                    const result = loginUser(username, password);
+
+                    if (!result.success) {
+                        showToast(result.message, 'error');
+                        return;
+                    }
+
+                    currentUser = result.user;
+                    sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    closeModal();
+                    showToast(`👋 Chào mừng ${result.user.name || result.user.username}!`, 'success');
+
+                    if (result.requireChange) {
+                        setTimeout(() => {
+                            showToast('🔐 Vui lòng đổi mật khẩu để bảo mật!', 'warning', 5000);
+                            setTimeout(showChangePasswordModal, 1500);
+                        }, 1000);
+                    }
+                }
+            );
         }
 
-        function spotifyPrev() {
-            if (spotifyShuffle) {
-                let newIndex;
-                do {
-                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
-                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
-                spotifyIndex = newIndex;
-            } else {
-                spotifyIndex = (spotifyIndex - 1 + spotifyPlaylist.length) % spotifyPlaylist.length;
+        function showChangePasswordModal() {
+            if (!currentUser) {
+                showToast('⚠️ Vui lòng đăng nhập trước!', 'warning');
+                return;
             }
-            loadSpotifyTrack(spotifyIndex);
-            if (spotifyPlaying) {
-                spotifyProgress = 0;
-                document.getElementById('spotifyProgressFill').style.width = '0%';
-                document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            }
-            showToast('⏮️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
+
+            showModal(
+                '🔐 Đổi mật khẩu',
+                `
+                <div class="form-group">
+                    <label>Mật khẩu cũ</label>
+                    <input type="password" id="oldPassword" placeholder="Nhập mật khẩu cũ..." />
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu mới</label>
+                    <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới (≥ 8 ký tự)..." />
+                </div>
+                <div class="form-group">
+                    <label>Xác nhận mật khẩu mới</label>
+                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới..." />
+                </div>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
+                    <i class="fas fa-info-circle"></i> Mật khẩu nên có: chữ hoa, chữ thường, số, ký tự đặc biệt
+                </div>
+                `,
+                'Đổi mật khẩu',
+                'Hủy',
+                () => {
+                    const oldPwd = document.getElementById('oldPassword')?.value || '';
+                    const newPwd = document.getElementById('newPassword')?.value || '';
+                    const confirmPwd = document.getElementById('confirmPassword')?.value || '';
+
+                    if (!oldPwd || !newPwd || !confirmPwd) {
+                        showToast('⚠️ Vui lòng điền đầy đủ!', 'warning');
+                        return;
+                    }
+
+                    if (newPwd !== confirmPwd) {
+                        showToast('⚠️ Mật khẩu mới không khớp!', 'warning');
+                        return;
+                    }
+
+                    if (newPwd.length < 8) {
+                        showToast('⚠️ Mật khẩu phải có ít nhất 8 ký tự!', 'warning');
+                        return;
+                    }
+
+                    const result = changePassword(currentUser.username, oldPwd, newPwd);
+
+                    if (result.success) {
+                        showToast(result.message, 'success');
+                        closeModal();
+
+                        const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
+                        const updatedUser = users.find(u => u.username === currentUser.username);
+                        if (updatedUser) {
+                            currentUser = updatedUser;
+                            sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
+                        }
+                    } else {
+                        showToast(result.message, 'error');
+                    }
+                }
+            );
         }
 
-        function spotifyShuffle() {
-            spotifyShuffle = !spotifyShuffle;
-            const btn = document.getElementById('spotifyShuffleBtn');
-            if (spotifyShuffle) {
-                btn.style.color = '#1db954';
-                showToast('🔀 Shuffle: BẬT', 'success', 1500);
-            } else {
-                btn.style.color = '';
-                showToast('🔀 Shuffle: TẮT', 'info', 1500);
-            }
+        function logoutUser() {
+            currentUser = null;
+            sessionStorage.removeItem('sixhen_current_user');
+            updateAuthUI();
+            showToast('👋 Đã đăng xuất!', 'info');
         }
 
-        document.getElementById('spotifyProgressTrack').addEventListener('click', (e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const percent = ((e.clientX - rect.left) / rect.width) * 100;
-            spotifyProgress = Math.max(0, Math.min(100, percent));
-            document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
-            const seconds = Math.floor((spotifyProgress / 100) * 210);
-            document.getElementById('spotifyCurrentTime').textContent =
-                Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
-        });
+        updateAuthUI();
 
-        loadSpotifyTrack(0);
-
-        // ===== 18. KEYBOARD SHORTCUTS =====
+        // ================================================================
+        // 19. KEYBOARD SHORTCUTS
+        // ================================================================
         document.addEventListener('keydown', (e) => {
             if (e.ctrlKey && e.key === 'k') {
                 e.preventDefault();
@@ -2480,12 +3131,31 @@
                     '⌨️ Phím tắt',
                     `
                     <p><strong>Ctrl + K</strong> - Trợ giúp</p>
-                    <p><strong>Ctrl + D</strong> - Dark/Light mode</p>
-                    <p><strong>Space</strong> - Play/Pause nhạc</p>
+                    <p><strong>Ctrl + 1</strong> - Play/Pause nhạc</p>
+                    <p><strong>Ctrl + Shift + M</strong> - Modal test</p>
                     <p><strong>Escape</strong> - Đóng modal</p>
+                    <p><strong>Ctrl + D</strong> - Dark/Light mode</p>
+                    <p><strong>Ctrl + L</strong> - Đăng nhập nhanh</p>
                     `,
                     'OK',
                     'Đóng'
+                );
+            }
+
+            if (e.ctrlKey && e.key === '1') {
+                e.preventDefault();
+                playBtn.click();
+                showToast(`🎵 ${isPlaying ? 'Tạm dừng' : 'Đang phát'}`, 'info', 1500);
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+                e.preventDefault();
+                showModal(
+                    '🎯 Modal Test',
+                    `<p>Modal test thành công!</p><br><p><strong>✅ Tính năng:</strong> Đẹp, mượt, dễ dùng</p>`,
+                    'Tuyệt',
+                    'Đóng',
+                    () => showToast('🎉 Test thành công!', 'success')
                 );
             }
 
@@ -2494,34 +3164,51 @@
                 themeToggle.click();
             }
 
-            if (e.key === ' ' && !e.target.closest('input') && !e.target.closest('textarea')) {
+            if (e.ctrlKey && e.key === 'l') {
                 e.preventDefault();
-                spotifyToggle();
+                if (currentUser) {
+                    showToast('👋 Bạn đã đăng nhập rồi!', 'info');
+                } else {
+                    showLoginModal();
+                }
             }
         });
 
-        // ===== 19. REDUCED MOTION =====
+        // ================================================================
+        // 20. REDUCED MOTION
+        // ================================================================
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.querySelectorAll('.particle').forEach(el => el.remove());
             document.querySelectorAll('.shape').forEach(el => el.remove());
             document.querySelectorAll('.floating-emoji').forEach(el => el.remove());
+            document.querySelectorAll('.mouse-trail').forEach(el => el.remove());
         }
 
-        // ===== 20. CONSOLE =====
+        // ================================================================
+        // 21. CONSOLE
+        // ================================================================
         console.log('🚀 sixhen · Developer Portfolio');
         console.log('💰 Tiền là số 1, code là số 2');
         console.log('📍 Nam Định - quê hương tôi');
         console.log('📱 17 tuổi - đang học code');
         console.log('👁️ Visitor: 1 IP = 1 view');
-        console.log('🎵 Spotify: ' + spotifyPlaylist.length + ' bài hát');
-        console.log('✅ Portfolio đã sẵn sàng!');
+        console.log('👤 Users: ' + JSON.parse(localStorage.getItem('sixhen_users') || '[]').length + ' tài khoản');
+        console.log('🔑 Đăng nhập: sixhen / Sixhen@2026');
 
-        // ===== 21. WELCOME =====
+        // ================================================================
+        // 22. WELCOME
+        // ================================================================
         window.addEventListener('load', () => {
             setTimeout(() => {
-                showToast('🚀 Chào mừng đến với portfolio của tôi!', 'success', 3000);
-            }, 1200);
+                if (!currentUser) {
+                    showToast('🚀 Chào mừng! Đăng ký để tạo profile riêng', 'info', 4000);
+                } else {
+                    showToast(`👋 Chào mừng ${currentUser.name || currentUser.username}!`, 'success', 3000);
+                }
+            }, 1500);
         });
+
+        console.log('✅ Portfolio đã sẵn sàng!');
     </script>
 </body>
 </html>
