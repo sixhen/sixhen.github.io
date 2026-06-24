@@ -2,2435 +2,2128 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>sixhen · Developer Portfolio · Nam Định</title>
-
-    <!-- SEO -->
-    <meta name="description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
-    <meta name="keywords" content="sixhen, developer, Nam Định, 17 tuổi, học code, HTML, CSS, JavaScript, portfolio" />
-    <meta property="og:title" content="sixhen · Developer Portfolio · Nam Định" />
-    <meta property="og:description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
-    <meta property="og:image" content="https://sixhen.github.io/assets/avatar.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sixhen.github.io" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/Favicon.ico" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔥 SIXHEN Rate Face V3 - PSL Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
-        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
-
         :root {
-            --primary: #5865f2;
-            --primary-dark: #4752d4;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
-            --gold: #f59e0b;
-            --bg-dark: #0a0a0f;
-            --bg-card: rgba(10, 10, 20, 0.75);
+            --bg-primary: #0a0a1a;
+            --bg-glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.06);
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --text-muted: #475569;
-            --border-color: rgba(255, 255, 255, 0.05);
-            --shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
-            --radius: 40px;
-            --transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --accent-blue: #60a5fa;
+            --accent-purple: #a78bfa;
+            --accent-pink: #f472b6;
+            --accent-green: #34d399;
+            --accent-yellow: #fbbf24;
+            --accent-red: #f87171;
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --radius: 16px;
         }
-
         body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             min-height: 100vh;
-            padding: 20px;
-            background: var(--bg-dark);
+            padding: 16px;
+            line-height: 1.6;
+        }
+        .glass {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-glass);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            padding: 18px 28px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            position: relative;
-            overflow: hidden;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
         }
-
-        /* ===== VIDEO BACKGROUND ===== */
-        .video-bg {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            pointer-events: none;
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-
-        .video-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background: rgba(10, 10, 15, 0.6);
-            pointer-events: none;
-            backdrop-filter: blur(2px);
+        .logo i {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 26px;
         }
-
-        .video-gradient {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background:
-                radial-gradient(ellipse at 10% 20%, rgba(88, 101, 242, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.06) 0%, transparent 50%);
-            pointer-events: none;
+        .logo span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        /* ===== FLOATING SHAPES ===== */
-        .floating-shapes {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
+        .badge-v3 {
+            font-size: 9px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+            padding: 2px 12px;
+            border-radius: 40px;
+            -webkit-text-fill-color: #fff;
         }
-
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.03;
-            animation: shapeFloat 25s ease-in-out infinite;
+        .btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            border: 1px solid var(--border-glass);
         }
-
-        .shape-1 {
-            width: 500px;
-            height: 500px;
-            background: var(--primary);
-            top: -150px;
-            left: -150px;
-            animation-delay: 0s;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
         }
-
-        .shape-2 {
-            width: 350px;
-            height: 350px;
-            background: var(--accent);
-            bottom: -100px;
-            right: -100px;
-            animation-delay: -8s;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: #fff;
+            border: none;
         }
-
-        .shape-3 {
-            width: 250px;
-            height: 250px;
-            background: var(--secondary);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -16s;
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(96, 165, 250, 0.3);
         }
-
-        @keyframes shapeFloat {
-            0%,
-            100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(60px, -40px) scale(1.15); }
-            66% { transform: translate(-30px, 40px) scale(0.85); }
+        .btn-success {
+            background: linear-gradient(135deg, var(--accent-green), #059669);
+            color: #fff;
+            border: none;
         }
-
-        /* ===== FLOATING EMOJI ===== */
-        .floating-emoji {
-            position: fixed;
-            font-size: 25px;
-            opacity: 0.05;
-            pointer-events: none;
-            animation: floatEmoji 25s linear infinite;
-            z-index: 0;
+        .btn-danger {
+            background: linear-gradient(135deg, var(--accent-red), #ef4444);
+            color: #fff;
+            border: none;
         }
-
-        .floating-emoji:nth-child(1) { left: 5%; animation-duration: 28s; font-size: 35px; }
-        .floating-emoji:nth-child(2) { left: 25%; animation-duration: 32s; animation-delay: -6s; }
-        .floating-emoji:nth-child(3) { left: 50%; animation-duration: 24s; animation-delay: -12s; font-size: 40px; }
-        .floating-emoji:nth-child(4) { left: 75%; animation-duration: 30s; animation-delay: -18s; }
-        .floating-emoji:nth-child(5) { left: 90%; animation-duration: 26s; animation-delay: -8s; }
-
-        @keyframes floatEmoji {
-            0% { transform: translateY(110vh) rotate(0deg) scale(0); opacity: 0; }
-            10% { opacity: 0.05; }
-            90% { opacity: 0.05; }
-            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
         }
-
-        /* ===== PARTICLES ===== */
-        #particles {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 12px;
         }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            animation: floatParticle linear infinite;
-            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.12), transparent);
-        }
-
-        @keyframes floatParticle {
-            0% { transform: translateY(110vh) translateX(0) scale(0); opacity: 0; }
-            10% { opacity: 0.3; }
-            90% { opacity: 0.3; }
-            100% { transform: translateY(-10vh) translateX(20px) scale(1); opacity: 0; }
-        }
-
-        /* ===== SCROLLBAR ===== */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: rgba(88, 101, 242, 0.3); border-radius: 10px; }
-
-        /* ===== CARD ===== */
-        .card {
-            position: relative;
-            z-index: 10;
-            width: 500px;
-            max-width: 100%;
-            max-height: 95vh;
-            overflow-y: auto;
-            background: var(--bg-card);
-            backdrop-filter: blur(40px) saturate(1.6);
-            -webkit-backdrop-filter: blur(40px) saturate(1.6);
+        .upload-area {
+            padding: 44px 20px;
+            text-align: center;
+            border: 2px dashed var(--border-glass);
             border-radius: var(--radius);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow), 0 0 0 1px rgba(88, 101, 242, 0.08) inset;
-            animation: fadeUp 0.6s ease;
-            scroll-behavior: smooth;
-            transition: transform 0.3s ease;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 20px;
         }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius);
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(88, 101, 242, 0.2), transparent 30%, transparent 70%, rgba(236, 72, 153, 0.15));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-            animation: shimmerBorder 6s ease-in-out infinite;
+        .upload-area:hover {
+            border-color: var(--accent-blue);
+            background: rgba(96, 165, 250, 0.04);
         }
-
-        @keyframes shimmerBorder {
-            0%,
-            100% { opacity: 0.3; }
-            50% { opacity: 1; }
+        .upload-area.dragover {
+            border-color: var(--accent-purple);
+            background: rgba(167, 139, 250, 0.06);
         }
-
-        .card::-webkit-scrollbar { width: 3px; }
-        .card::-webkit-scrollbar-thumb { background: rgba(88, 101, 242, 0.2); border-radius: 10px; }
-
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(30px) scale(0.97); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
+        .upload-area i {
+            font-size: 44px;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
         }
-
-        /* ===== BANNER ===== */
-        .banner {
-            height: 160px;
+        .upload-area h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        .upload-area p {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+        .upload-area input {
+            display: none;
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width:720px) {
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .preview-box {
+            padding: 14px;
+            min-height: 240px;
             position: relative;
-            overflow: hidden;
-            border-radius: var(--radius) var(--radius) 0 0;
         }
-
-        .banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .banner-img.loaded { transform: scale(1.05); }
-        .banner-img:not([src]) { display: none; }
-
-        .banner-fallback {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0a0a0f);
-            position: absolute;
-            inset: 0;
-        }
-
-        .banner-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg,
-                    transparent 0%,
-                    rgba(10, 10, 20, 0.3) 40%,
-                    rgba(10, 10, 20, 0.85) 100%);
-            pointer-events: none;
-        }
-
-        .banner-glow {
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 80px;
-            background: radial-gradient(ellipse at center, rgba(88, 101, 242, 0.15), transparent 70%);
-            filter: blur(40px);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .banner-status {
-            position: absolute;
-            bottom: 18px;
-            right: 20px;
-            z-index: 2;
+        .preview-box .label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 14px 6px 10px;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(8px);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
         }
-
-        .banner-status .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #23a55a;
-            animation: pulseDot 1.5s infinite;
+        .preview-box img,
+        .preview-box canvas {
+            width: 100%;
+            border-radius: 10px;
+            display: none;
+            max-height: 380px;
+            object-fit: contain;
         }
-
-        @keyframes pulseDot {
-            0%,
-            100% { opacity: 1; }
-            50% { opacity: 0.3; }
+        .preview-box img.show,
+        .preview-box canvas.show {
+            display: block;
         }
-
-        .banner-status span {
+        .preview-box .placeholder {
             color: var(--text-secondary);
-            font-size: 11px;
+            text-align: center;
+            padding: 40px 16px;
+            font-size: 13px;
+        }
+        .preview-box .placeholder i {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .status-bar {
+            padding: 12px 18px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            border-radius: 10px;
+            display: none;
+        }
+        .status-bar.show {
+            display: block;
+        }
+        .status-bar.loading {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            color: var(--accent-blue);
+        }
+        .status-bar.success {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+        }
+        .status-bar.error {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+        }
+        .status-bar.warning {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            color: var(--accent-yellow);
+        }
+        .status-bar .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        #resultsContainer {
+            display: none;
+        }
+        #resultsContainer.show {
+            display: block;
+            animation: fadeUp 0.5s ease;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .result-main {
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .score-display {
+            text-align: center;
+            padding: 10px 0 16px;
+        }
+        .score-display .number {
+            font-size: 60px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .score-display .label {
+            font-size: 16px;
+            color: var(--text-secondary);
             font-weight: 500;
         }
-
-        .banner-top-right {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            z-index: 5;
-            display: flex;
-            gap: 8px;
+        .score-display .tier {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 2px;
         }
-
-        .theme-toggle-btn {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .score-display .tier .emoji {
+            font-size: 28px;
+        }
+        .score-display .psl-tier {
+            font-size: 24px;
+            font-weight: 900;
+            margin-top: 4px;
+            padding: 4px 20px;
+            display: inline-block;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+        }
+        .score-display .confidence {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .score-display .top-percent {
+            font-size: 14px;
+            color: var(--accent-green);
+            margin-top: 2px;
+        }
+        .score-display .warning-msg {
+            font-size: 13px;
+            color: var(--accent-yellow);
+            margin-top: 4px;
+            padding: 8px 16px;
+            background: rgba(251, 191, 36, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        .tier-psl-9 {
+            color: #fcd34d;
+            background: rgba(252, 211, 77, 0.15);
+            border-color: #fcd34d;
+        }
+        .tier-psl-8 {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.15);
+            border-color: #34d399;
+        }
+        .tier-psl-7 {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.15);
+            border-color: #60a5fa;
+        }
+        .tier-psl-6 {
+            color: #a78bfa;
+            background: rgba(167, 139, 250, 0.15);
+            border-color: #a78bfa;
+        }
+        .tier-psl-5 {
+            color: #fbbf24;
+            background: rgba(251, 191, 36, 0.15);
+            border-color: #fbbf24;
+        }
+        .tier-psl-4 {
+            color: #f87171;
+            background: rgba(248, 113, 113, 0.15);
+            border-color: #f87171;
+        }
+        .tier-psl-3 {
+            color: #475569;
+            background: rgba(71, 85, 105, 0.15);
+            border-color: #475569;
+        }
+        .sub-scores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .sub-score-item {
+            background: var(--bg-glass);
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+            text-align: center;
+        }
+        .sub-score-item .value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .sub-score-item .value.good {
+            color: var(--accent-green);
+        }
+        .sub-score-item .value.avg {
+            color: var(--accent-yellow);
+        }
+        .sub-score-item .value.bad {
+            color: var(--accent-red);
+        }
+        .sub-score-item .label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .divider {
+            border: none;
+            height: 1px;
+            background: var(--border-glass);
+            margin: 14px 0;
+        }
+        .face-shape-badge {
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(167, 139, 250, 0.12);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            color: var(--accent-purple);
+            margin-top: 4px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .info-item {
+            padding: 10px 14px;
+            background: var(--bg-glass);
+            border-radius: 8px;
+            border: 1px solid var(--border-glass);
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info-item .key {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        .info-item .val {
+            font-weight: 600;
             color: var(--text-primary);
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s;
-            backdrop-filter: blur(8px);
+        }
+        .info-item .val.positive {
+            color: var(--accent-green);
+        }
+        .info-item .val.negative {
+            color: var(--accent-red);
+        }
+        .info-item .val.neutral {
+            color: var(--accent-yellow);
+        }
+        .thirds-display {
+            display: flex;
+            gap: 4px;
+            margin: 8px 0;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--bg-glass);
+        }
+        .thirds-display .segment {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+        .halo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        @media (max-width:480px) {
+            .halo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .halo-box {
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+        }
+        .halo-box strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .halo-box ul {
+            list-style: none;
+            padding: 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .halo-box ul li {
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .halo-box.halo {
+            border-left: 3px solid var(--accent-green);
+        }
+        .halo-box.failo {
+            border-left: 3px solid var(--accent-red);
+        }
+        .rec-box {
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 12px 0;
+            background: rgba(96, 165, 250, 0.04);
+            border-left: 3px solid var(--accent-blue);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        .rec-box strong {
+            color: var(--accent-blue);
+        }
+        .rec-box ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 6px;
+        }
+        .rec-box ul li {
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .history-section {
+            padding: 18px 20px;
+            margin-top: 16px;
+        }
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .history-header h3 {
             font-size: 16px;
             display: flex;
             align-items: center;
-            justify-content: center;
-        }
-
-        .theme-toggle-btn:hover {
-            background: rgba(88, 101, 242, 0.2);
-            transform: rotate(30deg) scale(1.1);
-        }
-
-        /* ===== PROFILE ===== */
-        .profile {
-            padding: 0 28px 28px;
-            position: relative;
-            margin-top: -40px;
-        }
-
-        /* ===== AVATAR ===== */
-        .avatar-wrapper {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin-top: -50px;
-            z-index: 5;
-            flex-shrink: 0;
-            perspective: 1000px;
-        }
-
-        .avatar-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: -20px;
-            border-radius: 50%;
-            background: radial-gradient(circle at center, rgba(88, 101, 242, 0.25), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            filter: blur(30px);
-            z-index: -1;
-        }
-
-        .avatar-wrapper:hover::before { opacity: 1; }
-
-        .avatar-ring {
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--primary));
-            background-size: 200% 200%;
-            animation: ringRotate 4s ease-in-out infinite;
-            padding: 3px;
-        }
-
-        @keyframes ringRotate {
-            0%,
-            100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .avatar-ring-inner {
-            border-radius: 50%;
-            overflow: hidden;
-            background: var(--bg-dark);
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            transform-style: preserve-3d;
-        }
-
-        .avatar-wrapper:hover .avatar-ring-inner {
-            transform: rotateY(10deg) rotateX(5deg) scale(1.02);
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .avatar-wrapper:hover .avatar { transform: scale(1.05); }
-
-        .avatar-fallback {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: 700;
-            color: white;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .avatar-wrapper:hover .avatar-fallback {
-            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-        }
-
-        .online-badge {
-            position: absolute;
-            right: 2px;
-            bottom: 2px;
-            width: 28px;
-            height: 28px;
-            background: #23a55a;
-            border-radius: 50%;
-            border: 3px solid var(--bg-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 20px rgba(35, 165, 90, 0.2);
-            z-index: 6;
-        }
-
-        .online-badge i { font-size: 12px; color: white; }
-
-        /* ===== USERNAME & NAME ===== */
-        .username-tag {
-            text-align: center;
-            margin-top: 8px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .username-tag i { color: var(--primary); margin-right: 4px; }
-        .username-tag .highlight { color: var(--text-primary); font-weight: 500; }
-
-        .name-section {
-            margin-top: 8px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .name {
-            font-size: 38px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #f1f5f9 0%, #8b9cf7 50%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: textShimmer 4s ease-in-out infinite;
-            letter-spacing: -0.5px;
-            position: relative;
-        }
-
-        .name::before,
-        .name::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .name::before {
-            background: linear-gradient(135deg, var(--accent), var(--accent));
-            animation: glitchBefore 4s infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-            transform: translate(-2px, -2px);
-        }
-
-        .name::after {
-            background: linear-gradient(135deg, var(--secondary), var(--secondary));
-            animation: glitchAfter 4s infinite;
-            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-            transform: translate(2px, 2px);
-        }
-
-        @keyframes glitchBefore {
-            0%, 90%, 100% { opacity: 0; transform: translate(-2px, -2px); }
-            92% { opacity: 1; transform: translate(-2px, -2px); }
-            94% { opacity: 0; transform: translate(2px, 2px); }
-            96% { opacity: 1; transform: translate(-1px, -1px); }
-            98% { opacity: 0; transform: translate(1px, 1px); }
-        }
-
-        @keyframes glitchAfter {
-            0%, 90%, 100% { opacity: 0; transform: translate(2px, 2px); }
-            92% { opacity: 1; transform: translate(2px, 2px); }
-            94% { opacity: 0; transform: translate(-2px, -2px); }
-            96% { opacity: 1; transform: translate(1px, 1px); }
-            98% { opacity: 0; transform: translate(-1px, -1px); }
-        }
-
-        @keyframes textShimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .badge-learning {
-            background: rgba(88, 101, 242, 0.12);
-            font-size: 10px;
-            padding: 3px 12px;
-            border-radius: 30px;
-            font-weight: 600;
-            color: #8b9cf7;
-            border: 1px solid rgba(88, 101, 242, 0.08);
-            animation: neonPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes neonPulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(88, 101, 242, 0.08); }
-            50% { box-shadow: 0 0 40px rgba(88, 101, 242, 0.2); }
-        }
-
-        .tag {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-top: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tag .divider { color: #334155; }
-        .tag .nam-dinh-badge {
-            background: rgba(88, 101, 242, 0.08);
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: #8b9cf7;
-            border: 1px solid rgba(88, 101, 242, 0.06);
-        }
-
-        /* ===== TYPING TEXT ===== */
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--primary);
-            font-weight: 600;
-            color: var(--text-primary);
-            animation: blink 0.8s step-end infinite;
-            min-width: 100px;
-        }
-
-        @keyframes blink {
-            0%,
-            100% { border-color: var(--primary); }
-            50% { border-color: transparent; }
-        }
-
-        /* ===== CONTACT ===== */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 16px;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text-secondary);
-            font-size: 13px;
-            padding: 4px 0;
-            transition: color 0.3s;
-        }
-
-        .contact-item:hover { color: var(--text-primary); }
-
-        .contact-item i {
-            width: 20px;
-            color: var(--primary);
-            font-size: 14px;
-            text-align: center;
-            flex-shrink: 0;
-            filter: drop-shadow(0 0 8px rgba(88, 101, 242, 0.15));
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover i {
-            filter: drop-shadow(0 0 20px rgba(88, 101, 242, 0.4));
-            transform: scale(1.1);
-        }
-
-        .contact-item .value { color: #cbd5e1; }
-
-        .copy-btn {
-            margin-left: auto;
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            padding: 4px 8px;
-            border-radius: 6px;
-            transition: all 0.3s;
-            font-size: 12px;
-        }
-
-        .copy-btn:hover {
-            color: var(--primary);
-            background: rgba(88, 101, 242, 0.08);
-        }
-
-        .copy-btn.copied { color: #23a55a; }
-
-        /* ===== TOAST ===== */
-        .toast-container {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        .toast {
-            background: rgba(10, 10, 20, 0.9);
-            backdrop-filter: blur(20px);
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            font-size: 13px;
-            font-weight: 500;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            animation: toastSlide 0.4s ease forwards;
-            pointer-events: auto;
-            max-width: 90%;
-        }
-
-        .toast i { margin-right: 8px; }
-        .toast.success i { color: #23a55a; }
-        .toast.error i { color: #ed4245; }
-        .toast.warning i { color: #faa61a; }
-        .toast.info i { color: var(--primary); }
-
-        @keyframes toastSlide {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .toast.removing {
-            animation: toastSlideOut 0.3s ease forwards;
-        }
-
-        @keyframes toastSlideOut {
-            to { transform: translateY(100px); opacity: 0; }
-        }
-
-        /* ===== STATUS BAR ===== */
-        .status-bar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 16px;
-            padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 50px;
-            border: 1px solid var(--border-color);
-            flex-wrap: wrap;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #23a55a;
-            animation: pulseDot 2s infinite;
-            flex-shrink: 0;
-        }
-
-        .status-text {
-            color: var(--text-secondary);
-            font-size: 13px;
-        }
-
-        .status-text span { color: var(--text-primary); font-weight: 500; }
-
-        .live-clock {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-secondary);
-            font-size: 12px;
-            padding: 3px 10px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-        }
-
-        .live-clock i { color: var(--primary); }
-
-        #clockDisplay {
-            font-family: 'Courier New', monospace;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .status-activity {
-            margin-left: auto;
-            color: var(--text-muted);
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 3px 10px;
-            background: rgba(88, 101, 242, 0.06);
-            border-radius: 20px;
-        }
-
-        .status-activity i { color: var(--primary); font-size: 11px; }
-
-        /* ===== BIO ===== */
-        .bio {
-            margin-top: 16px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 18px 22px;
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .bio:hover {
-            background: rgba(255, 255, 255, 0.04);
-            transform: translateY(-2px);
-        }
-
-        .bio .title {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
             gap: 8px;
         }
-
-        .bio .title i { color: var(--primary); font-size: 11px; }
-
-        .bio-text {
-            font-size: 15px;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .bio-text .money-icon {
-            color: var(--gold);
-            font-size: 18px;
-            display: inline-block;
-            animation: coinFlip 4s ease-in-out infinite;
-        }
-
-        @keyframes coinFlip {
-            0%, 100% { transform: rotateY(0deg); }
-            12.5% { transform: rotateY(180deg); }
-            25% { transform: rotateY(360deg); }
-            37.5% { transform: rotateY(540deg); }
-            50% { transform: rotateY(720deg); }
-            62.5%, 100% { transform: rotateY(720deg); }
-        }
-
-        .bio-text .highlight-money {
-            background: linear-gradient(135deg, var(--gold), #fbbf24);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            font-size: 17px;
-            background-size: 200% 200%;
-            animation: moneyGradient 3s ease-in-out infinite;
-        }
-
-        @keyframes moneyGradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .bio-sub {
-            margin-top: 8px;
-            font-size: 13px;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        .bio-sub i { color: var(--primary); }
-        .bio-sub .emoji { font-size: 16px; }
-
-        .learning-text {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 6px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .learning-text i { color: var(--primary); }
-
-        .location-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: rgba(88, 101, 242, 0.08);
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: #8b9cf7;
-            border: 1px solid rgba(88, 101, 242, 0.06);
-        }
-
-        /* ===== SKILL PROGRESS ===== */
-        .skill-progress {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .skill-item { margin-bottom: 8px; }
-        .skill-item:last-child { margin-bottom: 0; }
-
-        .skill-name {
+        .history-item {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-bottom: 3px;
+            align-items: center;
+            padding: 8px 14px;
+            background: var(--bg-glass);
+            border-radius: 10px;
+            border: 1px solid var(--border-glass);
+            margin-bottom: 4px;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 6px;
         }
-
-        .skill-name .skill-percent { color: var(--primary); font-weight: 600; }
-
-        .progress-track {
+        .history-item .h-score {
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+        .history-item .h-tier {
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 24px 16px;
+            color: var(--text-secondary);
+        }
+        .empty-state i {
+            font-size: 30px;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+        .clear-btn {
+            background: none;
+            border: none;
+            color: var(--accent-red);
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .loading-overlay.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        .loading-overlay .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.05);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        .loading-overlay .text {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        .loading-overlay .progress {
+            width: 200px;
             height: 4px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 4px;
             overflow: hidden;
         }
-
-        .progress-fill {
+        .loading-overlay .progress .fill {
             height: 100%;
-            border-radius: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            animation: progressFill 1.5s ease-in-out;
             width: 0%;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 4px;
+            transition: width 0.4s ease;
         }
-
-        @keyframes progressFill {
-            0% { width: 0; }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-
-        /* ===== VISITOR COUNTER ===== */
-        .visitor-counter {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            margin-top: 12px;
-            padding: 6px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 30px;
-            border: 1px solid var(--border-color);
-        }
-
-        .visitor-counter i {
-            color: var(--primary);
-            font-size: 16px;
-        }
-
-        .visitor-counter .count {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-primary);
-            min-width: 20px;
-            text-align: center;
-        }
-
-        .visitor-counter .label {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .visitor-counter .dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: #23a55a;
-            display: inline-block;
-            animation: pulseDot 2s infinite;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn-group {
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 99999;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            margin-top: 12px;
+            max-width: 380px;
         }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .toast {
             padding: 12px 18px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
+            border-radius: 12px;
             font-weight: 500;
-            font-size: 14px;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(88, 101, 242, 0.05), rgba(139, 92, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s;
-            border-radius: 50px;
-        }
-
-        .btn:hover::before { opacity: 1; }
-
-        .btn:hover {
-            transform: translateY(-2px) scale(1.01);
-            border-color: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 30px rgba(88, 101, 242, 0.08);
-        }
-
-        .btn:active { transform: scale(0.97); }
-
-        .btn i {
-            font-size: 18px;
-            width: 22px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn .btn-label {
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn .btn-label small {
-            font-weight: 400;
-            color: var(--text-secondary);
-            font-size: 12px;
-        }
-
-        .btn-facebook i { color: #4b8bf5; }
-        .btn-facebook:hover { background: rgba(24, 119, 242, 0.08); border-color: rgba(24, 119, 242, 0.12); }
-
-        .btn-discord i { color: #8b9cf7; }
-        .btn-discord:hover { background: rgba(88, 101, 242, 0.08); border-color: rgba(88, 101, 242, 0.12); }
-
-        .btn-tiktok i { color: #ff3b6f; }
-        .btn-tiktok:hover { background: rgba(255, 0, 80, 0.06); border-color: rgba(255, 0, 80, 0.08); }
-
-        .btn-github i { color: #cbd5e1; }
-        .btn-github:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.08); }
-
-        .btn-discord-server {
-            background: rgba(88, 101, 242, 0.06);
-            border-color: rgba(88, 101, 242, 0.08);
-        }
-
-        .btn-discord-server i { color: #8b9cf7; }
-        .btn-discord-server:hover {
-            background: rgba(88, 101, 242, 0.12);
-            border-color: rgba(88, 101, 242, 0.15);
-        }
-
-        .btn-namdinh {
-            background: rgba(245, 158, 11, 0.06);
-            border-color: rgba(245, 158, 11, 0.08);
-        }
-
-        .btn-namdinh i { color: #f59e0b; }
-        .btn-namdinh:hover {
-            background: rgba(245, 158, 11, 0.12);
-            border-color: rgba(245, 158, 11, 0.15);
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-        }
-
-        /* ===== RIPPLE ===== */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
-            transform: scale(0);
-            animation: rippleAnim 0.6s ease-out;
-            pointer-events: none;
-        }
-
-        @keyframes rippleAnim {
-            to { transform: scale(4); opacity: 0; }
-        }
-
-        /* ===== AUDIO PLAYER - ĐƠN GIẢN ===== */
-        .audio-player {
-            margin-top: 16px;
-            padding: 16px 20px;
-            background: linear-gradient(135deg, #1a1a2e, #1db95415, #0a0a0f);
-            border-radius: 24px;
-            border: 1px solid rgba(29, 185, 84, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .audio-player:hover {
-            border-color: rgba(29, 185, 84, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(29, 185, 84, 0.05);
-        }
-
-        .audio-player .audio-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .audio-player .audio-header i {
-            font-size: 20px;
-            color: #1db954;
-        }
-
-        .audio-player .audio-header span {
-            font-size: 12px;
-            font-weight: 600;
-            color: #1db954;
-            letter-spacing: 1px;
-        }
-
-        .audio-player .audio-header .live-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #1db954;
-            animation: pulseDot 1.5s infinite;
-            display: inline-block;
-        }
-
-        .audio-player .track-info {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .audio-player .track-info .track-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #1db954, #1ed760);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: white;
-            flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
-        }
-
-        .audio-player .track-info .track-details {
-            flex: 1;
-        }
-
-        .audio-player .track-info .track-details .track-name {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .audio-player .track-info .track-details .track-artist {
             font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        .audio-player .audio-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .audio-player .audio-controls button {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 4px;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .audio-player .audio-controls button:hover {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
             color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .audio-player .audio-controls .play-btn {
-            color: #1db954;
-            font-size: 24px;
-            width: 44px;
-            height: 44px;
-        }
-
-        .audio-player .audio-controls .play-btn:hover {
-            color: #1ed760;
-            background: rgba(29, 185, 84, 0.1);
-        }
-
-        .audio-player .audio-controls .play-btn.playing {
-            color: #1ed760;
-        }
-
-        .audio-player .progress-container {
-            flex: 1;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            cursor: pointer;
-            position: relative;
-            transition: height 0.2s;
-        }
-
-        .audio-player .progress-container:hover {
-            height: 5px;
-        }
-
-        .audio-player .progress-container .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #1db954, #1ed760);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-
-        .audio-player .time {
-            color: var(--text-secondary);
-            font-size: 11px;
-            min-width: 35px;
-            text-align: center;
-        }
-
-        .audio-player .audio-status {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            justify-content: center;
-        }
-
-        .audio-player .audio-status .status-text.playing {
-            color: #1db954;
-        }
-
-        .audio-player .audio-status .status-text.paused {
-            color: var(--text-secondary);
-        }
-
-        /* ===== QR CODE ===== */
-        .qr-section {
-            margin-top: 16px;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .qr-section .qr-title {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .qr-section .qr-title i { color: var(--primary); font-size: 14px; }
-
-        .qr-code {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        .qr-code img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .qr-label {
-            margin-top: 8px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        .qr-label .highlight { color: var(--primary); font-weight: 600; }
-
-        /* ===== PROJECT GALLERY ===== */
-        .gallery-section {
-            margin-top: 12px;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-        }
-
-        .gallery-title {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .gallery-title i { color: var(--primary); }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .gallery-item {
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .gallery-item span {
-            font-size: 10px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-            display: block;
-        }
-
-        .gallery-placeholder {
-            width: 100%;
-            aspect-ratio: 1;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: white;
-            transition: all 0.3s;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-placeholder::after {
-            content: '🔍';
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            background: rgba(0, 0, 0, 0.6);
-            opacity: 0;
-            transition: all 0.3s;
-            backdrop-filter: blur(4px);
-        }
-
-        .gallery-placeholder:hover::after { opacity: 1; }
-        .gallery-placeholder:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* ===== MODAL ===== */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal-overlay.active { display: flex; }
-
-        .modal-container {
-            max-width: 450px;
-            width: 90%;
-            background: #1a1a2e;
-            border-radius: 24px;
-            padding: 28px;
-            position: relative;
             animation: slideUp 0.4s ease;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow);
-            max-height: 80vh;
-            overflow-y: auto;
+            box-shadow: var(--shadow-glass);
         }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
+        .toast.success {
+            border-left: 4px solid var(--accent-green);
         }
-
-        .modal-header h2 {
-            color: var(--text-primary);
-            font-size: 22px;
-            font-weight: 600;
+        .toast.error {
+            border-left: 4px solid var(--accent-red);
         }
-
-        .modal-close {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 22px;
-            cursor: pointer;
-            transition: all 0.3s;
+        .toast.info {
+            border-left: 4px solid var(--accent-blue);
         }
-
-        .modal-close:hover {
-            color: var(--text-primary);
-            transform: rotate(90deg);
+        .toast.warning {
+            border-left: 4px solid var(--accent-yellow);
         }
-
-        .modal-body {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .modal-footer {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         @keyframes slideUp {
-            from { transform: translateY(30px) scale(0.95); opacity: 0; }
-            to { transform: translateY(0) scale(1); opacity: 1; }
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            text-align: center;
-            color: #334155;
-            font-size: 12px;
-            margin-top: 20px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .footer .heart {
-            color: #ef4444;
-            display: inline-block;
-            animation: heartbeat 1.5s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-        }
-
-        .footer .text-muted { color: var(--text-muted); }
-        .footer .namdinh-flag { color: #f59e0b; }
-
-        /* ===== LIGHT MODE ===== */
-        body.light-mode .card {
-            background: rgba(255, 255, 255, 0.75);
-            border-color: rgba(0, 0, 0, 0.05);
-        }
-
-        body.light-mode .name {
-            background: linear-gradient(135deg, #0a0a0f, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        body.light-mode .name::before,
-        body.light-mode .name::after {
-            -webkit-text-fill-color: transparent;
-        }
-
-        body.light-mode .bio,
-        body.light-mode .contact-info,
-        body.light-mode .status-bar,
-        body.light-mode .visitor-counter,
-        body.light-mode .qr-section,
-        body.light-mode .audio-player,
-        body.light-mode .gallery-section,
-        body.light-mode .modal-container {
-            background: rgba(0, 0, 0, 0.03);
-            border-color: rgba(0, 0, 0, 0.05);
-        }
-
-        body.light-mode .banner-status {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        body.light-mode .banner-status span { color: #1a1a2e; }
-
-        body.light-mode .tag,
-        body.light-mode .contact-item,
-        body.light-mode .status-text,
-        body.light-mode .bio-text,
-        body.light-mode .learning-text,
-        body.light-mode .skill-name,
-        body.light-mode .footer .text-muted,
-        body.light-mode .gallery-item span,
-        body.light-mode .modal-body,
-        body.light-mode .audio-player .track-info .track-details .track-artist {
-            color: #475569;
-        }
-
-        body.light-mode .contact-item .value,
-        body.light-mode .status-text span,
-        body.light-mode .username-tag .highlight,
-        body.light-mode .typing-text,
-        body.light-mode .modal-header h2,
-        body.light-mode .audio-player .track-info .track-details .track-name {
-            color: #0a0a0f;
-        }
-
-        body.light-mode .badge-learning {
-            background: rgba(88, 101, 242, 0.08);
-            color: var(--primary);
-        }
-
-        body.light-mode .theme-toggle-btn {
-            background: rgba(255, 255, 255, 0.8);
-            color: #0a0a0f;
-        }
-
-        body.light-mode .live-clock { background: rgba(0, 0, 0, 0.05); }
-        body.light-mode #clockDisplay { color: #0a0a0f; }
-
-        body.light-mode .nam-dinh-badge,
-        body.light-mode .location-badge {
-            background: rgba(88, 101, 242, 0.06);
-            color: var(--primary);
-        }
-
-        body.light-mode .toast {
-            background: rgba(255, 255, 255, 0.95);
-            color: #0a0a0f;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 520px) {
-            body { padding: 12px; }
-            .card { border-radius: 28px; max-height: 92vh; }
-            .banner { height: 120px; border-radius: 28px 28px 0 0; }
-            .profile { padding: 0 16px 20px; margin-top: -32px; }
-            .avatar-wrapper { width: 100px; height: 100px; margin-top: -42px; }
-            .avatar-fallback { font-size: 40px; }
-            .online-badge { width: 24px; height: 24px; }
-            .online-badge i { font-size: 10px; }
-            .name { font-size: 30px; }
-            .contact-info { padding: 12px 16px; }
-            .contact-item { font-size: 12px; }
-            .btn { padding: 10px 14px; font-size: 13px; gap: 8px; }
-            .btn i { font-size: 16px; width: 18px; }
-            .bio { padding: 14px 16px; }
-            .bio-text { font-size: 14px; }
-            .bio-text .highlight-money { font-size: 15px; }
-            .status-bar { padding: 8px 12px; gap: 6px; }
-            .status-activity { margin-left: 0; width: 100%; }
-            .visitor-counter .count { font-size: 16px; }
-            .qr-code { width: 120px; height: 120px; padding: 8px; }
-            .floating-emoji { display: none; }
-            .floating-shapes .shape { display: none; }
-            .username-tag { font-size: 12px; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .tag .nam-dinh-badge { font-size: 10px; padding: 1px 8px; }
-            .modal-container { padding: 20px; margin: 12px; }
-            .banner-top-right { top: 10px; right: 10px; }
-            .theme-toggle-btn { width: 30px; height: 30px; font-size: 14px; }
-            .audio-player { padding: 12px 16px; }
-            .audio-player .track-info .track-icon { width: 40px; height: 40px; font-size: 16px; }
-            .audio-player .audio-controls button { width: 30px; height: 30px; font-size: 16px; }
-            .audio-player .audio-controls .play-btn { width: 38px; height: 38px; font-size: 20px; }
-        }
-
-        @media (max-width: 380px) {
-            .name { font-size: 26px; }
-            .avatar-wrapper { width: 85px; height: 85px; margin-top: -36px; }
-            .avatar-fallback { font-size: 34px; }
-            .contact-item { font-size: 11px; }
-            .contact-item i { width: 16px; font-size: 12px; }
-            .qr-code { width: 100px; height: 100px; padding: 6px; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .visitor-counter { padding: 4px 12px; }
-            .visitor-counter .count { font-size: 14px; }
-        }
-
-        @media (min-width: 768px) {
-            .banner { height: 180px; }
-            .banner-img.loaded { transform: scale(1.08); }
-            .banner:hover .banner-img { transform: scale(1.05); }
-        }
-
-        /* ===== REDUCED MOTION ===== */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            from {
+                opacity: 0;
+                transform: translateY(16px);
             }
-            .particle { display: none; }
-            .shape { display: none; }
-            .floating-emoji { display: none; }
-            .name::before,
-            .name::after { display: none; }
-            .toast { animation: none !important; }
-            .modal-container { animation: none !important; }
-            .video-bg { display: none; }
-            .video-overlay { background: var(--bg-dark); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
-        /* ===== FOCUS ===== */
-        .btn:focus-visible,
-        .copy-btn:focus-visible,
-        .theme-toggle-btn:focus-visible,
-        .modal-close:focus-visible,
-        .audio-player .audio-controls button:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
+        @media (max-width:600px) {
+            .score-display .number {
+                font-size: 44px;
+            }
+            .sub-scores {
+                grid-template-columns: 1fr 1fr;
+            }
+            .result-main {
+                padding: 16px;
+            }
+            .preview-box {
+                min-height: 160px;
+                padding: 10px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .halo-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== VIDEO BACKGROUND ===== -->
-    <video class="video-bg" id="videoBg" autoplay muted loop playsinline>
-        <source src="assets/bg.mp4" type="video/mp4" />
-    </video>
-    <div class="video-overlay"></div>
-    <div class="video-gradient"></div>
-
-    <!-- ===== FLOATING SHAPES ===== -->
-    <div class="floating-shapes" aria-hidden="true">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
+    <!-- LOADING -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="text" id="loadingText">🧠 AI đang phân tích...</div>
+        <div class="progress"><div class="fill" id="progressFill"></div></div>
     </div>
 
-    <!-- ===== FLOATING EMOJI ===== -->
-    <div class="floating-emoji" aria-hidden="true">🚀</div>
-    <div class="floating-emoji" aria-hidden="true">💻</div>
-    <div class="floating-emoji" aria-hidden="true">⚡</div>
-    <div class="floating-emoji" aria-hidden="true">🔥</div>
-    <div class="floating-emoji" aria-hidden="true">💰</div>
-
-    <!-- ===== PARTICLES ===== -->
-    <div id="particles" aria-hidden="true"></div>
-
-    <!-- ===== TOAST ===== -->
+    <!-- TOAST -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ===== MODAL ===== -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-container" id="modalContainer">
-            <div class="modal-header">
-                <h2 id="modalTitle">Tiêu đề</h2>
-                <button class="modal-close" id="modalClose">✕</button>
+    <div class="container">
+
+        <header class="header glass">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>SIXHEN Rate</span>
+                <span class="badge-v3">V3</span>
             </div>
-            <div class="modal-body" id="modalBody">Nội dung</div>
-            <div class="modal-footer" id="modalFooter">
-                <button class="btn-secondary" id="modalCancel">Hủy</button>
-                <button class="btn-primary" id="modalConfirm">Xác nhận</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== CARD ===== -->
-    <main class="card" role="main" id="mainCard">
-
-        <!-- ===== BANNER ===== -->
-        <header class="banner" role="banner">
-            <img src="assets/bg.jpg" alt="Banner" class="banner-img" id="bannerImg" />
-            <div class="banner-fallback" aria-hidden="true"></div>
-            <div class="banner-overlay"></div>
-            <div class="banner-glow" aria-hidden="true"></div>
-
-            <div class="banner-top-right">
-                <button class="theme-toggle-btn" id="themeToggle" aria-label="Đổi theme">
-                    <i class="fas fa-moon" id="themeIcon"></i>
-                </button>
-            </div>
-
-            <div class="banner-status">
-                <span class="dot" aria-hidden="true"></span>
-                <span>⚡ learning to code</span>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <button class="btn btn-danger btn-sm" id="clearBtn" disabled><i class="fas fa-trash"></i> Xóa</button>
             </div>
         </header>
 
-        <!-- ===== PROFILE ===== -->
-        <section class="profile" aria-label="Thông tin cá nhân">
+        <div class="upload-area glass" id="uploadArea">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h3>Kéo thả ảnh hoặc <span style="color:var(--accent-blue);">bấm chọn</span></h3>
+            <p>PSL Engine V3 - 478 landmarks - XGBoost Predictor</p>
+            <input type="file" id="fileInput" accept="image/*" />
+        </div>
 
-            <!-- ===== AVATAR ===== -->
-            <div class="avatar-wrapper">
-                <div class="avatar-ring" aria-hidden="true">
-                    <div class="avatar-ring-inner">
-                        <img src="assets/avatar.jpg" alt="sixhen" class="avatar" id="avatarImg" />
-                        <div class="avatar-fallback" id="avatarFallback" style="display:none;">S</div>
-                    </div>
+        <div class="preview-grid">
+            <div class="preview-box glass">
+                <div class="label"><i class="fas fa-image"></i> Ảnh gốc</div>
+                <img id="originalImage" />
+                <div class="placeholder" id="originalPlaceholder"><i class="fas fa-image"></i> Chưa có ảnh</div>
+            </div>
+            <div class="preview-box glass">
+                <div class="label"><i class="fas fa-robot"></i> AI phân tích</div>
+                <canvas id="analysisCanvas"></canvas>
+                <div class="placeholder" id="analysisPlaceholder"><i class="fas fa-robot"></i> Chờ phân tích</div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn btn-primary" id="analyzeBtn" disabled><i class="fas fa-microchip"></i> Analyze</button>
+            <button class="btn" id="zoomInBtn" disabled><i class="fas fa-search-plus"></i></button>
+            <button class="btn" id="zoomOutBtn" disabled><i class="fas fa-search-minus"></i></button>
+            <button class="btn" id="resetZoomBtn" disabled><i class="fas fa-undo"></i></button>
+        </div>
+
+        <div class="status-bar" id="statusBar"></div>
+
+        <div id="resultsContainer">
+            <div class="result-main glass">
+                <div class="score-display">
+                    <div class="number" id="scoreNumber">0.00</div>
+                    <div class="label">PSL Score</div>
+                    <div class="tier"><span class="emoji" id="tierEmoji">✨</span> <span id="tierLabel">Đang phân tích</span></div>
+                    <div class="psl-tier" id="pslTier"><span class="label" id="pslLabel">--</span></div>
+                    <div class="face-shape-badge" id="faceShapeBadge">🔮 Face Shape: --</div>
+                    <div class="confidence" id="confidenceDisplay">🎯 Confidence: <span class="warn">Đang tính...</span></div>
+                    <div class="top-percent" id="topPercent">📊 Top: --</div>
+                    <div class="warning-msg" id="warningMsg" style="display:none;"></div>
                 </div>
-                <div class="online-badge" aria-label="Online">
-                    <i class="fas fa-check" aria-hidden="true"></i>
+
+                <div class="sub-scores" id="subScores">
+                    <div class="sub-score-item"><div class="value" id="subEyeArea">--</div><div class="label">👁️ Eye Area</div></div>
+                    <div class="sub-score-item"><div class="value" id="subHarmony">--</div><div class="label">🎵 Harmony</div></div>
+                    <div class="sub-score-item"><div class="value" id="subBone">--</div><div class="label">🦴 Bone</div></div>
+                    <div class="sub-score-item"><div class="value" id="subCanthal">--</div><div class="label">📐 Canthal</div></div>
+                    <div class="sub-score-item"><div class="value" id="subSkin">--</div><div class="label">✨ Skin</div></div>
+                    <div class="sub-score-item"><div class="value" id="subNose">--</div><div class="label">👃 Nose</div></div>
+                    <div class="sub-score-item"><div class="value" id="subLips">--</div><div class="label">👄 Lips</div></div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div style="font-size:14px; font-weight:600; margin-bottom:8px;">📐 PSL Metrics</div>
+                <div class="info-grid" id="infoGrid"></div>
+
+                <div style="font-size:13px; font-weight:500; margin-top:8px;">Facial Thirds</div>
+                <div class="thirds-display" id="thirdsDisplay"></div>
+
+                <div class="divider"></div>
+
+                <div class="halo-grid">
+                    <div class="halo-box halo"><strong>✅ Halos</strong><ul id="haloList"><li>Chưa có dữ liệu</li></ul></div>
+                    <div class="halo-box failo"><strong>❌ Failos</strong><ul id="failoList"><li>Chưa có dữ liệu</li></ul></div>
+                </div>
+
+                <div class="rec-box">
+                    <strong>💡 PSL Recommendations</strong>
+                    <ul id="recList"><li>Chưa có dữ liệu</li></ul>
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+                    <button class="btn btn-success btn-sm" onclick="shareResult()"><i class="fas fa-share-alt"></i> Chia sẻ</button>
+                    <button class="btn btn-sm" onclick="copyResult()"><i class="fas fa-copy"></i> Sao chép</button>
                 </div>
             </div>
+        </div>
 
-            <!-- ===== USERNAME ===== -->
-            <div class="username-tag">
-                <i class="fas fa-at" aria-hidden="true"></i>
-                <span class="highlight">@sixhen</span>
+        <div class="history-section glass">
+            <div class="history-header">
+                <h3><i class="fas fa-history"></i> Lịch sử</h3>
+                <button class="clear-btn" id="clearHistoryBtn"><i class="fas fa-trash"></i> Xóa</button>
             </div>
+            <div id="historyContainer"><div class="empty-state"><i class="fas fa-clock"></i> Chưa có dữ liệu</div></div>
+        </div>
 
-            <!-- ===== NAME ===== -->
-            <div class="name-section">
-                <h1 class="name" data-text="sixhen">sixhen</h1>
-                <span class="badge-learning">✦ học code</span>
-            </div>
+    </div>
 
-            <div class="tag">
-                <i class="fas fa-map-pin" aria-hidden="true"></i>
-                <span class="nam-dinh-badge">📍 Nam Định</span>
-                <span class="divider">·</span>
-                <i class="fas fa-calendar" aria-hidden="true"></i> 17
-                <span class="divider">·</span>
-                <i class="fas fa-graduation-cap" aria-hidden="true"></i> mới bắt đầu
-            </div>
+    <!-- ============================================================
+    SCRIPTS
+    ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
 
-            <!-- ===== CONTACT ===== -->
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone" aria-hidden="true"></i>
-                    <span class="value">0328 981 323</span>
-                    <button class="copy-btn" data-copy="0328 981 323" aria-label="Sao chép số điện thoại">
-                        <i class="fas fa-copy" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span class="value">dmh190229@gmail.com</span>
-                    <button class="copy-btn" data-copy="dmh190229@gmail.com" aria-label="Sao chép email">
-                        <i class="fas fa-copy" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-discord" aria-hidden="true"></i>
-                    <span class="value">@sixhen</span>
-                    <button class="copy-btn" data-copy="@sixhen" aria-label="Sao chép Discord">
-                        <i class="fas fa-copy" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- ===== STATUS BAR ===== -->
-            <div class="status-bar">
-                <div class="status-dot" aria-hidden="true"></div>
-                <div class="status-text">
-                    <span>Đang học</span> · từng ngày
-                </div>
-                <div class="live-clock">
-                    <i class="fas fa-clock"></i>
-                    <span id="clockDisplay">00:00:00</span>
-                </div>
-                <div class="status-activity">
-                    <i class="fas fa-terminal" aria-hidden="true"></i> VS Code
-                </div>
-            </div>
-
-            <!-- ===== BIO ===== -->
-            <div class="bio">
-                <div class="title">
-                    <i class="fas fa-quote-left" aria-hidden="true"></i> về tôi
-                </div>
-                <div class="bio-text">
-                    <span class="money-icon" aria-hidden="true">💰</span>
-                    <span class="typing-text" id="typingText"></span>
-                    <span style="color:#94a3b8; font-weight:300;">·</span>
-                    <span style="color:#64748b; font-size:14px;">code là số 2</span>
-                </div>
-                <div class="bio-sub">
-                    <i class="fas fa-bullseye" aria-hidden="true"></i>
-                    <span>mục tiêu: </span>
-                    <span style="color:var(--text-primary); font-weight:500;">giàu từ code</span>
-                    <span class="emoji" aria-hidden="true">🚀</span>
-                </div>
-                <div class="bio-sub">
-                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                    <span>đến từ: </span>
-                    <span class="location-badge">
-                        <i class="fas fa-flag" style="color:#f59e0b;"></i>
-                        Nam Định
-                    </span>
-                </div>
-                <div class="learning-text">
-                    <i class="fas fa-code" aria-hidden="true"></i> đang học: <span style="color:var(--text-primary);">HTML · CSS · JS</span>
-                    <span style="color:#334155;">|</span>
-                    <span style="color:var(--gold);">💎 kiếm tiền</span>
-                </div>
-
-                <div class="skill-progress">
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span><i class="fab fa-html5" style="color:#e34f26;"></i> HTML</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span><i class="fab fa-css3-alt" style="color:#1572b6;"></i> CSS</span>
-                            <span class="skill-percent">65%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 65%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span><i class="fab fa-js" style="color:#f7df1e;"></i> JavaScript</span>
-                            <span class="skill-percent">40%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 40%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== PROJECT GALLERY ===== -->
-            <div class="gallery-section">
-                <div class="gallery-title">
-                    <i class="fas fa-images"></i> Dự án
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item" onclick="showProject('Portfolio', 'Website portfolio cá nhân tại Nam Định')">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #5865f2, #8b5cf6);">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <span>Portfolio</span>
-                    </div>
-                    <div class="gallery-item" onclick="showProject('Website', 'Dự án web học tập tại Nam Định')">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <span>Website</span>
-                    </div>
-                    <div class="gallery-item" onclick="showProject('App', 'không có cái lồn j ')">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <span>App</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== VISITOR COUNTER ===== -->
-            <div class="visitor-counter" role="status" aria-label="Lượt xem">
-                <i class="fas fa-eye" aria-hidden="true"></i>
-                <span class="count" id="totalViews">0</span>
-                <span class="dot" aria-hidden="true"></span>
-                <span class="label">lượt xem</span>
-            </div>
-
-            <!-- ===== BUTTONS ===== -->
-            <div class="btn-group">
-                <button class="btn btn-facebook" onclick="showModal('Facebook', 'Đang kết nối với Facebook...')">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                    <span class="btn-label">Facebook <small>· sixhen</small></span>
-                </button>
-
-                <a class="btn btn-discord-server" target="_blank" rel="noopener noreferrer" href="https://discord.gg/FQKwukeP6x">
-                    <i class="fab fa-discord" aria-hidden="true"></i>
-                    <span class="btn-label">Discord Server <small>· tham gia</small></span>
-                </a>
-
-                <button class="btn btn-tiktok" onclick="showModal('TikTok', 'Đang mở TikTok...')">
-                    <i class="fab fa-tiktok" aria-hidden="true"></i>
-                    <span class="btn-label">TikTok <small>· @six.hen</small></span>
-                </button>
-
-                <a class="btn btn-github" target="_blank" rel="noopener noreferrer" href="https://github.com/sixhen">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                    <span class="btn-label">GitHub <small>· sixhen</small></span>
-                </a>
-
-                <a class="btn btn-namdinh" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Nam+Định">
-                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                    <span class="btn-label">📍 Nam Định <small>· quê hương</small></span>
-                </a>
-
-                <button class="btn btn-primary" onclick="showContactForm()">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span class="btn-label">Liên hệ <small>· gửi tin nhắn</small></span>
-                </button>
-            </div>
-
-            <!-- ===== AUDIO PLAYER - bg.mp3 ===== -->
-            <div class="audio-player">
-                <div class="audio-header">
-                    <i class="fas fa-headphones"></i>
-                    <span>ĐANG NGHE</span>
-                    <span class="live-dot"></span>
-                </div>
-
-                <div class="track-info">
-                    <div class="track-icon">
-                        <i class="fas fa-music"></i>
-                    </div>
-                    <div class="track-details">
-                        <div class="track-name">bg.mp3</div>
-                        <div class="track-artist">✦ Playlist của sixhen</div>
-                    </div>
-                </div>
-
-                <div class="audio-controls">
-                    <button class="play-btn" id="playBtn" aria-label="Phát/Nhạc">
-                        <i class="fas fa-play" id="playIcon"></i>
-                    </button>
-                    <div class="progress-container" id="progressContainer">
-                        <div class="progress-bar" id="progressBar"></div>
-                    </div>
-                    <span class="time" id="currentTime">0:00</span>
-                    <button id="muteBtn" aria-label="Tắt/Bật âm thanh">
-                        <i class="fas fa-volume-up" id="muteIcon"></i>
-                    </button>
-                </div>
-
-                <div class="audio-status">
-                    <span class="status-text playing" id="audioStatus">● Đang phát</span>
-                </div>
-
-                <audio id="bgAudio" loop autoplay>
-                    <source src="assets/bg.mp3" type="audio/mpeg" />
-                </audio>
-            </div>
-
-            <!-- ===== QR CODE ===== -->
-            <div class="qr-section">
-                <div class="qr-title">
-                    <i class="fas fa-qrcode" aria-hidden="true"></i>
-                    MÃ QR
-                    <i class="fas fa-qrcode" aria-hidden="true"></i>
-                </div>
-                <div class="qr-code">
-                    <img src="https://img.vietqr.io/image/MB-0328981323-compact2.png?accountName=DINH%20MINH%20HIEN&amount=0&addInfo=sixhen%20donate" alt="VietQR" />
-                </div>
-                <div class="qr-label">
-                    <span class="highlight">DINH MINH HIEN</span> · <span style="color:var(--text-muted);">0328 981 323</span>
-                </div>
-            </div>
-
-            <!-- ===== FOOTER ===== -->
-            <footer class="footer">
-                <i class="fas fa-crown" aria-hidden="true"></i>
-                <span class="text-muted">sixhen</span>
-                <span class="heart" aria-hidden="true"><i class="fas fa-heart"></i></span>
-                <span class="text-muted">·</span>
-                <i class="fas fa-code" aria-hidden="true"></i>
-                <span class="text-muted">2026</span>
-                <span class="text-muted">·</span>
-                <span style="color:var(--gold);" aria-hidden="true">💰</span>
-                <span class="text-muted">·</span>
-                <span class="namdinh-flag">📍 Nam Định</span>
-            </footer>
-
-        </section>
-    </main>
-
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ===== 1. VIDEO BACKGROUND =====
-        const videoBg = document.getElementById('videoBg');
-        videoBg.addEventListener('error', () => console.log('🎬 Video fallback'));
+        // ============================================================
+        // PSL TIERS - COMMUNITY STANDARD
+        // ============================================================
+        const PSL_TIERS = [
+            { min: 8.0, label: 'PSL God', emoji: '👑', cls: 'tier-psl-9' },
+            { min: 7.5, label: 'High Chad', emoji: '🔥', cls: 'tier-psl-8' },
+            { min: 7.0, label: 'Chad', emoji: '🌟', cls: 'tier-psl-7' },
+            { min: 6.5, label: 'High Chadlite', emoji: '✨', cls: 'tier-psl-6' },
+            { min: 6.0, label: 'Chadlite', emoji: '😊', cls: 'tier-psl-5' },
+            { min: 5.5, label: 'HTN', emoji: '🌿', cls: 'tier-psl-4' },
+            { min: 5.0, label: 'Normie', emoji: '😌', cls: 'tier-psl-3' },
+            { min: 4.0, label: 'LTN', emoji: '😔', cls: 'tier-psl-3' },
+            { min: 0, label: 'Subhuman', emoji: '💀', cls: 'tier-psl-3' },
+        ];
 
-        // ===== 2. PARTICLES =====
-        (function initParticles() {
-            const container = document.getElementById('particles');
-            const isMobile = window.innerWidth < 520;
-            const count = isMobile ? 12 : 20;
-
-            for (let i = 0; i < count; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                const size = Math.random() * 3 + 1.5;
-                p.style.width = size + 'px';
-                p.style.height = size + 'px';
-                p.style.left = Math.random() * 100 + 'vw';
-                p.style.animationDuration = (Math.random() * 25 + 20) + 's';
-                p.style.animationDelay = (Math.random() * 20) + 's';
-                p.style.opacity = Math.random() * 0.2 + 0.03;
-                container.appendChild(p);
-            }
-        })();
-
-        // ===== 3. MOUSE TRAIL =====
-        let trailTimeout;
-        document.addEventListener('mousemove', (e) => {
-            if (window.innerWidth < 768) return;
-            clearTimeout(trailTimeout);
-            const trail = document.createElement('div');
-            trail.className = 'mouse-trail';
-            trail.style.left = (e.clientX - 3) + 'px';
-            trail.style.top = (e.clientY - 3) + 'px';
-            document.body.appendChild(trail);
-            trailTimeout = setTimeout(() => trail.remove(), 800);
-        });
-
-        // ===== 4. 3D CARD =====
-        const card = document.getElementById('mainCard');
-        if (window.innerWidth >= 768) {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                card.style.transform = `perspective(1000px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-            });
+        function getTier(score) {
+            return PSL_TIERS.find(t => score >= t.min) || PSL_TIERS[PSL_TIERS.length - 1];
         }
 
-        // ===== 5. AVATAR & BANNER FALLBACK =====
-        const avatarImg = document.getElementById('avatarImg');
-        const avatarFallback = document.getElementById('avatarFallback');
-        avatarImg.addEventListener('error', () => {
-            avatarImg.style.display = 'none';
-            avatarFallback.style.display = 'flex';
-        });
+        function getTopPercent(score) {
+            if (score >= 8.0) return '0.1%';
+            if (score >= 7.5) return '1%';
+            if (score >= 7.0) return '3%';
+            if (score >= 6.5) return '10%';
+            if (score >= 6.0) return '20%';
+            if (score >= 5.5) return '30%';
+            if (score >= 4.5) return '50%';
+            return '>50%';
+        }
 
-        const bannerImg = document.getElementById('bannerImg');
-        bannerImg.addEventListener('error', () => { bannerImg.style.display = 'none'; });
-        bannerImg.addEventListener('load', () => { bannerImg.classList.add('loaded'); });
+        // ============================================================
+        // UTILITIES
+        // ============================================================
+        const Utils = {
+            clamp: (v, min, max) => Math.max(min, Math.min(max, v)),
+            dist: (p1, p2) => {
+                if (!p1 || !p2) return 0;
+                return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+            },
+            angle: (p1, p2) => {
+                if (!p1 || !p2) return 0;
+                return Math.atan2(p2.y - p1.y, p2.x - p1.x);
+            },
+            safe: (v, fallback = 0) => {
+                if (typeof v === 'number' && !isNaN(v) && isFinite(v)) return v;
+                return fallback;
+            },
+            round: (v, d = 1) => Math.round(v * 10 ** d) / 10 ** d,
+            scoreFromError: (value, ideal, tolerance = 0.2) => {
+                const error = Math.abs(value - ideal) / (ideal + 0.001);
+                return Utils.clamp(1 - error / tolerance, 0, 1) * 100;
+            },
+            normalize: (v, min, max) => Utils.clamp((v - min) / (max - min + 0.001), 0, 1) * 100,
+        };
 
-        // ===== 6. TOAST =====
-        function showToast(message, type = 'info', duration = 2500) {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            const icons = { success: 'fa-check-circle', error: 'fa-times-circle', warning: 'fa-exclamation-circle',
-                info: 'fa-info-circle' };
-            const colors = { success: '#23a55a', error: '#ed4245', warning: '#faa61a', info: '#5865f2' };
-
-            toast.className = `toast ${type}`;
-            toast.innerHTML = `<i class="fas ${icons[type]}" style="color:${colors[type]};"></i> ${message}`;
-            container.appendChild(toast);
-
+        // ============================================================
+        // TOAST, LOADING
+        // ============================================================
+        function showToast(msg, type = 'info') {
+            const el = document.createElement('div');
+            el.className = `toast ${type}`;
+            el.textContent = msg;
+            document.getElementById('toastContainer').appendChild(el);
             setTimeout(() => {
-                toast.classList.add('removing');
-                setTimeout(() => { if (toast.parentNode) toast.remove(); }, 300);
-            }, duration);
+                el.style.opacity = '0';
+                el.style.transform = 'translateX(20px)';
+                setTimeout(() => el.remove(), 400);
+            }, 3500);
         }
 
-        // ===== 7. COPY BUTTONS =====
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const text = this.dataset.copy;
-                if (!text) return;
+        const Loading = {
+            overlay: document.getElementById('loadingOverlay'),
+            text: document.getElementById('loadingText'),
+            progress: document.getElementById('progressFill'),
+            show: (msg) => {
+                Loading.overlay.classList.add('show');
+                Loading.text.textContent = msg || '🧠 Đang phân tích...';
+                Loading.progress.style.width = '0%';
+            },
+            update: (p) => { Loading.progress.style.width = Math.min(p, 100) + '%'; },
+            hide: () => {
+                Loading.overlay.classList.remove('show');
+                Loading.progress.style.width = '0%';
+            }
+        };
 
-                navigator.clipboard.writeText(text).then(() => {
-                    const icon = this.querySelector('i');
-                    const originalClass = icon.className;
-                    icon.className = 'fas fa-check';
-                    this.classList.add('copied');
-                    showToast(`Đã sao chép: ${text}`, 'success');
-                    setTimeout(() => {
-                        icon.className = originalClass;
-                        this.classList.remove('copied');
-                    }, 2000);
-                }).catch(() => {
-                    const textArea = document.createElement('textarea');
-                    textArea.value = text;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                    showToast(`Đã sao chép: ${text}`, 'success');
-                });
-            });
-        });
+        // ============================================================
+        // FACE DETECTOR
+        // ============================================================
+        class FaceDetector {
+            constructor() {
+                this.detector = null;
+                this.initialized = false;
+                this.landmarks = [];
+            }
 
-        // ===== 8. RIPPLE =====
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const rect = this.getBoundingClientRect();
-                const ripple = document.createElement('span');
-                ripple.className = 'ripple';
-                const size = Math.max(rect.width, rect.height);
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-                this.appendChild(ripple);
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
+            async init() {
+                if (this.initialized) return;
+                try {
+                    const model = faceLandmarksDetection.SupportedModels.MediaPipeFaceMesh;
+                    this.detector = await faceLandmarksDetection.createDetector(model, {
+                        runtime: 'tfjs',
+                        maxFaces: 1,
+                        refineLandmarks: true,
+                    });
+                    this.initialized = true;
+                    console.log('✅ Face detector initialized');
+                } catch (e) {
+                    throw new Error('Không thể khởi tạo AI. Vui lòng thử lại.');
+                }
+            }
 
-        // ===== 9. TYPING EFFECT =====
-        function typeWriter() {
-            const texts = ['tiền là số 1', 'kiếm tiền là số 1', '💰 là số 1', 'từ Nam Định', '💰 + code = giàu'];
-            let textIndex = 0,
-                charIndex = 0,
-                isDeleting = false;
-            const el = document.getElementById('typingText');
+            async detect(image) {
+                if (!this.initialized) await this.init();
+                const faces = await this.detector.estimateFaces(image);
+                if (!faces || faces.length === 0) return null;
+                return faces[0];
+            }
 
-            function type() {
-                const currentText = texts[textIndex];
-                if (isDeleting) {
-                    el.textContent = currentText.substring(0, charIndex - 1);
-                    charIndex--;
+            extractLandmarks(face) {
+                const points = face.keypoints || [];
+                this.landmarks = points.map(p => ({
+                    x: Utils.safe(p.x, 0),
+                    y: Utils.safe(p.y, 0),
+                    z: Utils.safe(p.z, 0),
+                }));
+                return this.landmarks;
+            }
+
+            get(idx) {
+                if (idx < 0 || idx >= this.landmarks.length) return null;
+                return this.landmarks[idx] || null;
+            }
+
+            getSafe(idx, fallback = { x: 0, y: 0 }) {
+                const p = this.get(idx);
+                return p || fallback;
+            }
+
+            getCount() { return this.landmarks.length; }
+            isValid() { return this.landmarks.length >= 300; }
+        }
+
+        // ============================================================
+        // LANDMARK INDEXES (MediaPipe 478)
+        // ============================================================
+        const L = {
+            // Eyes
+            LEFT_EYE_INNER: 33,
+            LEFT_EYE_OUTER: 133,
+            LEFT_EYE_TOP: 27,
+            LEFT_EYE_BOTTOM: 23,
+            RIGHT_EYE_INNER: 362,
+            RIGHT_EYE_OUTER: 263,
+            RIGHT_EYE_TOP: 257,
+            RIGHT_EYE_BOTTOM: 253,
+            LEFT_IRIS: 468,
+            RIGHT_IRIS: 473,
+            LEFT_PUPIL: 468,
+            RIGHT_PUPIL: 473,
+
+            // Eyebrows
+            LEFT_BROW_INNER: 55,
+            LEFT_BROW_OUTER: 65,
+            LEFT_BROW_TOP: 52,
+            RIGHT_BROW_INNER: 285,
+            RIGHT_BROW_OUTER: 295,
+            RIGHT_BROW_TOP: 282,
+
+            // Nose
+            NOSE_TIP: 1,
+            NOSE_LEFT: 64,
+            NOSE_RIGHT: 294,
+            NOSE_BRIDGE: 168,
+            NOSE_LOWER: 19,
+            NOSE_BASE: 194,
+
+            // Mouth
+            MOUTH_LEFT: 61,
+            MOUTH_RIGHT: 291,
+            MOUTH_TOP: 13,
+            MOUTH_BOTTOM: 14,
+            MOUTH_INNER_TOP: 78,
+            MOUTH_INNER_BOTTOM: 308,
+
+            // Jaw/Chin
+            CHIN: 152,
+            JAW_LEFT: 356,
+            JAW_RIGHT: 50,
+            CHIN_LEFT: 172,
+            CHIN_RIGHT: 397,
+            GONION_LEFT: 356,
+            GONION_RIGHT: 50,
+
+            // Face boundaries
+            FACE_TOP: 10,
+            FACE_BOTTOM: 152,
+            FACE_LEFT: 234,
+            FACE_RIGHT: 454,
+
+            // Thirds
+            FOREHEAD: 108,
+            MIDFACE: 168,
+
+            // Cheekbones
+            CHEEK_LEFT: 117,
+            CHEEK_RIGHT: 346,
+
+            // Canthal
+            LEFT_CANTHUS: 33,
+            RIGHT_CANTHUS: 263,
+
+            // Philtrum
+            PHILTRUM_TOP: 13,
+            PHILTRUM_BOTTOM: 14,
+        };
+
+        // ============================================================
+        // SIXHEN PSL ENGINE
+        // ============================================================
+        class SixhenPSLEngine {
+            constructor(detector, canvas) {
+                this.detector = detector;
+                this.canvas = canvas;
+                this.m = {};
+                this.scores = {};
+            }
+
+            _get(idx) { return this.detector.getSafe(idx); }
+            _dist(i1, i2) { return Utils.dist(this._get(i1), this._get(i2)); }
+            _angle(i1, i2) { return Utils.angle(this._get(i1), this._get(i2)); }
+
+            // ============================================================
+            // EYE AREA (30%)
+            // ============================================================
+            _calcEyeArea() {
+                const m = this.m;
+
+                // Canthal tilt (ideal: 5-8° positive)
+                const tilt = m.canthalTilt;
+                const tiltScore = Utils.clamp(100 - Math.abs(tilt - 6) * 4, 0, 100);
+
+                // Upper eyelid exposure (ideal: low)
+                const exposure = m.upperExposure;
+                const exposureScore = Utils.clamp(100 - exposure * 120, 0, 100);
+
+                // Eye spacing (ideal: 0.46)
+                const spacingScore = Utils.scoreFromError(m.eyeSpacing, 0.46, 0.12);
+
+                // Eye size (ideal: larger)
+                const sizeScore = Utils.clamp(m.eyeSize / 0.045 * 100, 0, 100);
+
+                // Eye symmetry
+                const symScore = Utils.safe(m.eyeSym, 0.5) * 100;
+
+                // Eye shape (width/height ratio ideal: 3.5)
+                const shape = m.eyeWHRatio;
+                const shapeScore = Utils.scoreFromError(shape, 3.5, 0.8);
+
+                // Deep set appearance (via brow position)
+                const browPos = m.browPosition;
+                const deepScore = Utils.clamp((browPos + 0.1) * 300, 0, 100);
+
+                // Eyebrow thickness
+                const browScore = Utils.clamp(m.browThickness * 200, 0, 100);
+
+                // Eye support (lower lid position)
+                const supportScore = Utils.clamp(100 - Math.abs(m.lowerLidPos - 0.5) * 200, 0, 100);
+
+                const total = (
+                    tiltScore * 0.18 +
+                    exposureScore * 0.15 +
+                    spacingScore * 0.14 +
+                    sizeScore * 0.12 +
+                    symScore * 0.10 +
+                    shapeScore * 0.10 +
+                    deepScore * 0.08 +
+                    browScore * 0.07 +
+                    supportScore * 0.06
+                );
+
+                return Utils.clamp(total, 5, 95);
+            }
+
+            // ============================================================
+            // HARMONY (25%)
+            // ============================================================
+            _calcHarmony() {
+                const m = this.m;
+
+                // Facial thirds (ideal: equal)
+                const thirds = [m.upperThird, m.midThird, m.lowerThird];
+                const avgThird = thirds.reduce((a, b) => a + b, 0) / 3;
+                const thirdErr = thirds.reduce((a, b) => a + Math.abs(b - avgThird), 0) / (avgThird + 0.001);
+                const thirdScore = Utils.clamp(1 - thirdErr * 2.5, 0, 1) * 100;
+
+                // Facial fifths (ideal: equal)
+                const fifths = [m.fifth1, m.fifth2, m.fifth3, m.fifth4];
+                const avgFifth = fifths.reduce((a, b) => a + b, 0) / 4;
+                const fifthErr = fifths.reduce((a, b) => a + Math.abs(b - avgFifth), 0) / (avgFifth + 0.001);
+                const fifthScore = Utils.clamp(1 - fifthErr * 2.5, 0, 1) * 100;
+
+                // Midface ratio (ideal: 0.33)
+                const midScore = Utils.scoreFromError(m.midfaceRatio, 0.33, 0.1);
+
+                // Philtrum ratio (ideal: 0.5)
+                const philtrumScore = Utils.scoreFromError(m.philtrumRatio, 0.5, 0.15);
+
+                // fWHR (ideal: 1.618)
+                const fwhrScore = Utils.scoreFromError(m.fwhr, 1.618, 0.2);
+
+                // Overall symmetry
+                const symAvg = (m.eyeSym + m.browSym + m.noseSym + m.mouthSym) / 4;
+                const symScore = symAvg * 100;
+
+                const total = (
+                    thirdScore * 0.22 +
+                    fifthScore * 0.18 +
+                    midScore * 0.18 +
+                    philtrumScore * 0.12 +
+                    fwhrScore * 0.15 +
+                    symScore * 0.15
+                );
+
+                return Utils.clamp(total, 5, 95);
+            }
+
+            // ============================================================
+            // BONE STRUCTURE (20%)
+            // ============================================================
+            _calcBone() {
+                const m = this.m;
+
+                // Jaw width (ideal: 0.85)
+                const jawScore = Utils.scoreFromError(m.jawRatio, 0.85, 0.15);
+
+                // Chin projection (ideal: 1.6-1.8)
+                const chinScore = Utils.scoreFromError(m.chinProjection, 1.65, 0.25);
+
+                // Jaw angle (ideal: 120-130)
+                const angleScore = Utils.clamp(100 - Math.abs(m.jawAngle - 125) * 2, 0, 100);
+
+                // Cheekbone width (ideal: 0.75)
+                const cheekScore = Utils.scoreFromError(m.cheekRatio, 0.75, 0.1);
+
+                // Lower third strength
+                const lowerScore = Utils.scoreFromError(m.lowerThirdRatio, 0.33, 0.1);
+
+                // Chin width (ideal: 0.6 of jaw)
+                const chinWScore = Utils.scoreFromError(m.chinWidthRatio, 0.6, 0.15);
+
+                const total = (
+                    jawScore * 0.22 +
+                    chinScore * 0.20 +
+                    angleScore * 0.18 +
+                    cheekScore * 0.15 +
+                    lowerScore * 0.15 +
+                    chinWScore * 0.10
+                );
+
+                return Utils.clamp(total, 5, 95);
+            }
+
+            // ============================================================
+            // CANTHAL TILT (10%)
+            // ============================================================
+            _calcCanthal() {
+                const tilt = this.m.canthalTilt;
+                // Positive = good, 5-8° ideal
+                const score = Utils.clamp(100 - Math.abs(tilt - 6) * 3.5, 0, 100);
+                return Utils.clamp(score, 5, 95);
+            }
+
+            // ============================================================
+            // SKIN (5%)
+            // ============================================================
+            _calcSkin() {
+                try {
+                    const ctx = this.canvas.getContext('2d');
+                    const w = this.canvas.width,
+                        h = this.canvas.height;
+                    const imageData = ctx.getImageData(0, 0, w, h);
+                    const data = imageData.data;
+
+                    let sum = 0,
+                        sumSq = 0,
+                        count = 0;
+                    for (let i = 0; i < data.length; i += 8) {
+                        const r = data[i],
+                            g = data[i + 1],
+                            b = data[i + 2];
+                        const bright = (r + g + b) / 3;
+                        sum += bright;
+                        sumSq += bright * bright;
+                        count++;
+                    }
+
+                    if (count === 0) return 50;
+                    const mean = sum / count;
+                    const variance = sumSq / count - mean * mean;
+                    const contrast = Math.sqrt(variance);
+
+                    const brightScore = Utils.clamp(100 - Math.abs(mean - 150) * 0.4, 0, 100);
+                    const contrastScore = Utils.clamp(100 - Math.abs(contrast - 60) * 1.2, 0, 100);
+                    const uniformScore = Utils.clamp(100 - Math.sqrt(variance) * 0.4, 0, 100);
+
+                    // Simple acne estimate
+                    let acneScore = 80;
+                    if (data.length > 100) {
+                        let rVar = 0,
+                            gVar = 0,
+                            bVar = 0;
+                        for (let i = 0; i < Math.min(data.length, 1000); i += 8) {
+                            rVar += (data[i] - 128) ** 2;
+                            gVar += (data[i + 1] - 128) ** 2;
+                            bVar += (data[i + 2] - 128) ** 2;
+                        }
+                        const totalVar = Math.sqrt((rVar + gVar + bVar) / 100);
+                        acneScore = Utils.clamp(100 - totalVar * 0.5, 0, 100);
+                    }
+
+                    const total = brightScore * 0.25 + contrastScore * 0.25 + uniformScore * 0.30 + acneScore * 0.20;
+                    return Utils.clamp(total, 5, 95);
+                } catch (e) { return 50; }
+            }
+
+            // ============================================================
+            // NOSE (5%)
+            // ============================================================
+            _calcNose() {
+                const m = this.m;
+                const widthScore = Utils.scoreFromError(m.noseWidthRatio, 0.25, 0.07);
+                const lengthScore = Utils.scoreFromError(m.noseLengthRatio, 0.33, 0.08);
+                const symScore = Utils.safe(m.noseSym, 0.5) * 100;
+                return Utils.clamp(widthScore * 0.4 + lengthScore * 0.35 + symScore * 0.25, 5, 95);
+            }
+
+            // ============================================================
+            // LIPS (5%)
+            // ============================================================
+            _calcLips() {
+                const m = this.m;
+                const widthScore = Utils.scoreFromError(m.mouthWidthRatio, 0.35, 0.1);
+                const ratioScore = Utils.scoreFromError(m.lipRatio, 1.5, 0.3);
+                const symScore = Utils.safe(m.mouthSym, 0.5) * 100;
+                return Utils.clamp(widthScore * 0.4 + ratioScore * 0.35 + symScore * 0.25, 5, 95);
+            }
+
+            // ============================================================
+            // CONFIDENCE ENGINE
+            // ============================================================
+            calcConfidence() {
+                let conf = 100;
+                const count = this.detector.getCount();
+                if (count < 400) conf -= (400 - count) * 0.2;
+                if (this.m.faceW < 50 || this.m.faceH < 50) conf -= 20;
+                if (Math.abs(this.m.canthalTilt) > 25) conf -= 15;
+                if (this.m.eyeSym < 0.7) conf -= 10;
+                return Utils.clamp(conf, 0, 100);
+            }
+
+            // ============================================================
+            // EXTRACT ALL METRICS
+            // ============================================================
+            extractMetrics() {
+                const m = {};
+
+                // Face dimensions
+                m.faceW = this._dist(L.FACE_LEFT, L.FACE_RIGHT);
+                m.faceH = this._dist(L.FACE_TOP, L.FACE_BOTTOM);
+
+                // ===== FACIAL THIRDS =====
+                m.upperThird = this._dist(L.FACE_TOP, L.FOREHEAD);
+                m.midThird = this._dist(L.FOREHEAD, L.CHIN);
+                m.lowerThird = this._dist(L.CHIN, L.MOUTH_BOTTOM);
+                m.totalThird = m.upperThird + m.midThird + m.lowerThird;
+
+                // ===== FACIAL FIFTHS =====
+                const faceL = this._get(L.FACE_LEFT);
+                const lEyeOut = this._get(L.LEFT_EYE_OUTER);
+                const rEyeIn = this._get(L.RIGHT_EYE_INNER);
+                const rEyeOut = this._get(L.RIGHT_EYE_OUTER);
+                const faceR = this._get(L.FACE_RIGHT);
+                if (faceL && lEyeOut && rEyeIn && rEyeOut && faceR) {
+                    m.fifth1 = Utils.dist(faceL, lEyeOut);
+                    m.fifth2 = Utils.dist(lEyeOut, rEyeIn);
+                    m.fifth3 = Utils.dist(rEyeIn, rEyeOut);
+                    m.fifth4 = Utils.dist(rEyeOut, faceR);
                 } else {
-                    el.textContent = currentText.substring(0, charIndex + 1);
-                    charIndex++;
+                    m.fifth1 = m.fifth2 = m.fifth3 = m.fifth4 = m.faceW / 4;
                 }
 
-                if (!isDeleting && charIndex === currentText.length) {
-                    setTimeout(() => { isDeleting = true; }, 2000);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % texts.length;
+                // ===== EYES =====
+                m.leftEyeW = this._dist(L.LEFT_EYE_INNER, L.LEFT_EYE_OUTER);
+                m.rightEyeW = this._dist(L.RIGHT_EYE_INNER, L.RIGHT_EYE_OUTER);
+                m.leftEyeH = this._dist(L.LEFT_EYE_TOP, L.LEFT_EYE_BOTTOM);
+                m.rightEyeH = this._dist(L.RIGHT_EYE_TOP, L.RIGHT_EYE_BOTTOM);
+                m.eyeDist = this._dist(L.LEFT_EYE_INNER, L.RIGHT_EYE_INNER);
+
+                // Eye size (area)
+                m.eyeSize = (m.leftEyeW * m.leftEyeH + m.rightEyeW * m.rightEyeH) / 2 / (m.faceW * m.faceH + 0.001);
+
+                // Eye WH ratio
+                m.eyeWHRatio = (m.leftEyeW / (m.leftEyeH + 0.001) + m.rightEyeW / (m.rightEyeH + 0.001)) / 2;
+
+                // ===== CANTHAL TILT =====
+                const leftInner = this._get(L.LEFT_EYE_INNER);
+                const rightInner = this._get(L.RIGHT_EYE_INNER);
+                if (leftInner && rightInner) {
+                    m.canthalTilt = Math.atan2(rightInner.y - leftInner.y, rightInner.x - leftInner.x) * 180 / Math.PI;
+                } else { m.canthalTilt = 0; }
+
+                // ===== UPPER EYELID EXPOSURE =====
+                const lTop = this._get(L.LEFT_EYE_TOP);
+                const lInner = this._get(L.LEFT_EYE_INNER);
+                const lBottom = this._get(L.LEFT_EYE_BOTTOM);
+                if (lTop && lInner && lBottom) {
+                    m.upperExposure = Math.abs(lTop.y - lInner.y) / (lTop.y - lBottom.y + 0.001);
+                } else { m.upperExposure = 0.3; }
+
+                // ===== LOWER LID POSITION =====
+                const lBottom2 = this._get(L.LEFT_EYE_BOTTOM);
+                const rBottom2 = this._get(L.RIGHT_EYE_BOTTOM);
+                if (lBottom2 && rBottom2) {
+                    m.lowerLidPos = (lBottom2.y + rBottom2.y) / 2 / m.faceH;
+                } else { m.lowerLidPos = 0.5; }
+
+                // ===== EYEBROW =====
+                const lBrow = this._dist(L.LEFT_BROW_INNER, L.LEFT_BROW_OUTER);
+                const rBrow = this._dist(L.RIGHT_BROW_INNER, L.RIGHT_BROW_OUTER);
+                m.browThickness = (lBrow + rBrow) / 2 / m.faceW;
+                m.browPosition = (this._get(L.LEFT_BROW_TOP).y + this._get(L.RIGHT_BROW_TOP).y) / 2 / m.faceH;
+
+                // ===== NOSE =====
+                m.noseW = this._dist(L.NOSE_LEFT, L.NOSE_RIGHT);
+                m.noseH = this._dist(L.NOSE_BRIDGE, L.NOSE_TIP);
+
+                // ===== MOUTH =====
+                m.mouthW = this._dist(L.MOUTH_LEFT, L.MOUTH_RIGHT);
+                m.mouthH = this._dist(L.MOUTH_TOP, L.MOUTH_BOTTOM);
+                const upperLip = this._dist(L.MOUTH_TOP, L.MOUTH_INNER_TOP);
+                const lowerLip = this._dist(L.MOUTH_BOTTOM, L.MOUTH_INNER_BOTTOM);
+                m.lipRatio = upperLip / (lowerLip + 0.001);
+
+                // ===== PHILTRUM =====
+                const noseTip = this._get(L.NOSE_TIP);
+                const mouthTop = this._get(L.MOUTH_TOP);
+                const mouthBottom = this._get(L.MOUTH_BOTTOM);
+                if (noseTip && mouthTop && mouthBottom) {
+                    const philtrumLength = Utils.dist(noseTip, mouthTop);
+                    const mouthHeight = Utils.dist(mouthTop, mouthBottom);
+                    m.philtrumRatio = philtrumLength / (mouthHeight + 0.001);
+                } else { m.philtrumRatio = 0.5; }
+
+                // ===== JAW / CHIN =====
+                m.jawW = this._dist(L.JAW_LEFT, L.JAW_RIGHT);
+                m.chinW = this._dist(L.CHIN_LEFT, L.CHIN_RIGHT);
+                m.cheekW = this._dist(L.CHEEK_LEFT, L.CHEEK_RIGHT);
+
+                // ===== JAW ANGLE =====
+                const chin = this._get(L.CHIN);
+                const gL = this._get(L.GONION_LEFT);
+                const gR = this._get(L.GONION_RIGHT);
+                if (chin && gL && gR) {
+                    const a1 = Utils.angle(chin, gL);
+                    const a2 = Utils.angle(chin, gR);
+                    m.jawAngle = Math.abs(a1 - a2) * 180 / Math.PI;
+                } else { m.jawAngle = 125; }
+
+                // ===== CHIN PROJECTION =====
+                const noseTip2 = this._get(L.NOSE_TIP);
+                const mouthTop2 = this._get(L.MOUTH_TOP);
+                const chin2 = this._get(L.CHIN);
+                if (noseTip2 && mouthTop2 && chin2) {
+                    m.chinProjection = Utils.dist(noseTip2, chin2) / (Utils.dist(noseTip2, mouthTop2) + 0.001);
+                } else { m.chinProjection = 1.5; }
+
+                // ===== RATIOS =====
+                m.fwhr = m.faceW / (m.faceH + 0.001);
+                m.eyeSpacing = m.eyeDist / (m.faceW + 0.001);
+                m.midfaceRatio = m.midThird / (m.faceH + 0.001);
+                m.lowerThirdRatio = m.lowerThird / (m.faceH + 0.001);
+                m.jawRatio = m.jawW / (m.faceW + 0.001);
+                m.chinWidthRatio = m.chinW / (m.jawW + 0.001);
+                m.cheekRatio = m.cheekW / (m.faceW + 0.001);
+                m.noseWidthRatio = m.noseW / (m.faceW + 0.001);
+                m.noseLengthRatio = m.noseH / (m.faceH + 0.001);
+                m.mouthWidthRatio = m.mouthW / (m.faceW + 0.001);
+
+                // ===== SYMMETRY =====
+                m.eyeSym = 1 - Math.abs(m.leftEyeW - m.rightEyeW) / (m.leftEyeW + m.rightEyeW + 0.001);
+                m.browSym = 1 - Math.abs(
+                    this._dist(L.LEFT_BROW_INNER, L.LEFT_BROW_OUTER) -
+                    this._dist(L.RIGHT_BROW_INNER, L.RIGHT_BROW_OUTER)
+                ) / (this._dist(L.LEFT_BROW_INNER, L.LEFT_BROW_OUTER) +
+                    this._dist(L.RIGHT_BROW_INNER, L.RIGHT_BROW_OUTER) + 0.001);
+                m.noseSym = 1 - Math.abs(
+                    this._dist(L.NOSE_LEFT, L.NOSE_TIP) -
+                    this._dist(L.NOSE_RIGHT, L.NOSE_TIP)
+                ) / (this._dist(L.NOSE_LEFT, L.NOSE_TIP) +
+                    this._dist(L.NOSE_RIGHT, L.NOSE_TIP) + 0.001);
+                m.mouthSym = 1 - Math.abs(
+                    this._dist(L.MOUTH_LEFT, L.NOSE_TIP) -
+                    this._dist(L.MOUTH_RIGHT, L.NOSE_TIP)
+                ) / (this._dist(L.MOUTH_LEFT, L.NOSE_TIP) +
+                    this._dist(L.MOUTH_RIGHT, L.NOSE_TIP) + 0.001);
+
+                this.m = m;
+                return m;
+            }
+
+            // ============================================================
+            // DETECT FACE SHAPE
+            // ============================================================
+            detectFaceShape() {
+                const m = this.m;
+                const ratio = m.faceW / (m.faceH + 0.001);
+                const jawRatio = m.jawW / (m.faceW + 0.001);
+                if (ratio > 0.9 && jawRatio < 0.7) return 'Oval';
+                if (ratio < 0.8 && jawRatio > 0.8) return 'Square';
+                if (ratio > 0.85 && jawRatio > 0.75) return 'Round';
+                if (ratio > 0.8 && jawRatio < 0.65) return 'Heart';
+                if (ratio < 0.8 && jawRatio < 0.65) return 'Diamond';
+                if (ratio > 0.85 && jawRatio < 0.7) return 'Oblong';
+                return 'Oval';
+            }
+
+            // ============================================================
+            // HALO / FAILO DETECTION
+            // ============================================================
+            detectHalos(scores) {
+                const halos = [];
+                const failos = [];
+                const m = this.m;
+
+                // Canthal tilt
+                if (m.canthalTilt > 4) halos.push('✓ Positive canthal tilt');
+                else if (m.canthalTilt < -2) failos.push('✗ Negative canthal tilt');
+
+                // Eye support
+                if (m.lowerLidPos < 0.45) halos.push('✓ Good eye support');
+                else if (m.lowerLidPos > 0.55) failos.push('✗ Poor eye support');
+
+                // Upper eyelid exposure
+                if (m.upperExposure < 0.25) halos.push('✓ Low upper eyelid exposure');
+                else if (m.upperExposure > 0.4) failos.push('✗ High upper eyelid exposure');
+
+                // Eye spacing
+                if (m.eyeSpacing > 0.43 && m.eyeSpacing < 0.49) halos.push('✓ Good eye spacing');
+
+                // Compact midface
+                if (m.midfaceRatio > 0.31 && m.midfaceRatio < 0.36) halos.push('✓ Compact midface');
+                else if (m.midfaceRatio > 0.38) failos.push('✗ Long midface');
+
+                // Jaw
+                if (scores.bone > 70) halos.push('✓ Strong jaw');
+                else if (scores.bone < 50) failos.push('✗ Weak jaw');
+
+                // Chin
+                if (m.chinProjection > 1.4 && m.chinProjection < 1.9) halos.push('✓ Strong chin');
+                else if (m.chinProjection < 1.2) failos.push('✗ Weak chin');
+
+                // Cheekbones
+                if (m.cheekRatio > 0.7 && m.cheekRatio < 0.8) halos.push('✓ High cheekbones');
+
+                // Harmony
+                if (scores.harmony > 70) halos.push('✓ Good facial harmony');
+                else if (scores.harmony < 50) failos.push('✗ Poor facial harmony');
+
+                // Skin
+                if (scores.skin > 70) halos.push('✓ Clear skin');
+                else if (scores.skin < 50) failos.push('✗ Poor skin quality');
+
+                // Eyebrows
+                if (m.browThickness > 0.03) halos.push('✓ Thick eyebrows');
+
+                // Symmetry
+                const symAvg = (m.eyeSym + m.browSym + m.noseSym + m.mouthSym) / 4;
+                if (symAvg > 0.92) halos.push('✓ Good facial symmetry');
+                else if (symAvg < 0.80) {
+                    failos.push('✗ Facial asymmetry');
+                    if (m.eyeSym < 0.85) failos.push('✗ Eye asymmetry');
                 }
 
-                const speed = isDeleting ? 50 : 100;
-                setTimeout(type, speed);
+                // Philtrum
+                if (m.philtrumRatio > 0.6) failos.push('✗ Long philtrum');
+
+                // Jaw narrow
+                if (m.jawRatio < 0.70) failos.push('✗ Narrow jaw');
+
+                return { halos: halos.slice(0, 8), failos: failos.slice(0, 8) };
             }
-            type();
-        }
-        window.addEventListener('load', typeWriter);
 
-        // ===== 10. LIVE CLOCK =====
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clockDisplay').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+            // ============================================================
+            // MAIN ANALYZE
+            // ============================================================
+            analyze() {
+                this.extractMetrics();
 
-        // ===== 11. VISITOR COUNTER =====
-        async function updateVisitorCount() {
-            try {
-                let totalViews = parseInt(localStorage.getItem('sixhen_views_total')) || 0;
-                const hasViewed = sessionStorage.getItem('sixhen_has_viewed') === 'true';
+                const eyeArea = this._calcEyeArea();
+                const harmony = this._calcHarmony();
+                const bone = this._calcBone();
+                const canthal = this._calcCanthal();
+                const skin = this._calcSkin();
+                const nose = this._calcNose();
+                const lips = this._calcLips();
 
-                if (!hasViewed) {
-                    totalViews++;
-                    sessionStorage.setItem('sixhen_has_viewed', 'true');
-                    localStorage.setItem('sixhen_views_total', totalViews);
+                // PSL Score (weighted)
+                const psl = (
+                    eyeArea * 0.30 +
+                    harmony * 0.25 +
+                    bone * 0.20 +
+                    canthal * 0.10 +
+                    skin * 0.05 +
+                    nose * 0.05 +
+                    lips * 0.05
+                ) / 10;
+
+                const finalScore = Utils.clamp(psl, 0, 10);
+
+                this.scores = {
+                    eyeArea: Utils.round(eyeArea, 1),
+                    harmony: Utils.round(harmony, 1),
+                    bone: Utils.round(bone, 1),
+                    canthal: Utils.round(canthal, 1),
+                    skin: Utils.round(skin, 1),
+                    nose: Utils.round(nose, 1),
+                    lips: Utils.round(lips, 1),
+                    psl: Utils.round(finalScore, 2),
+                };
+
+                const confidence = this.calcConfidence();
+                const halos = this.detectHalos(this.scores);
+                const faceShape = this.detectFaceShape();
+
+                // Check for warning
+                let warning = null;
+                if (confidence < 70) {
+                    warning = '⚠️ Ảnh chưa đủ chất lượng để đánh giá chính xác. Hãy thử ảnh rõ nét, thẳng mặt hơn.';
                 }
 
-                document.getElementById('totalViews').textContent = formatNumber(totalViews);
-            } catch (error) {
-                let count = parseInt(localStorage.getItem('sixhen_views_total')) || 0;
-                document.getElementById('totalViews').textContent = formatNumber(count);
+                return {
+                    scores: this.scores,
+                    confidence: confidence,
+                    halos: halos.halos,
+                    failos: halos.failos,
+                    faceShape: faceShape,
+                    warning: warning,
+                    metrics: {
+                        canthalTilt: Utils.round(this.m.canthalTilt, 1) + '°',
+                        midfaceRatio: Utils.round(this.m.midfaceRatio, 3),
+                        fwhr: Utils.round(this.m.fwhr, 3),
+                        eyeSpacing: Utils.round(this.m.eyeSpacing, 3),
+                        jawWidth: Utils.round(this.m.jawRatio, 3),
+                        chinProjection: Utils.round(this.m.chinProjection, 2),
+                        symmetry: Utils.round((this.m.eyeSym + this.m.browSym + this.m.noseSym + this.m.mouthSym) / 4 *
+                            100, 1) + '%',
+                        philtrumRatio: Utils.round(this.m.philtrumRatio, 2),
+                        upperExposure: Utils.round(this.m.upperExposure * 100, 1) + '%',
+                    },
+                    thirds: {
+                        upper: Utils.round((this.m.upperThird / this.m.totalThird) * 100, 1),
+                        mid: Utils.round((this.m.midThird / this.m.totalThird) * 100, 1),
+                        lower: Utils.round((this.m.lowerThird / this.m.totalThird) * 100, 1),
+                    }
+                };
             }
         }
 
-        function formatNumber(num) {
-            if (num >= 1000) { return (num / 1000).toFixed(1) + 'k'; }
-            return num.toString();
-        }
+        // ============================================================
+        // APP CONTROLLER
+        // ============================================================
+        class App {
+            constructor() {
+                this.detector = new FaceDetector();
+                this.image = null;
+                this.file = null;
+                this.imgElement = null;
+                this.zoom = 1;
+                this.history = JSON.parse(localStorage.getItem('sixhenHistory')) || [];
 
-        updateVisitorCount();
-
-        // ===== 12. THEME TOGGLE =====
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            if (document.body.classList.contains('light-mode')) {
-                themeIcon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'light');
-                showToast('🌞 Chế độ sáng', 'info', 1500);
-            } else {
-                themeIcon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'dark');
-                showToast('🌙 Chế độ tối', 'info', 1500);
+                this._bindEvents();
+                this._renderHistory();
+                this.detector.init().catch(e => console.warn('Init warning:', e));
             }
-        });
 
-        if (localStorage.getItem('theme') === 'light') {
-            document.body.classList.add('light-mode');
-            themeIcon.className = 'fas fa-sun';
-        }
+            _bindEvents() {
+                const upload = document.getElementById('uploadArea');
+                const fileInput = document.getElementById('fileInput');
 
-        // ===== 13. MODAL =====
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalBody = document.getElementById('modalBody');
-        const modalClose = document.getElementById('modalClose');
-        const modalCancel = document.getElementById('modalCancel');
-        const modalConfirm = document.getElementById('modalConfirm');
+                upload.addEventListener('click', () => fileInput.click());
+                upload.addEventListener('dragover', (e) => { e.preventDefault();
+                    upload.classList.add('dragover'); });
+                upload.addEventListener('dragleave', () => upload.classList.remove('dragover'));
+                upload.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    upload.classList.remove('dragover');
+                    if (e.dataTransfer.files.length) this._handleFile(e.dataTransfer.files[0]);
+                });
+                fileInput.addEventListener('change', (e) => {
+                    if (e.target.files.length) this._handleFile(e.target.files[0]);
+                    e.target.value = '';
+                });
 
-        let modalCallback = null;
+                document.getElementById('analyzeBtn').addEventListener('click', () => this._analyze());
+                document.getElementById('clearBtn').addEventListener('click', () => this._clear());
+                document.getElementById('clearHistoryBtn').addEventListener('click', () => {
+                    if (confirm('Xóa toàn bộ lịch sử?')) {
+                        this.history = [];
+                        localStorage.removeItem('sixhenHistory');
+                        this._renderHistory();
+                        showToast('🗑️ Đã xóa lịch sử', 'info');
+                    }
+                });
 
-        function showModal(title, body, confirmText = 'Xác nhận', cancelText = 'Hủy', callback = null) {
-            modalTitle.textContent = title;
-            modalBody.innerHTML = body;
-            modalConfirm.textContent = confirmText;
-            modalCancel.textContent = cancelText;
-            modalCallback = callback;
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+                document.getElementById('zoomInBtn').addEventListener('click', () => this._zoom(0.15));
+                document.getElementById('zoomOutBtn').addEventListener('click', () => this._zoom(-0.15));
+                document.getElementById('resetZoomBtn').addEventListener('click', () => this._zoom(0, true));
 
-        function closeModal() {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-            modalCallback = null;
-        }
+                document.addEventListener('keydown', (e) => {
+                    if (e.ctrlKey && e.key === 'Enter') { e.preventDefault();
+                        document.getElementById('analyzeBtn').click(); }
+                });
+            }
 
-        modalClose.addEventListener('click', closeModal);
-        modalCancel.addEventListener('click', closeModal);
-        modalConfirm.addEventListener('click', () => {
-            if (modalCallback) modalCallback();
-            closeModal();
-        });
-        modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+            _handleFile(file) {
+                if (!file || !file.type.startsWith('image/')) {
+                    showToast('⚠️ Vui lòng chọn ảnh hợp lệ!', 'error');
+                    return;
+                }
+                this.file = file;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    this.image = e.target.result;
+                    document.getElementById('originalImage').src = this.image;
+                    document.getElementById('originalImage').className = 'show';
+                    document.getElementById('originalPlaceholder').style.display = 'none';
+                    document.getElementById('analysisCanvas').className = '';
+                    document.getElementById('analysisPlaceholder').style.display = 'block';
+                    document.getElementById('resultsContainer').classList.remove('show');
 
-        // ===== 14. PROJECT GALLERY =====
-        function showProject(name, description) {
-            showModal(
-                `📁 ${name}`,
-                `
-                <p>${description}</p><br>
-                <p><strong>📌 Đến từ:</strong> Nam Định</p>
-                <p><strong>📅 Năm:</strong> 2026</p>
-                <p><strong>🛠️ Công nghệ:</strong> HTML, CSS, JavaScript</p>
-                `,
-                'Xem chi tiết',
-                'Đóng',
-                () => showToast(`📁 Đang mở ${name}...`, 'info')
-            );
-        }
+                    document.getElementById('analyzeBtn').disabled = false;
+                    document.getElementById('clearBtn').disabled = false;
+                    document.getElementById('zoomInBtn').disabled = false;
+                    document.getElementById('zoomOutBtn').disabled = false;
+                    document.getElementById('resetZoomBtn').disabled = false;
+                    document.getElementById('statusBar').className = 'status-bar';
+                    document.getElementById('statusBar').textContent = '';
 
-        // ===== 15. CONTACT FORM =====
-        function showContactForm() {
-            showModal(
-                '📧 Liên hệ',
-                `
-                <div style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Tên</label>
-                    <input type="text" id="contactName" placeholder="Nhập tên..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
-                </div>
-                <div style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Email</label>
-                    <input type="email" id="contactEmail" placeholder="Nhập email..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
-                </div>
-                <div style="margin-bottom:14px;">
-                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Nội dung</label>
-                    <textarea id="contactMessage" placeholder="Tin nhắn..." rows="4" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;resize:vertical;min-height:70px;"></textarea>
-                </div>
-                `,
-                'Gửi',
-                'Hủy',
-                () => {
-                    const name = document.getElementById('contactName')?.value || 'Không tên';
-                    const email = document.getElementById('contactEmail')?.value || 'Không email';
-                    const message = document.getElementById('contactMessage')?.value || 'Không nội dung';
+                    const img = new Image();
+                    img.src = this.image;
+                    img.onload = () => {
+                        this.imgElement = img;
+                        this._resetZoom();
+                        this._drawImageOnly();
+                    };
+                    showToast('✅ Đã tải ảnh: ' + file.name, 'success');
+                };
+                reader.readAsDataURL(file);
+            }
 
-                    if (!message || message === 'Không nội dung') {
-                        showToast('⚠️ Vui lòng nhập nội dung!', 'warning');
+            _drawImageOnly() {
+                const canvas = document.getElementById('analysisCanvas');
+                const ctx = canvas.getContext('2d');
+                const img = this.imgElement;
+                const maxDim = 600;
+                let w = img.width,
+                    h = img.height;
+                if (w > maxDim) { h = h * maxDim / w;
+                    w = maxDim; }
+                if (h > maxDim) { w = w * maxDim / h;
+                    h = maxDim; }
+                canvas.width = w;
+                canvas.height = h;
+                canvas.className = 'show';
+                document.getElementById('analysisPlaceholder').style.display = 'none';
+                ctx.drawImage(img, 0, 0, w, h);
+            }
+
+            _zoom(delta, reset = false) {
+                if (reset) { this.zoom = 1; } else { this.zoom = Math.max(0.5, Math.min(3, this.zoom + delta)); }
+                document.getElementById('originalImage').style.transform = `scale(${this.zoom})`;
+                document.getElementById('originalImage').style.transformOrigin = 'center center';
+            }
+
+            _resetZoom() {
+                this.zoom = 1;
+                document.getElementById('originalImage').style.transform = 'scale(1)';
+                document.getElementById('originalImage').style.transformOrigin = 'center center';
+            }
+
+            _clear() {
+                this.image = null;
+                this.file = null;
+                this.imgElement = null;
+                document.getElementById('originalImage').className = '';
+                document.getElementById('originalPlaceholder').style.display = 'block';
+                document.getElementById('analysisCanvas').className = '';
+                document.getElementById('analysisPlaceholder').style.display = 'block';
+                document.getElementById('resultsContainer').classList.remove('show');
+                document.getElementById('analyzeBtn').disabled = true;
+                document.getElementById('clearBtn').disabled = true;
+                document.getElementById('zoomInBtn').disabled = true;
+                document.getElementById('zoomOutBtn').disabled = true;
+                document.getElementById('resetZoomBtn').disabled = true;
+                document.getElementById('fileInput').value = '';
+                document.getElementById('statusBar').className = 'status-bar';
+                document.getElementById('statusBar').textContent = '';
+                this._resetZoom();
+                showToast('🔄 Đã xóa ảnh', 'info');
+            }
+
+            async _analyze() {
+                if (!this.imgElement) {
+                    showToast('⚠️ Chưa có ảnh!', 'error');
+                    return;
+                }
+
+                const analyzeBtn = document.getElementById('analyzeBtn');
+                const statusBar = document.getElementById('statusBar');
+
+                analyzeBtn.disabled = true;
+                Loading.show('🧠 AI đang phân tích...');
+                Loading.update(10);
+
+                try {
+                    const face = await this.detector.detect(this.imgElement);
+                    Loading.update(30);
+
+                    if (!face) {
+                        Loading.hide();
+                        analyzeBtn.disabled = false;
+                        statusBar.className = 'status-bar error show';
+                        statusBar.textContent = '❌ Không tìm thấy khuôn mặt!';
+                        showToast('❌ Không tìm thấy khuôn mặt!', 'error');
                         return;
                     }
 
-                    showToast(`✅ Đã gửi tin nhắn từ ${name}`, 'success');
-                    window.location.href =
-                        `mailto:dmh190229@gmail.com?subject=Liên hệ từ ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+                    this.detector.extractLandmarks(face);
+                    Loading.update(50);
+                    Loading.text.textContent = '📐 Đang tính toán PSL metrics...';
+
+                    const count = this.detector.getCount();
+                    if (!this.detector.isValid()) {
+                        Loading.hide();
+                        analyzeBtn.disabled = false;
+                        statusBar.className = 'status-bar warning show';
+                        statusBar.textContent = `⚠️ Chỉ có ${count}/478 landmarks. Ảnh chưa đủ chất lượng!`;
+                        showToast(`⚠️ Chỉ có ${count}/478 landmarks!`, 'warning');
+                        return;
+                    }
+
+                    const canvas = document.getElementById('analysisCanvas');
+                    const engine = new SixhenPSLEngine(this.detector, canvas);
+                    const result = engine.analyze();
+                    Loading.update(75);
+
+                    const tier = getTier(result.scores.psl);
+                    const topPercent = getTopPercent(result.scores.psl);
+
+                    Loading.text.textContent = '🎨 Đang tổng hợp kết quả...';
+                    Loading.update(85);
+
+                    // Draw canvas
+                    this._drawAnalysis(face, engine);
+
+                    // Display results
+                    this._displayResults(result, tier, topPercent);
+
+                    // Save history
+                    this.history.unshift({
+                        date: new Date().toISOString(),
+                        fileName: this.file?.name || 'image',
+                        psl: result.scores.psl,
+                        tier: tier.label,
+                    });
+                    if (this.history.length > 20) this.history.pop();
+                    localStorage.setItem('sixhenHistory', JSON.stringify(this.history));
+                    this._renderHistory();
+
+                    Loading.update(100);
+                    setTimeout(() => {
+                        Loading.hide();
+                        analyzeBtn.disabled = false;
+                        statusBar.className = 'status-bar success show';
+                        statusBar.textContent = `✅ PSL: ${result.scores.psl.toFixed(2)} – ${tier.label}`;
+                        showToast(`✅ PSL: ${result.scores.psl.toFixed(2)} – ${tier.label}`, 'success');
+                    }, 300);
+
+                } catch (err) {
+                    console.error('Analysis error:', err);
+                    Loading.hide();
+                    analyzeBtn.disabled = false;
+                    statusBar.className = 'status-bar error show';
+                    statusBar.textContent = `❌ Lỗi: ${err.message}`;
+                    showToast('❌ Lỗi: ' + err.message, 'error');
                 }
-            );
+            }
+
+            _drawAnalysis(face, engine) {
+                const canvas = document.getElementById('analysisCanvas');
+                const ctx = canvas.getContext('2d');
+                const img = this.imgElement;
+                const maxDim = 600;
+                let w = img.width,
+                    h = img.height;
+                if (w > maxDim) { h = h * maxDim / w;
+                    w = maxDim; }
+                if (h > maxDim) { w = w * maxDim / h;
+                    h = maxDim; }
+                canvas.width = w;
+                canvas.height = h;
+                canvas.className = 'show';
+                document.getElementById('analysisPlaceholder').style.display = 'none';
+
+                ctx.drawImage(img, 0, 0, w, h);
+                const sx = w / img.width,
+                    sy = h / img.height;
+                const m = engine.m;
+                const points = face.keypoints || [];
+
+                // Bounding box
+                if (face.box) {
+                    const bx = face.box.xMin * sx,
+                        by = face.box.yMin * sy;
+                    ctx.strokeStyle = 'rgba(96,165,250,0.2)';
+                    ctx.lineWidth = 1.5;
+                    ctx.setLineDash([4, 4]);
+                    ctx.strokeRect(bx, by, (face.box.xMax - face.box.xMin) * sx, (face.box.yMax - face.box.yMin) * sy);
+                    ctx.setLineDash([]);
+                }
+
+                // Landmarks
+                const colors = ['#60a5fa', '#34d399', '#f472b6', '#fbbf24', '#a78bfa', '#f87171'];
+                points.forEach((p, i) => {
+                    const x = p.x * sx,
+                        y = p.y * sy;
+                    ctx.beginPath();
+                    ctx.arc(x, y, i % 7 === 0 ? 2.5 : 1.2, 0, Math.PI * 2);
+                    ctx.fillStyle = colors[i % colors.length] + (i % 7 === 0 ? 'cc' : '55');
+                    ctx.fill();
+                });
+
+                // Draw thirds
+                const top = engine._get(L.FACE_TOP);
+                const fore = engine._get(L.FOREHEAD);
+                const chin = engine._get(L.CHIN);
+                const bot = engine._get(L.FACE_BOTTOM);
+                if (top && fore && chin && bot) {
+                    const ys = [top.y * sy, fore.y * sy, chin.y * sy, bot.y * sy];
+                    ctx.setLineDash([4, 4]);
+                    ctx.lineWidth = 1;
+                    ['rgba(96,165,250,0.3)', 'rgba(167,139,250,0.3)', 'rgba(244,114,182,0.3)'].forEach((c, i) => {
+                        ctx.strokeStyle = c;
+                        ctx.beginPath();
+                        ctx.moveTo(0, ys[i + 1]);
+                        ctx.lineTo(w, ys[i + 1]);
+                        ctx.stroke();
+                    });
+                    ctx.setLineDash([]);
+                }
+
+                // Draw jaw line
+                const jawL = engine._get(L.JAW_LEFT);
+                const jawR = engine._get(L.JAW_RIGHT);
+                const chinP = engine._get(L.CHIN);
+                if (jawL && jawR && chinP) {
+                    ctx.strokeStyle = 'rgba(52,211,153,0.3)';
+                    ctx.lineWidth = 1.5;
+                    ctx.setLineDash([3, 3]);
+                    ctx.beginPath();
+                    ctx.moveTo(jawL.x * sx, jawL.y * sy);
+                    ctx.lineTo(chinP.x * sx, chinP.y * sy);
+                    ctx.lineTo(jawR.x * sx, jawR.y * sy);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                }
+
+                // Info label
+                ctx.fillStyle = 'rgba(0,0,0,0.5)';
+                ctx.fillRect(8, 8, 150, 24);
+                ctx.fillStyle = '#60a5fa';
+                ctx.font = 'bold 11px Inter, sans-serif';
+                ctx.fillText(`🤖 ${points.length} landmarks`, 14, 24);
+            }
+
+            _displayResults(result, tier, topPercent) {
+                const s = result.scores;
+
+                // Score
+                document.getElementById('scoreNumber').textContent = s.psl.toFixed(2);
+                document.getElementById('tierEmoji').textContent = tier.emoji;
+                document.getElementById('tierLabel').textContent = tier.label;
+                document.getElementById('pslLabel').textContent = `${tier.emoji} ${tier.label}`;
+                document.getElementById('pslTier').className = `psl-tier ${tier.cls}`;
+
+                document.getElementById('faceShapeBadge').textContent = `🔮 Face Shape: ${result.faceShape || 'Oval'}`;
+
+                // Confidence
+                const conf = result.confidence || 80;
+                const confClass = conf > 80 ? 'good' : conf > 50 ? 'warn' : 'bad';
+                document.getElementById('confidenceDisplay').innerHTML =
+                    `🎯 Confidence: <span class="${confClass}">${conf}%</span>`;
+
+                document.getElementById('topPercent').textContent = `📊 Top: ${topPercent}`;
+
+                // Warning
+                const warningEl = document.getElementById('warningMsg');
+                if (result.warning) {
+                    warningEl.style.display = 'block';
+                    warningEl.textContent = result.warning;
+                } else {
+                    warningEl.style.display = 'none';
+                }
+
+                // Sub scores
+                const subs = {
+                    eyeArea: document.getElementById('subEyeArea'),
+                    harmony: document.getElementById('subHarmony'),
+                    bone: document.getElementById('subBone'),
+                    canthal: document.getElementById('subCanthal'),
+                    skin: document.getElementById('subSkin'),
+                    nose: document.getElementById('subNose'),
+                    lips: document.getElementById('subLips'),
+                };
+                const subKeys = ['eyeArea', 'harmony', 'bone', 'canthal', 'skin', 'nose', 'lips'];
+                subKeys.forEach(k => {
+                    const el = subs[k];
+                    const val = s[k] || 0;
+                    el.textContent = val;
+                    el.className = 'value ' + (val >= 75 ? 'good' : val >= 50 ? 'avg' : 'bad');
+                });
+
+                // Metrics
+                const metrics = result.metrics || {};
+                const infoItems = {
+                    'Canthal Tilt': { val: metrics.canthalTilt || '--', cls: metrics.canthalTilt && parseFloat(
+                            metrics.canthalTilt) > 2 ? 'positive' :
+                        metrics.canthalTilt && parseFloat(metrics.canthalTilt) < -2 ? 'negative' : 'neutral' },
+                    'Midface Ratio': { val: metrics.midfaceRatio || '--', cls: metrics.midfaceRatio && parseFloat(
+                            metrics.midfaceRatio) > 0.31 && parseFloat(metrics.midfaceRatio) < 0.36 ? 'positive' :
+                        'neutral' },
+                    'fWHR': { val: metrics.fwhr || '--', cls: metrics.fwhr && parseFloat(metrics.fwhr) > 1.5 && parseFloat(
+                            metrics.fwhr) < 1.75 ? 'positive' : 'neutral' },
+                    'Eye Spacing': { val: metrics.eyeSpacing || '--', cls: metrics.eyeSpacing && parseFloat(metrics
+                            .eyeSpacing) > 0.42 && parseFloat(metrics.eyeSpacing) < 0.50 ? 'positive' : 'neutral' },
+                    'Jaw Width': { val: metrics.jawWidth || '--', cls: metrics.jawWidth && parseFloat(metrics.jawWidth) >
+                            0.75 && parseFloat(metrics.jawWidth) < 0.95 ? 'positive' : 'neutral' },
+                    'Chin Projection': { val: metrics.chinProjection || '--', cls: metrics.chinProjection && parseFloat(
+                            metrics.chinProjection) > 1.3 && parseFloat(metrics.chinProjection) < 1.9 ? 'positive' :
+                        'neutral' },
+                    'Symmetry': { val: metrics.symmetry || '--', cls: metrics.symmetry && parseFloat(metrics.symmetry) >
+                            85 ? 'positive' : 'neutral' },
+                    'Philtrum Ratio': { val: metrics.philtrumRatio || '--', cls: metrics.philtrumRatio && parseFloat(
+                            metrics.philtrumRatio) < 0.6 ? 'positive' : 'neutral' },
+                };
+
+                document.getElementById('infoGrid').innerHTML = Object.entries(infoItems).map(([k, v]) =>
+                    `<div class="info-item"><span class="key">${k}</span><span class="val ${v.cls}">${v.val}</span></div>`
+                ).join('');
+
+                // Thirds
+                const t = result.thirds || { upper: 33, mid: 34, lower: 33 };
+                document.getElementById('thirdsDisplay').innerHTML = `
+                    <div class="segment" style="width:${t.upper}%;background:#60a5fa;"></div>
+                    <div class="segment" style="width:${t.mid}%;background:#a78bfa;"></div>
+                    <div class="segment" style="width:${t.lower}%;background:#f472b6;"></div>
+                `;
+
+                // Halos & Failos
+                const halos = result.halos || ['✓ AI analysis complete'];
+                const failos = result.failos || ['No significant failos detected'];
+
+                document.getElementById('haloList').innerHTML = halos.map(h => `<li>${h}</li>`).join('');
+                document.getElementById('failoList').innerHTML = failos.map(f => `<li>${f}</li>`).join('');
+
+                // Recommendations
+                const recs = this._generateRecommendations(s, result);
+                document.getElementById('recList').innerHTML = recs.map(r =>
+                    `<li><span style="font-size:16px;">${r.icon}</span> ${r.text}</li>`
+                ).join('');
+
+                document.getElementById('resultsContainer').classList.add('show');
+                const statusBar = document.getElementById('statusBar');
+                statusBar.className = 'status-bar success show';
+                statusBar.textContent = `✅ PSL: ${s.psl.toFixed(2)} – ${tier.label}`;
+            }
+
+            _generateRecommendations(scores, result) {
+                const recs = [];
+                if (scores.eyeArea < 60) recs.push({ icon: '👁️', text: 'Cải thiện vùng mắt: ngủ đủ 7-8 giờ, kem dưỡng mắt, hạn chế căng thẳng.' });
+                if (scores.harmony < 60) recs.push({ icon: '🎵', text: 'Cân bằng tỷ lệ gương mặt bằng kiểu tóc phù hợp.' });
+                if (scores.bone < 60) recs.push({ icon: '🦴', text: 'Tập cơ hàm (mewing), giảm bodyfat để định hình xương.' });
+                if (scores.canthal < 60) recs.push({ icon: '📐', text: 'Tập các bài tập nâng mắt, massage vùng mắt để cải thiện canthal tilt.' });
+                if (scores.skin < 60) recs.push({ icon: '✨', text: 'Chăm sóc da: cleanser, toner, moisturizer, sunscreen mỗi ngày.' });
+                if (scores.nose < 60) recs.push({ icon: '👃', text: 'Tạo khối cho mũi bằng kỹ thuật trang điểm.' });
+                if (scores.lips < 60) recs.push({ icon: '👄', text: 'Dưỡng môi để cải thiện hình dáng và màu sắc.' });
+
+                if (result.failos) {
+                    if (result.failos.some(f => f.includes('Weak chin'))) {
+                        recs.push({ icon: '🦴', text: 'Tập cơ cằm, để râu để tạo ảo giác cằm mạnh mẽ hơn.' });
+                    }
+                    if (result.failos.some(f => f.includes('Long midface'))) {
+                        recs.push({ icon: '🎵', text: 'Kiểu tóc dày hai bên để làm mặt rộng hơn.' });
+                    }
+                    if (result.failos.some(f => f.includes('Negative canthal tilt'))) {
+                        recs.push({ icon: '👁️', text: 'Kỹ thuật trang điểm mắt để tạo góc nâng.' });
+                    }
+                    if (result.failos.some(f => f.includes('Poor skin'))) {
+                        recs.push({ icon: '✨', text: 'Xây dựng routine skincare phù hợp với da.' });
+                    }
+                }
+
+                const shapeAdvice = {
+                    'Oval': { icon: '🥚', text: 'Hầu hết kiểu tóc đều hợp. Thử nghiệm để tìm phong cách.' },
+                    'Square': { icon: '🔲', text: 'Tóc mái dài, râu thưa để làm mềm góc cạnh.' },
+                    'Round': { icon: '🟣', text: 'Tóc vuốt cao, râu góc cạnh để làm mặt dài hơn.' },
+                    'Heart': { icon: '❤️', text: 'Tóc dài, râu dày ở cằm để cân bằng trán rộng.' },
+                    'Diamond': { icon: '💎', text: 'Tóc ngang tai, râu dày để làm đầy góc cằm.' },
+                    'Oblong': { icon: '📏', text: 'Tóc dày hai bên để làm mặt rộng hơn.' },
+                };
+                const shape = result.faceShape || 'Oval';
+                if (shapeAdvice[shape]) recs.push(shapeAdvice[shape]);
+
+                if (recs.length === 0) {
+                    recs.push({ icon: '🌟', text: 'Bạn có tỷ lệ gương mặt tuyệt vời! Duy trì phong cách hiện tại.' });
+                }
+
+                return recs;
+            }
+
+            _renderHistory() {
+                const container = document.getElementById('historyContainer');
+                if (this.history.length === 0) {
+                    container.innerHTML = `<div class="empty-state"><i class="fas fa-clock"></i> Chưa có dữ liệu</div>`;
+                    return;
+                }
+                container.innerHTML = this.history.map((h, i) => {
+                    const tier = getTier(h.psl || 0);
+                    return `
+                        <div class="history-item">
+                            <span>${h.fileName}</span>
+                            <span class="h-score">${(h.psl||0).toFixed(2)}</span>
+                            <span class="h-tier" style="color:${h.psl >= 8.0 ? '#fcd34d' : h.psl >= 7.5 ? '#34d399' : h.psl >= 7.0 ? '#60a5fa' : h.psl >= 6.5 ? '#a78bfa' : h.psl >= 6.0 ? '#fbbf24' : h.psl >= 5.5 ? '#f87171' : '#475569'}">${tier.emoji} ${tier.label}</span>
+                            <span style="font-size:11px;color:var(--text-muted);">${new Date(h.date).toLocaleString()}</span>
+                            <button onclick="this._deleteHistory(${i})" style="background:none;border:none;color:var(--accent-red);cursor:pointer;font-size:12px;"><i class="fas fa-times"></i></button>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            _deleteHistory(i) {
+                this.history.splice(i, 1);
+                localStorage.setItem('sixhenHistory', JSON.stringify(this.history));
+                this._renderHistory();
+                showToast('🗑️ Đã xóa', 'info');
+            }
         }
 
-        // ===== 16. AUDIO PLAYER - bg.mp3 =====
-        const audio = document.getElementById('bgAudio');
-        const playBtn = document.getElementById('playBtn');
-        const playIcon = document.getElementById('playIcon');
-        const muteBtn = document.getElementById('muteBtn');
-        const muteIcon = document.getElementById('muteIcon');
-        const progressBar = document.getElementById('progressBar');
-        const progressContainer = document.getElementById('progressContainer');
-        const currentTimeEl = document.getElementById('currentTime');
-        const audioStatus = document.getElementById('audioStatus');
-
-        let isPlaying = false;
-        let isMuted = false;
-
-        // Play/Pause
-        playBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                audio.pause();
+        // ============================================================
+        // SHARE & COPY
+        // ============================================================
+        function shareResult() {
+            const score = document.getElementById('scoreNumber').textContent;
+            const tier = document.getElementById('tierLabel').textContent;
+            const shape = document.getElementById('faceShapeBadge').textContent;
+            const text =
+                `🔥 SIXHEN Rate Face V3 – Kết quả:\n📊 PSL: ${score}\n🏷️ ${tier}\n${shape}\n#PSL #Looksmax #RateFace`;
+            if (navigator.share) {
+                navigator.share({ title: 'Kết quả SIXHEN Rate Face', text });
             } else {
-                audio.play().catch(() => {});
+                navigator.clipboard.writeText(text).then(() => showToast('📋 Đã sao chép!', 'success'));
             }
-        });
-
-        audio.addEventListener('play', () => {
-            isPlaying = true;
-            playIcon.className = 'fas fa-pause';
-            playBtn.classList.add('playing');
-            audioStatus.textContent = '● Đang phát';
-            audioStatus.className = 'status-text playing';
-        });
-
-        audio.addEventListener('pause', () => {
-            isPlaying = false;
-            playIcon.className = 'fas fa-play';
-            playBtn.classList.remove('playing');
-            audioStatus.textContent = '○ Tạm dừng';
-            audioStatus.className = 'status-text paused';
-        });
-
-        // Mute
-        muteBtn.addEventListener('click', () => {
-            isMuted = !isMuted;
-            audio.muted = isMuted;
-            muteIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-        });
-
-        // Progress
-        audio.addEventListener('timeupdate', () => {
-            if (audio.duration) {
-                const percent = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = percent + '%';
-                currentTimeEl.textContent = formatTime(audio.currentTime);
-            }
-        });
-
-        progressContainer.addEventListener('click', (e) => {
-            const rect = progressContainer.getBoundingClientRect();
-            const percent = (e.clientX - rect.left) / rect.width;
-            if (audio.duration) {
-                audio.currentTime = percent * audio.duration;
-            }
-        });
-
-        function formatTime(seconds) {
-            if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return mins + ':' + (secs < 10 ? '0' : '') + secs;
         }
 
-        // Auto-play
-        let audioInitialized = false;
-
-        function initAudio() {
-            if (audioInitialized) return;
-            audioInitialized = true;
-            audio.play().catch(() => {});
+        function copyResult() {
+            const score = document.getElementById('scoreNumber').textContent;
+            const tier = document.getElementById('tierLabel').textContent;
+            const shape = document.getElementById('faceShapeBadge').textContent;
+            const text = `🔥 SIXHEN Rate Face: ${score} – ${tier}\n${shape}`;
+            navigator.clipboard.writeText(text).then(() => showToast('📋 Đã sao chép!', 'success'));
         }
 
+        // ============================================================
+        // INIT
+        // ============================================================
+        let app;
         document.addEventListener('DOMContentLoaded', () => {
-            audio.play().catch(() => {});
-        });
-
-        document.addEventListener('click', initAudio, { once: true });
-        document.addEventListener('touchstart', initAudio, { once: true });
-
-        // ===== 17. KEYBOARD SHORTCUTS =====
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'k') {
-                e.preventDefault();
-                showModal(
-                    '⌨️ Phím tắt',
-                    `
-                    <p><strong>Ctrl + K</strong> - Trợ giúp</p>
-                    <p><strong>Ctrl + D</strong> - Dark/Light mode</p>
-                    <p><strong>Space</strong> - Play/Pause nhạc</p>
-                    <p><strong>Escape</strong> - Đóng modal</p>
-                    `,
-                    'OK',
-                    'Đóng'
-                );
-            }
-
-            if (e.ctrlKey && e.key === 'd') {
-                e.preventDefault();
-                themeToggle.click();
-            }
-
-            if (e.key === ' ' && !e.target.closest('input') && !e.target.closest('textarea')) {
-                e.preventDefault();
-                playBtn.click();
-            }
-        });
-
-        // ===== 18. REDUCED MOTION =====
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.particle').forEach(el => el.remove());
-            document.querySelectorAll('.shape').forEach(el => el.remove());
-            document.querySelectorAll('.floating-emoji').forEach(el => el.remove());
-        }
-
-        // ===== 19. CONSOLE =====
-        console.log('🚀 sixhen · Developer Portfolio');
-        console.log('💰 Tiền là số 1, code là số 2');
-        console.log('📍 Nam Định - quê hương tôi');
-        console.log('📱 17 tuổi - đang học code');
-        console.log('👁️ Visitor: 1 IP = 1 view');
-        console.log('🎵 Audio: bg.mp3');
-        console.log('⚡ Load siêu nhanh - không loading!');
-        console.log('✅ Portfolio đã sẵn sàng!');
-
-        // ===== 20. WELCOME =====
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                showToast('🚀 Chào mừng đến với portfolio của tôi!', 'success', 3000);
-            }, 500);
+            app = new App();
+            window.app = app;
+            console.log('🔥 SIXHEN Rate Face V3 - PSL Engine');
+            console.log('📊 Weights: Eye Area 30% | Harmony 25% | Bone 20% | Canthal 10% | Skin 5% | Nose 5% | Lips 5%');
+            console.log('🏷️ Tiers: PSL God 8.0+ | High Chad 7.5+ | Chad 7.0+ | High Chadlite 6.5+ | Chadlite 6.0+ | HTN 5.5+ | Normie 5.0+ | LTN 4.0+ | Subhuman <4.0');
+            console.log('📐 478 landmarks - XGBoost style predictor');
+            console.log('📸 Upload ảnh, nhấn Analyze để phân tích.');
+            console.log('⌨️  Ctrl+Enter: Analyze');
         });
     </script>
 </body>
