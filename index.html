@@ -21,9 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-        /* ================================================================
-           RESET & BASE
-           ================================================================ */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -59,9 +57,7 @@
             overflow: hidden;
         }
 
-        /* ================================================================
-           VIDEO BACKGROUND
-           ================================================================ */
+        /* ===== VIDEO BACKGROUND ===== */
         .video-bg {
             position: fixed;
             inset: 0;
@@ -91,9 +87,7 @@
             pointer-events: none;
         }
 
-        /* ================================================================
-           FLOATING SHAPES
-           ================================================================ */
+        /* ===== FLOATING SHAPES ===== */
         .floating-shapes {
             position: fixed;
             inset: 0;
@@ -144,9 +138,7 @@
             66% { transform: translate(-30px, 40px) scale(0.85); }
         }
 
-        /* ================================================================
-           FLOATING EMOJI
-           ================================================================ */
+        /* ===== FLOATING EMOJI ===== */
         .floating-emoji {
             position: fixed;
             font-size: 25px;
@@ -169,9 +161,7 @@
             100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
         }
 
-        /* ================================================================
-           LOADING
-           ================================================================ */
+        /* ===== LOADING ===== */
         #loading {
             position: fixed;
             inset: 0;
@@ -182,7 +172,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
         }
 
         #loading.hidden {
@@ -191,8 +181,8 @@
         }
 
         .loader {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border: 3px solid rgba(88, 101, 242, 0.1);
             border-top: 3px solid var(--primary);
             border-radius: 50%;
@@ -205,13 +195,11 @@
 
         .loader-text {
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 2px;
         }
 
-        /* ================================================================
-           PARTICLES
-           ================================================================ */
+        /* ===== PARTICLES ===== */
         #particles {
             position: fixed;
             inset: 0;
@@ -224,7 +212,7 @@
             position: absolute;
             border-radius: 50%;
             animation: floatParticle linear infinite;
-            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.15), transparent);
+            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.12), transparent);
         }
 
         @keyframes floatParticle {
@@ -234,15 +222,11 @@
             100% { transform: translateY(-10vh) translateX(20px) scale(1); opacity: 0; }
         }
 
-        /* ================================================================
-           SCROLLBAR
-           ================================================================ */
+        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(88, 101, 242, 0.3); border-radius: 10px; }
 
-        /* ================================================================
-           CARD
-           ================================================================ */
+        /* ===== CARD ===== */
         .card {
             position: relative;
             z-index: 10;
@@ -256,7 +240,7 @@
             border-radius: var(--radius);
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow), 0 0 0 1px rgba(88, 101, 242, 0.08) inset;
-            animation: fadeUp 0.8s ease;
+            animation: fadeUp 0.6s ease;
             scroll-behavior: smooth;
             transition: transform 0.3s ease;
         }
@@ -289,9 +273,7 @@
             100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* ================================================================
-           BANNER - NÂNG CẤP
-           ================================================================ */
+        /* ===== BANNER ===== */
         .banner {
             height: 160px;
             position: relative;
@@ -405,16 +387,14 @@
             transform: rotate(30deg) scale(1.1);
         }
 
-        /* ================================================================
-           PROFILE - NÂNG CẤP
-           ================================================================ */
+        /* ===== PROFILE ===== */
         .profile {
             padding: 0 28px 28px;
             position: relative;
             margin-top: -40px;
         }
 
-        /* ===== AVATAR 3D ===== */
+        /* ===== AVATAR ===== */
         .avatar-wrapper {
             position: relative;
             width: 120px;
@@ -631,9 +611,7 @@
             border: 1px solid rgba(88, 101, 242, 0.06);
         }
 
-        /* ================================================================
-           TYPING TEXT
-           ================================================================ */
+        /* ===== TYPING TEXT ===== */
         .typing-text {
             display: inline-block;
             overflow: hidden;
@@ -651,9 +629,7 @@
             50% { border-color: transparent; }
         }
 
-        /* ================================================================
-           CONTACT
-           ================================================================ */
+        /* ===== CONTACT ===== */
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -713,9 +689,7 @@
 
         .copy-btn.copied { color: #23a55a; }
 
-        /* ================================================================
-           TOAST
-           ================================================================ */
+        /* ===== TOAST ===== */
         .toast-container {
             position: fixed;
             bottom: 30px;
@@ -763,9 +737,7 @@
             to { transform: translateY(100px); opacity: 0; }
         }
 
-        /* ================================================================
-           STATUS BAR
-           ================================================================ */
+        /* ===== STATUS BAR ===== */
         .status-bar {
             display: flex;
             align-items: center;
@@ -827,9 +799,7 @@
 
         .status-activity i { color: var(--primary); font-size: 11px; }
 
-        /* ================================================================
-           BIO
-           ================================================================ */
+        /* ===== BIO ===== */
         .bio {
             margin-top: 16px;
             background: rgba(255, 255, 255, 0.02);
@@ -935,9 +905,7 @@
             border: 1px solid rgba(88, 101, 242, 0.06);
         }
 
-        /* ================================================================
-           SKILL PROGRESS
-           ================================================================ */
+        /* ===== SKILL PROGRESS ===== */
         .skill-progress {
             margin-top: 12px;
             padding-top: 12px;
@@ -976,9 +944,7 @@
             0% { width: 0; }
         }
 
-        /* ================================================================
-           VISITOR COUNTER
-           ================================================================ */
+        /* ===== VISITOR COUNTER ===== */
         .visitor-counter {
             display: flex;
             align-items: center;
@@ -1018,9 +984,7 @@
             animation: pulseDot 2s infinite;
         }
 
-        /* ================================================================
-           BUTTONS
-           ================================================================ */
+        /* ===== BUTTONS ===== */
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -1129,9 +1093,7 @@
             background: var(--primary-dark);
         }
 
-        /* ================================================================
-           RIPPLE
-           ================================================================ */
+        /* ===== RIPPLE ===== */
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -1311,170 +1273,7 @@
             color: #1ed760;
         }
 
-        /* ================================================================
-           GUESTBOOK
-           ================================================================ */
-        .guestbook-section {
-            margin-top: 16px;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-        }
-
-        .guestbook-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-
-        .guestbook-header .guestbook-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .guestbook-header .guestbook-title i {
-            color: var(--primary);
-            margin-right: 8px;
-        }
-
-        .guestbook-header .guestbook-count {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .guestbook-messages {
-            max-height: 200px;
-            overflow-y: auto;
-            margin-bottom: 12px;
-        }
-
-        .guestbook-messages::-webkit-scrollbar {
-            width: 3px;
-        }
-        .guestbook-messages::-webkit-scrollbar-thumb {
-            background: rgba(88, 101, 242, 0.2);
-            border-radius: 10px;
-        }
-
-        .guestbook-message {
-            padding: 10px 14px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-            margin-bottom: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            animation: messageIn 0.3s ease;
-        }
-
-        @keyframes messageIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .guestbook-message .msg-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 4px;
-        }
-
-        .guestbook-message .msg-header .msg-avatar {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .guestbook-message .msg-header .msg-name {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .guestbook-message .msg-header .msg-time {
-            font-size: 10px;
-            color: var(--text-muted);
-            margin-left: auto;
-        }
-
-        .guestbook-message .msg-content {
-            font-size: 13px;
-            color: var(--text-secondary);
-            padding-left: 32px;
-            word-break: break-word;
-        }
-
-        .guestbook-form {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .guestbook-form .form-row {
-            display: flex;
-            gap: 8px;
-        }
-
-        .guestbook-form input,
-        .guestbook-form textarea {
-            padding: 10px 14px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            color: var(--text-primary);
-            font-size: 13px;
-            transition: all 0.3s;
-            outline: none;
-            width: 100%;
-        }
-
-        .guestbook-form input:focus,
-        .guestbook-form textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
-        }
-
-        .guestbook-form .form-row input:first-child {
-            flex: 1;
-        }
-
-        .guestbook-form .form-row input:last-child {
-            flex: 2;
-        }
-
-        .guestbook-form textarea {
-            resize: vertical;
-            min-height: 50px;
-        }
-
-        .guestbook-form .guestbook-submit {
-            padding: 10px 20px;
-            border-radius: 50px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            align-self: flex-end;
-        }
-
-        .guestbook-form .guestbook-submit:hover {
-            background: var(--primary-dark);
-            transform: scale(1.02);
-        }
-
-        /* ================================================================
-           QR CODE
-           ================================================================ */
+        /* ===== QR CODE ===== */
         .qr-section {
             margin-top: 16px;
             padding: 16px;
@@ -1527,9 +1326,7 @@
 
         .qr-label .highlight { color: var(--primary); font-weight: 600; }
 
-        /* ================================================================
-           PROJECT GALLERY
-           ================================================================ */
+        /* ===== PROJECT GALLERY ===== */
         .gallery-section {
             margin-top: 12px;
             padding: 14px 18px;
@@ -1605,9 +1402,7 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* ================================================================
-           MODAL
-           ================================================================ */
+        /* ===== MODAL ===== */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -1688,9 +1483,7 @@
             to { transform: translateY(0) scale(1); opacity: 1; }
         }
 
-        /* ================================================================
-           FOOTER
-           ================================================================ */
+        /* ===== FOOTER ===== */
         .footer {
             text-align: center;
             color: #334155;
@@ -1745,8 +1538,7 @@
         body.light-mode .qr-section,
         body.light-mode .spotify-now,
         body.light-mode .gallery-section,
-        body.light-mode .modal-container,
-        body.light-mode .guestbook-section {
+        body.light-mode .modal-container {
             background: rgba(0, 0, 0, 0.03);
             border-color: rgba(0, 0, 0, 0.05);
         }
@@ -1766,8 +1558,6 @@
         body.light-mode .footer .text-muted,
         body.light-mode .gallery-item span,
         body.light-mode .modal-body,
-        body.light-mode .guestbook-message .msg-content,
-        body.light-mode .guestbook-message .msg-time,
         body.light-mode .spotify-track .track-artist,
         body.light-mode .spotify-track .track-album {
             color: #475569;
@@ -1779,7 +1569,6 @@
         body.light-mode .username-tag .highlight,
         body.light-mode .typing-text,
         body.light-mode .modal-header h2,
-        body.light-mode .guestbook-message .msg-name,
         body.light-mode .spotify-track .track-name {
             color: #0a0a0f;
         }
@@ -1805,12 +1594,6 @@
 
         body.light-mode .toast {
             background: rgba(255, 255, 255, 0.95);
-            color: #0a0a0f;
-        }
-
-        body.light-mode .guestbook-form input,
-        body.light-mode .guestbook-form textarea {
-            background: rgba(0, 0, 0, 0.03);
             color: #0a0a0f;
         }
 
@@ -1848,10 +1631,6 @@
             .theme-toggle-btn { width: 30px; height: 30px; font-size: 14px; }
             .spotify-now { padding: 12px 16px; }
             .spotify-track .track-artwork { width: 44px; height: 44px; font-size: 18px; }
-            .guestbook-section { padding: 12px 14px; }
-            .guestbook-form .form-row { flex-direction: column; }
-            .guestbook-form .guestbook-submit { width: 100%; }
-            .guestbook-message .msg-content { padding-left: 0; }
             .spotify-controls button { width: 30px; height: 30px; font-size: 14px; }
             .spotify-controls .play-btn { width: 38px; height: 38px; font-size: 18px; }
         }
@@ -1894,7 +1673,6 @@
             .modal-container { animation: none !important; }
             .video-bg { display: none; }
             .video-overlay { background: var(--bg-dark); }
-            .guestbook-message { animation: none !important; }
             .spotify-progress .progress-fill { transition: none !important; }
         }
 
@@ -1905,9 +1683,6 @@
         .copy-btn:focus-visible,
         .theme-toggle-btn:focus-visible,
         .modal-close:focus-visible,
-        .guestbook-form input:focus-visible,
-        .guestbook-form textarea:focus-visible,
-        .guestbook-submit:focus-visible,
         .spotify-controls button:focus-visible {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
@@ -1916,54 +1691,40 @@
 </head>
 <body>
 
-    <!-- ================================================================
-    VIDEO BACKGROUND
-    ================================================================ -->
+    <!-- ===== VIDEO BACKGROUND ===== -->
     <video class="video-bg" id="videoBg" autoplay muted loop playsinline>
         <source src="assets/bg.mp4" type="video/mp4" />
     </video>
     <div class="video-overlay"></div>
     <div class="video-gradient"></div>
 
-    <!-- ================================================================
-    FLOATING SHAPES
-    ================================================================ -->
+    <!-- ===== FLOATING SHAPES ===== -->
     <div class="floating-shapes" aria-hidden="true">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
     </div>
 
-    <!-- ================================================================
-    FLOATING EMOJI
-    ================================================================ -->
+    <!-- ===== FLOATING EMOJI ===== -->
     <div class="floating-emoji" aria-hidden="true">🚀</div>
     <div class="floating-emoji" aria-hidden="true">💻</div>
     <div class="floating-emoji" aria-hidden="true">⚡</div>
     <div class="floating-emoji" aria-hidden="true">🔥</div>
     <div class="floating-emoji" aria-hidden="true">💰</div>
 
-    <!-- ================================================================
-    LOADING
-    ================================================================ -->
+    <!-- ===== LOADING ===== -->
     <div id="loading" role="status" aria-label="Đang tải">
         <div class="loader"></div>
         <span class="loader-text">Loading...</span>
     </div>
 
-    <!-- ================================================================
-    TOAST
-    ================================================================ -->
+    <!-- ===== TOAST ===== -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ================================================================
-    PARTICLES
-    ================================================================ -->
+    <!-- ===== PARTICLES ===== -->
     <div id="particles" aria-hidden="true"></div>
 
-    <!-- ================================================================
-    MODAL
-    ================================================================ -->
+    <!-- ===== MODAL ===== -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-container" id="modalContainer">
             <div class="modal-header">
@@ -1978,14 +1739,10 @@
         </div>
     </div>
 
-    <!-- ================================================================
-    CARD
-    ================================================================ -->
+    <!-- ===== CARD ===== -->
     <main class="card" role="main" id="mainCard">
 
-        <!-- ============================================================
-        BANNER
-        ============================================================ -->
+        <!-- ===== BANNER ===== -->
         <header class="banner" role="banner">
             <img src="assets/bg.jpg" alt="Banner" class="banner-img" id="bannerImg" />
             <div class="banner-fallback" aria-hidden="true"></div>
@@ -2004,14 +1761,10 @@
             </div>
         </header>
 
-        <!-- ============================================================
-        PROFILE
-        ============================================================ -->
+        <!-- ===== PROFILE ===== -->
         <section class="profile" aria-label="Thông tin cá nhân">
 
-            <!-- ========================================================
-            AVATAR
-            ======================================================== -->
+            <!-- ===== AVATAR ===== -->
             <div class="avatar-wrapper">
                 <div class="avatar-ring" aria-hidden="true">
                     <div class="avatar-ring-inner">
@@ -2024,17 +1777,13 @@
                 </div>
             </div>
 
-            <!-- ========================================================
-            USERNAME
-            ======================================================== -->
+            <!-- ===== USERNAME ===== -->
             <div class="username-tag">
                 <i class="fas fa-at" aria-hidden="true"></i>
                 <span class="highlight">@sixhen</span>
             </div>
 
-            <!-- ========================================================
-            NAME
-            ======================================================== -->
+            <!-- ===== NAME ===== -->
             <div class="name-section">
                 <h1 class="name" data-text="sixhen">sixhen</h1>
                 <span class="badge-learning">✦ học code</span>
@@ -2049,9 +1798,7 @@
                 <i class="fas fa-graduation-cap" aria-hidden="true"></i> mới bắt đầu
             </div>
 
-            <!-- ========================================================
-            CONTACT
-            ======================================================== -->
+            <!-- ===== CONTACT ===== -->
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone" aria-hidden="true"></i>
@@ -2076,9 +1823,7 @@
                 </div>
             </div>
 
-            <!-- ========================================================
-            STATUS BAR
-            ======================================================== -->
+            <!-- ===== STATUS BAR ===== -->
             <div class="status-bar">
                 <div class="status-dot" aria-hidden="true"></div>
                 <div class="status-text">
@@ -2093,9 +1838,7 @@
                 </div>
             </div>
 
-            <!-- ========================================================
-            BIO
-            ======================================================== -->
+            <!-- ===== BIO ===== -->
             <div class="bio">
                 <div class="title">
                     <i class="fas fa-quote-left" aria-hidden="true"></i> về tôi
@@ -2157,9 +1900,7 @@
                 </div>
             </div>
 
-            <!-- ========================================================
-            PROJECT GALLERY
-            ======================================================== -->
+            <!-- ===== PROJECT GALLERY ===== -->
             <div class="gallery-section">
                 <div class="gallery-title">
                     <i class="fas fa-images"></i> Dự án
@@ -2186,9 +1927,7 @@
                 </div>
             </div>
 
-            <!-- ========================================================
-            VISITOR COUNTER
-            ======================================================== -->
+            <!-- ===== VISITOR COUNTER ===== -->
             <div class="visitor-counter" role="status" aria-label="Lượt xem">
                 <i class="fas fa-eye" aria-hidden="true"></i>
                 <span class="count" id="totalViews">0</span>
@@ -2196,9 +1935,7 @@
                 <span class="label">lượt xem</span>
             </div>
 
-            <!-- ========================================================
-            BUTTONS
-            ======================================================== -->
+            <!-- ===== BUTTONS ===== -->
             <div class="btn-group">
                 <button class="btn btn-facebook" onclick="showModal('Facebook', 'Đang kết nối với Facebook...')">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -2231,9 +1968,7 @@
                 </button>
             </div>
 
-            <!-- ================================================================
-            SPOTIFY NOW PLAYING
-            ================================================================ -->
+            <!-- ===== SPOTIFY NOW PLAYING ===== -->
             <div class="spotify-now">
                 <div class="spotify-header">
                     <i class="fas fa-headphones"></i>
@@ -2257,7 +1992,7 @@
                     <div class="progress-track" id="spotifyProgressTrack">
                         <div class="progress-fill" id="spotifyProgressFill"></div>
                     </div>
-                    <span class="time" id="spotifyDuration">0:00</span>
+                    <span class="time" id="spotifyDuration">3:30</span>
                 </div>
 
                 <div class="spotify-controls">
@@ -2276,36 +2011,7 @@
                 </div>
             </div>
 
-            <!-- ================================================================
-            GUESTBOOK
-            ================================================================ -->
-            <div class="guestbook-section">
-                <div class="guestbook-header">
-                    <div class="guestbook-title">
-                        <i class="fas fa-book"></i> Sổ lưu bút
-                    </div>
-                    <div class="guestbook-count" id="guestbookCount">0 lời nhắn</div>
-                </div>
-
-                <div class="guestbook-messages" id="guestbookMessages">
-                    <!-- Messages sẽ được render ở đây -->
-                </div>
-
-                <div class="guestbook-form">
-                    <div class="form-row">
-                        <input type="text" id="guestName" placeholder="Tên của bạn..." maxlength="30" />
-                        <input type="text" id="guestEmail" placeholder="Email (tùy chọn)..." />
-                    </div>
-                    <textarea id="guestMessage" placeholder="Viết lời nhắn của bạn..." maxlength="500" rows="2"></textarea>
-                    <button class="guestbook-submit" onclick="submitGuestbook()">
-                        <i class="fas fa-paper-plane"></i> Gửi lời nhắn
-                    </button>
-                </div>
-            </div>
-
-            <!-- ================================================================
-            QR CODE
-            ================================================================ -->
+            <!-- ===== QR CODE ===== -->
             <div class="qr-section">
                 <div class="qr-title">
                     <i class="fas fa-qrcode" aria-hidden="true"></i>
@@ -2320,9 +2026,7 @@
                 </div>
             </div>
 
-            <!-- ================================================================
-            FOOTER
-            ================================================================ -->
+            <!-- ===== FOOTER ===== -->
             <footer class="footer">
                 <i class="fas fa-crown" aria-hidden="true"></i>
                 <span class="text-muted">sixhen</span>
@@ -2339,33 +2043,25 @@
         </section>
     </main>
 
-    <!-- ================================================================
-    JAVASCRIPT
-    ================================================================ -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ================================================================
-        // 1. VIDEO BACKGROUND
-        // ================================================================
+        // ===== 1. VIDEO BACKGROUND =====
         const videoBg = document.getElementById('videoBg');
         videoBg.addEventListener('error', () => console.log('🎬 Video fallback'));
 
-        // ================================================================
-        // 2. LOADING
-        // ================================================================
+        // ===== 2. LOADING - TĂNG TỐC =====
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loading').classList.add('hidden');
                 videoBg.play().catch(() => {});
-            }, 600);
+            }, 400);
         });
 
-        // ================================================================
-        // 3. PARTICLES
-        // ================================================================
+        // ===== 3. PARTICLES =====
         (function initParticles() {
             const container = document.getElementById('particles');
             const isMobile = window.innerWidth < 520;
-            const count = isMobile ? 15 : 25;
+            const count = isMobile ? 12 : 20;
 
             for (let i = 0; i < count; i++) {
                 const p = document.createElement('div');
@@ -2381,9 +2077,7 @@
             }
         })();
 
-        // ================================================================
-        // 4. MOUSE TRAIL
-        // ================================================================
+        // ===== 4. MOUSE TRAIL =====
         let trailTimeout;
         document.addEventListener('mousemove', (e) => {
             if (window.innerWidth < 768) return;
@@ -2396,9 +2090,7 @@
             trailTimeout = setTimeout(() => trail.remove(), 800);
         });
 
-        // ================================================================
-        // 5. 3D CARD
-        // ================================================================
+        // ===== 5. 3D CARD =====
         const card = document.getElementById('mainCard');
         if (window.innerWidth >= 768) {
             card.addEventListener('mousemove', (e) => {
@@ -2412,9 +2104,7 @@
             });
         }
 
-        // ================================================================
-        // 6. AVATAR & BANNER FALLBACK
-        // ================================================================
+        // ===== 6. AVATAR & BANNER FALLBACK =====
         const avatarImg = document.getElementById('avatarImg');
         const avatarFallback = document.getElementById('avatarFallback');
         avatarImg.addEventListener('error', () => {
@@ -2426,10 +2116,8 @@
         bannerImg.addEventListener('error', () => { bannerImg.style.display = 'none'; });
         bannerImg.addEventListener('load', () => { bannerImg.classList.add('loaded'); });
 
-        // ================================================================
-        // 7. TOAST
-        // ================================================================
-        function showToast(message, type = 'info', duration = 3000) {
+        // ===== 7. TOAST =====
+        function showToast(message, type = 'info', duration = 2500) {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             const icons = { success: 'fa-check-circle', error: 'fa-times-circle', warning: 'fa-exclamation-circle',
@@ -2446,9 +2134,7 @@
             }, duration);
         }
 
-        // ================================================================
-        // 8. COPY BUTTONS
-        // ================================================================
+        // ===== 8. COPY BUTTONS =====
         document.querySelectorAll('.copy-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -2477,9 +2163,7 @@
             });
         });
 
-        // ================================================================
-        // 9. RIPPLE
-        // ================================================================
+        // ===== 9. RIPPLE =====
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const rect = this.getBoundingClientRect();
@@ -2494,9 +2178,7 @@
             });
         });
 
-        // ================================================================
-        // 10. TYPING EFFECT
-        // ================================================================
+        // ===== 10. TYPING EFFECT =====
         function typeWriter() {
             const texts = ['tiền là số 1', 'kiếm tiền là số 1', '💰 là số 1', 'từ Nam Định', '💰 + code = giàu'];
             let textIndex = 0,
@@ -2528,9 +2210,7 @@
         }
         window.addEventListener('load', typeWriter);
 
-        // ================================================================
-        // 11. LIVE CLOCK
-        // ================================================================
+        // ===== 11. LIVE CLOCK =====
         function updateClock() {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
@@ -2541,9 +2221,7 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        // ================================================================
-        // 12. VISITOR COUNTER
-        // ================================================================
+        // ===== 12. VISITOR COUNTER =====
         async function updateVisitorCount() {
             try {
                 let totalViews = parseInt(localStorage.getItem('sixhen_views_total')) || 0;
@@ -2569,9 +2247,7 @@
 
         updateVisitorCount();
 
-        // ================================================================
-        // 13. THEME TOGGLE
-        // ================================================================
+        // ===== 13. THEME TOGGLE =====
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
 
@@ -2593,9 +2269,7 @@
             themeIcon.className = 'fas fa-sun';
         }
 
-        // ================================================================
-        // 14. MODAL SYSTEM
-        // ================================================================
+        // ===== 14. MODAL =====
         const modalOverlay = document.getElementById('modalOverlay');
         const modalTitle = document.getElementById('modalTitle');
         const modalBody = document.getElementById('modalBody');
@@ -2630,9 +2304,7 @@
         modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-        // ================================================================
-        // 15. PROJECT GALLERY
-        // ================================================================
+        // ===== 15. PROJECT GALLERY =====
         function showProject(name, description) {
             showModal(
                 `📁 ${name}`,
@@ -2648,24 +2320,22 @@
             );
         }
 
-        // ================================================================
-        // 16. CONTACT FORM
-        // ================================================================
+        // ===== 16. CONTACT FORM =====
         function showContactForm() {
             showModal(
                 '📧 Liên hệ',
                 `
-                <div class="form-group">
-                    <label>Tên</label>
-                    <input type="text" id="contactName" placeholder="Nhập tên..." />
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Tên</label>
+                    <input type="text" id="contactName" placeholder="Nhập tên..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
                 </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="contactEmail" placeholder="Nhập email..." />
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Email</label>
+                    <input type="email" id="contactEmail" placeholder="Nhập email..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;" />
                 </div>
-                <div class="form-group">
-                    <label>Nội dung</label>
-                    <textarea id="contactMessage" placeholder="Tin nhắn..." rows="4"></textarea>
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Nội dung</label>
+                    <textarea id="contactMessage" placeholder="Tin nhắn..." rows="4" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:12px;color:var(--text-primary);font-size:14px;outline:none;resize:vertical;min-height:70px;"></textarea>
                 </div>
                 `,
                 'Gửi',
@@ -2687,9 +2357,7 @@
             );
         }
 
-        // ================================================================
-        // 17. SPOTIFY NOW PLAYING
-        // ================================================================
+        // ===== 17. SPOTIFY NOW PLAYING =====
         const spotifyPlaylist = [
             { name: 'Lofi Chill', artist: 'sixhen', album: '✦ Playlist cá nhân' },
             { name: 'Coding Beats', artist: 'sixhen', album: '✦ Playlist cá nhân' },
@@ -2792,7 +2460,6 @@
             }
         }
 
-        // Click trên progress để tua
         document.getElementById('spotifyProgressTrack').addEventListener('click', (e) => {
             const rect = e.currentTarget.getBoundingClientRect();
             const percent = ((e.clientX - rect.left) / rect.width) * 100;
@@ -2803,96 +2470,9 @@
                 Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
         });
 
-        // Load track đầu tiên
         loadSpotifyTrack(0);
 
-        // ================================================================
-        // 18. GUESTBOOK
-        // ================================================================
-        let guestbookMessages = JSON.parse(localStorage.getItem('sixhen_guestbook')) || [];
-
-        function renderGuestbook() {
-            const container = document.getElementById('guestbookMessages');
-            if (guestbookMessages.length === 0) {
-                container.innerHTML =
-                    `<div style="text-align:center;padding:20px;color:var(--text-muted);font-size:13px;">📭 Chưa có lời nhắn nào. Hãy là người đầu tiên!</div>`;
-                document.getElementById('guestbookCount').textContent = '0 lời nhắn';
-                return;
-            }
-
-            container.innerHTML = guestbookMessages.map(msg => `
-                <div class="guestbook-message">
-                    <div class="msg-header">
-                        <div class="msg-avatar">${(msg.name || 'A')[0].toUpperCase()}</div>
-                        <span class="msg-name">${msg.name || 'Ẩn danh'}</span>
-                        <span class="msg-time">${msg.time}</span>
-                    </div>
-                    <div class="msg-content">${msg.message}</div>
-                </div>
-            `).join('');
-
-            document.getElementById('guestbookCount').textContent = guestbookMessages.length + ' lời nhắn';
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function submitGuestbook() {
-            const nameInput = document.getElementById('guestName');
-            const emailInput = document.getElementById('guestEmail');
-            const messageInput = document.getElementById('guestMessage');
-
-            const name = nameInput.value.trim() || 'Ẩn danh';
-            const email = emailInput.value.trim();
-            const message = messageInput.value.trim();
-
-            if (!message) {
-                showToast('⚠️ Vui lòng nhập lời nhắn!', 'warning');
-                messageInput.focus();
-                return;
-            }
-
-            const now = new Date();
-            const time = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0') + ' ' +
-                now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
-
-            guestbookMessages.unshift({
-                name: name,
-                email: email,
-                message: message,
-                time: time
-            });
-
-            localStorage.setItem('sixhen_guestbook', JSON.stringify(guestbookMessages));
-            renderGuestbook();
-
-            nameInput.value = '';
-            emailInput.value = '';
-            messageInput.value = '';
-
-            showToast('✅ Cảm ơn bạn đã gửi lời nhắn! ❤️', 'success');
-
-            // Animation cho tin nhắn mới
-            const firstMsg = document.querySelector('.guestbook-message');
-            if (firstMsg) {
-                firstMsg.style.animation = 'none';
-                setTimeout(() => {
-                    firstMsg.style.animation = 'messageIn 0.3s ease';
-                }, 10);
-            }
-        }
-
-        // Enter để gửi tin nhắn
-        document.getElementById('guestMessage').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                submitGuestbook();
-            }
-        });
-
-        renderGuestbook();
-
-        // ================================================================
-        // 19. KEYBOARD SHORTCUTS
-        // ================================================================
+        // ===== 18. KEYBOARD SHORTCUTS =====
         document.addEventListener('keydown', (e) => {
             if (e.ctrlKey && e.key === 'k') {
                 e.preventDefault();
@@ -2901,7 +2481,7 @@
                     `
                     <p><strong>Ctrl + K</strong> - Trợ giúp</p>
                     <p><strong>Ctrl + D</strong> - Dark/Light mode</p>
-                    <p><strong>Space</strong> - Play/Pause nhạc (khi hover Spotify)</p>
+                    <p><strong>Space</strong> - Play/Pause nhạc</p>
                     <p><strong>Escape</strong> - Đóng modal</p>
                     `,
                     'OK',
@@ -2914,41 +2494,33 @@
                 themeToggle.click();
             }
 
-            // Space để play/pause khi đang focus vào Spotify
             if (e.key === ' ' && !e.target.closest('input') && !e.target.closest('textarea')) {
                 e.preventDefault();
                 spotifyToggle();
             }
         });
 
-        // ================================================================
-        // 20. REDUCED MOTION
-        // ================================================================
+        // ===== 19. REDUCED MOTION =====
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.querySelectorAll('.particle').forEach(el => el.remove());
             document.querySelectorAll('.shape').forEach(el => el.remove());
             document.querySelectorAll('.floating-emoji').forEach(el => el.remove());
         }
 
-        // ================================================================
-        // 21. CONSOLE
-        // ================================================================
+        // ===== 20. CONSOLE =====
         console.log('🚀 sixhen · Developer Portfolio');
         console.log('💰 Tiền là số 1, code là số 2');
         console.log('📍 Nam Định - quê hương tôi');
         console.log('📱 17 tuổi - đang học code');
         console.log('👁️ Visitor: 1 IP = 1 view');
         console.log('🎵 Spotify: ' + spotifyPlaylist.length + ' bài hát');
-        console.log('📖 Guestbook: ' + guestbookMessages.length + ' lời nhắn');
         console.log('✅ Portfolio đã sẵn sàng!');
 
-        // ================================================================
-        // 22. WELCOME
-        // ================================================================
+        // ===== 21. WELCOME =====
         window.addEventListener('load', () => {
             setTimeout(() => {
                 showToast('🚀 Chào mừng đến với portfolio của tôi!', 'success', 3000);
-            }, 1500);
+            }, 1200);
         });
     </script>
 </body>
