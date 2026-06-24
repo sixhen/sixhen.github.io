@@ -1069,8 +1069,8 @@
             to { transform: scale(4); opacity: 0; }
         }
 
-        /* ===== SPOTIFY NOW PLAYING ===== */
-        .spotify-now {
+        /* ===== AUDIO PLAYER - ĐƠN GIẢN ===== */
+        .audio-player {
             margin-top: 16px;
             padding: 16px 20px;
             background: linear-gradient(135deg, #1a1a2e, #1db95415, #0a0a0f);
@@ -1079,32 +1079,32 @@
             transition: all 0.3s ease;
         }
 
-        .spotify-now:hover {
+        .audio-player:hover {
             border-color: rgba(29, 185, 84, 0.3);
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(29, 185, 84, 0.05);
         }
 
-        .spotify-now .spotify-header {
+        .audio-player .audio-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        .spotify-now .spotify-header i {
+        .audio-player .audio-header i {
             font-size: 20px;
             color: #1db954;
         }
 
-        .spotify-now .spotify-header span {
+        .audio-player .audio-header span {
             font-size: 12px;
             font-weight: 600;
             color: #1db954;
             letter-spacing: 1px;
         }
 
-        .spotify-now .spotify-header .live-dot {
+        .audio-player .audio-header .live-dot {
             width: 6px;
             height: 6px;
             border-radius: 50%;
@@ -1113,97 +1113,56 @@
             display: inline-block;
         }
 
-        .spotify-track {
+        .audio-player .track-info {
             display: flex;
             align-items: center;
             gap: 14px;
         }
 
-        .spotify-track .track-artwork {
-            width: 56px;
-            height: 56px;
+        .audio-player .track-info .track-icon {
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
             background: linear-gradient(135deg, #1db954, #1ed760);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 20px;
             color: white;
             flex-shrink: 0;
             box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
         }
 
-        .spotify-track .track-info {
+        .audio-player .track-info .track-details {
             flex: 1;
         }
 
-        .spotify-track .track-info .track-name {
+        .audio-player .track-info .track-details .track-name {
             font-size: 15px;
             font-weight: 600;
             color: var(--text-primary);
         }
 
-        .spotify-track .track-info .track-artist {
+        .audio-player .track-info .track-details .track-artist {
             font-size: 13px;
             color: var(--text-secondary);
         }
 
-        .spotify-track .track-info .track-album {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .spotify-progress {
-            margin-top: 10px;
+        .audio-player .audio-controls {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .spotify-progress .progress-track {
-            flex: 1;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: height 0.2s;
-        }
-
-        .spotify-progress .progress-track:hover {
-            height: 5px;
-        }
-
-        .spotify-progress .progress-track .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #1db954, #1ed760);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .spotify-progress .time {
-            font-size: 11px;
-            color: var(--text-secondary);
-            min-width: 35px;
-        }
-
-        .spotify-controls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
+            gap: 12px;
             margin-top: 10px;
         }
 
-        .spotify-controls button {
+        .audio-player .audio-controls button {
             background: none;
             border: none;
             color: var(--text-secondary);
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             transition: all 0.3s;
-            padding: 6px;
+            padding: 4px;
             border-radius: 50%;
             width: 36px;
             height: 36px;
@@ -1212,25 +1171,72 @@
             justify-content: center;
         }
 
-        .spotify-controls button:hover {
+        .audio-player .audio-controls button:hover {
             color: var(--text-primary);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .spotify-controls .play-btn {
-            font-size: 22px;
+        .audio-player .audio-controls .play-btn {
             color: #1db954;
+            font-size: 24px;
             width: 44px;
             height: 44px;
         }
 
-        .spotify-controls .play-btn:hover {
+        .audio-player .audio-controls .play-btn:hover {
             color: #1ed760;
             background: rgba(29, 185, 84, 0.1);
         }
 
-        .spotify-controls .play-btn.playing {
+        .audio-player .audio-controls .play-btn.playing {
             color: #1ed760;
+        }
+
+        .audio-player .progress-container {
+            flex: 1;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: height 0.2s;
+        }
+
+        .audio-player .progress-container:hover {
+            height: 5px;
+        }
+
+        .audio-player .progress-container .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .audio-player .time {
+            color: var(--text-secondary);
+            font-size: 11px;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .audio-player .audio-status {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .audio-player .audio-status .status-text.playing {
+            color: #1db954;
+        }
+
+        .audio-player .audio-status .status-text.paused {
+            color: var(--text-secondary);
         }
 
         /* ===== QR CODE ===== */
@@ -1494,7 +1500,7 @@
         body.light-mode .status-bar,
         body.light-mode .visitor-counter,
         body.light-mode .qr-section,
-        body.light-mode .spotify-now,
+        body.light-mode .audio-player,
         body.light-mode .gallery-section,
         body.light-mode .modal-container {
             background: rgba(0, 0, 0, 0.03);
@@ -1516,18 +1522,16 @@
         body.light-mode .footer .text-muted,
         body.light-mode .gallery-item span,
         body.light-mode .modal-body,
-        body.light-mode .spotify-track .track-artist,
-        body.light-mode .spotify-track .track-album {
+        body.light-mode .audio-player .track-info .track-details .track-artist {
             color: #475569;
         }
 
         body.light-mode .contact-item .value,
         body.light-mode .status-text span,
-        body.light-mode .song,
         body.light-mode .username-tag .highlight,
         body.light-mode .typing-text,
         body.light-mode .modal-header h2,
-        body.light-mode .spotify-track .track-name {
+        body.light-mode .audio-player .track-info .track-details .track-name {
             color: #0a0a0f;
         }
 
@@ -1585,10 +1589,10 @@
             .modal-container { padding: 20px; margin: 12px; }
             .banner-top-right { top: 10px; right: 10px; }
             .theme-toggle-btn { width: 30px; height: 30px; font-size: 14px; }
-            .spotify-now { padding: 12px 16px; }
-            .spotify-track .track-artwork { width: 44px; height: 44px; font-size: 18px; }
-            .spotify-controls button { width: 30px; height: 30px; font-size: 14px; }
-            .spotify-controls .play-btn { width: 38px; height: 38px; font-size: 18px; }
+            .audio-player { padding: 12px 16px; }
+            .audio-player .track-info .track-icon { width: 40px; height: 40px; font-size: 16px; }
+            .audio-player .audio-controls button { width: 30px; height: 30px; font-size: 16px; }
+            .audio-player .audio-controls .play-btn { width: 38px; height: 38px; font-size: 20px; }
         }
 
         @media (max-width: 380px) {
@@ -1627,7 +1631,6 @@
             .modal-container { animation: none !important; }
             .video-bg { display: none; }
             .video-overlay { background: var(--bg-dark); }
-            .spotify-progress .progress-fill { transition: none !important; }
         }
 
         /* ===== FOCUS ===== */
@@ -1635,7 +1638,7 @@
         .copy-btn:focus-visible,
         .theme-toggle-btn:focus-visible,
         .modal-close:focus-visible,
-        .spotify-controls button:focus-visible {
+        .audio-player .audio-controls button:focus-visible {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
         }
@@ -1914,47 +1917,44 @@
                 </button>
             </div>
 
-            <!-- ===== SPOTIFY NOW PLAYING ===== -->
-            <div class="spotify-now">
-                <div class="spotify-header">
+            <!-- ===== AUDIO PLAYER - bg.mp3 ===== -->
+            <div class="audio-player">
+                <div class="audio-header">
                     <i class="fas fa-headphones"></i>
-                    <span>NOW PLAYING</span>
+                    <span>ĐANG NGHE</span>
                     <span class="live-dot"></span>
                 </div>
 
-                <div class="spotify-track">
-                    <div class="track-artwork">
+                <div class="track-info">
+                    <div class="track-icon">
                         <i class="fas fa-music"></i>
                     </div>
-                    <div class="track-info">
-                        <div class="track-name" id="spotifyTrackName">Lofi Chill</div>
-                        <div class="track-artist" id="spotifyArtist">sixhen</div>
-                        <div class="track-album" id="spotifyAlbum">✦ Playlist cá nhân</div>
+                    <div class="track-details">
+                        <div class="track-name">bg.mp3</div>
+                        <div class="track-artist">✦ Playlist của sixhen</div>
                     </div>
                 </div>
 
-                <div class="spotify-progress">
-                    <span class="time" id="spotifyCurrentTime">0:00</span>
-                    <div class="progress-track" id="spotifyProgressTrack">
-                        <div class="progress-fill" id="spotifyProgressFill"></div>
+                <div class="audio-controls">
+                    <button class="play-btn" id="playBtn" aria-label="Phát/Nhạc">
+                        <i class="fas fa-play" id="playIcon"></i>
+                    </button>
+                    <div class="progress-container" id="progressContainer">
+                        <div class="progress-bar" id="progressBar"></div>
                     </div>
-                    <span class="time" id="spotifyDuration">3:30</span>
+                    <span class="time" id="currentTime">0:00</span>
+                    <button id="muteBtn" aria-label="Tắt/Bật âm thanh">
+                        <i class="fas fa-volume-up" id="muteIcon"></i>
+                    </button>
                 </div>
 
-                <div class="spotify-controls">
-                    <button onclick="spotifyPrev()" aria-label="Bài trước">
-                        <i class="fas fa-step-backward"></i>
-                    </button>
-                    <button class="play-btn" id="spotifyPlayBtn" onclick="spotifyToggle()" aria-label="Play/Pause">
-                        <i class="fas fa-play" id="spotifyPlayIcon"></i>
-                    </button>
-                    <button onclick="spotifyNext()" aria-label="Bài tiếp">
-                        <i class="fas fa-step-forward"></i>
-                    </button>
-                    <button onclick="spotifyShuffle()" aria-label="Shuffle" id="spotifyShuffleBtn">
-                        <i class="fas fa-random"></i>
-                    </button>
+                <div class="audio-status">
+                    <span class="status-text playing" id="audioStatus">● Đang phát</span>
                 </div>
+
+                <audio id="bgAudio" loop autoplay>
+                    <source src="assets/bg.mp3" type="audio/mpeg" />
+                </audio>
             </div>
 
             <!-- ===== QR CODE ===== -->
@@ -2295,120 +2295,91 @@
             );
         }
 
-        // ===== 16. SPOTIFY NOW PLAYING =====
-        const spotifyPlaylist = [
-            { name: 'Lofi Chill', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Coding Beats', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Study Focus', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Night Drive', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-            { name: 'Dreamy Vibes', artist: 'sixhen', album: '✦ Playlist cá nhân' },
-        ];
+        // ===== 16. AUDIO PLAYER - bg.mp3 =====
+        const audio = document.getElementById('bgAudio');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const muteBtn = document.getElementById('muteBtn');
+        const muteIcon = document.getElementById('muteIcon');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const currentTimeEl = document.getElementById('currentTime');
+        const audioStatus = document.getElementById('audioStatus');
 
-        let spotifyIndex = 0;
-        let spotifyPlaying = false;
-        let spotifyProgress = 0;
-        let spotifyInterval = null;
-        let spotifyShuffle = false;
+        let isPlaying = false;
+        let isMuted = false;
 
-        function loadSpotifyTrack(index) {
-            const track = spotifyPlaylist[index];
-            document.getElementById('spotifyTrackName').textContent = track.name;
-            document.getElementById('spotifyArtist').textContent = track.artist;
-            document.getElementById('spotifyAlbum').textContent = track.album;
-            spotifyProgress = 0;
-            document.getElementById('spotifyProgressFill').style.width = '0%';
-            document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            document.getElementById('spotifyDuration').textContent = '3:30';
-        }
-
-        function spotifyToggle() {
-            const btn = document.getElementById('spotifyPlayBtn');
-            const icon = document.getElementById('spotifyPlayIcon');
-
-            spotifyPlaying = !spotifyPlaying;
-            if (spotifyPlaying) {
-                icon.className = 'fas fa-pause';
-                btn.classList.add('playing');
-                spotifyInterval = setInterval(() => {
-                    spotifyProgress += 0.5;
-                    if (spotifyProgress >= 100) {
-                        spotifyProgress = 0;
-                        spotifyNext();
-                    }
-                    document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
-                    const seconds = Math.floor((spotifyProgress / 100) * 210);
-                    document.getElementById('spotifyCurrentTime').textContent =
-                        Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
-                }, 300);
-                showToast('🎵 Đang phát: ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
+        // Play/Pause
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
             } else {
-                icon.className = 'fas fa-play';
-                btn.classList.remove('playing');
-                clearInterval(spotifyInterval);
+                audio.play().catch(() => {});
             }
-        }
-
-        function spotifyNext() {
-            if (spotifyShuffle) {
-                let newIndex;
-                do {
-                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
-                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
-                spotifyIndex = newIndex;
-            } else {
-                spotifyIndex = (spotifyIndex + 1) % spotifyPlaylist.length;
-            }
-            loadSpotifyTrack(spotifyIndex);
-            if (spotifyPlaying) {
-                spotifyProgress = 0;
-                document.getElementById('spotifyProgressFill').style.width = '0%';
-                document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            }
-            showToast('⏭️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
-        }
-
-        function spotifyPrev() {
-            if (spotifyShuffle) {
-                let newIndex;
-                do {
-                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
-                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
-                spotifyIndex = newIndex;
-            } else {
-                spotifyIndex = (spotifyIndex - 1 + spotifyPlaylist.length) % spotifyPlaylist.length;
-            }
-            loadSpotifyTrack(spotifyIndex);
-            if (spotifyPlaying) {
-                spotifyProgress = 0;
-                document.getElementById('spotifyProgressFill').style.width = '0%';
-                document.getElementById('spotifyCurrentTime').textContent = '0:00';
-            }
-            showToast('⏮️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
-        }
-
-        function spotifyShuffle() {
-            spotifyShuffle = !spotifyShuffle;
-            const btn = document.getElementById('spotifyShuffleBtn');
-            if (spotifyShuffle) {
-                btn.style.color = '#1db954';
-                showToast('🔀 Shuffle: BẬT', 'success', 1500);
-            } else {
-                btn.style.color = '';
-                showToast('🔀 Shuffle: TẮT', 'info', 1500);
-            }
-        }
-
-        document.getElementById('spotifyProgressTrack').addEventListener('click', (e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const percent = ((e.clientX - rect.left) / rect.width) * 100;
-            spotifyProgress = Math.max(0, Math.min(100, percent));
-            document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
-            const seconds = Math.floor((spotifyProgress / 100) * 210);
-            document.getElementById('spotifyCurrentTime').textContent =
-                Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
         });
 
-        loadSpotifyTrack(0);
+        audio.addEventListener('play', () => {
+            isPlaying = true;
+            playIcon.className = 'fas fa-pause';
+            playBtn.classList.add('playing');
+            audioStatus.textContent = '● Đang phát';
+            audioStatus.className = 'status-text playing';
+        });
+
+        audio.addEventListener('pause', () => {
+            isPlaying = false;
+            playIcon.className = 'fas fa-play';
+            playBtn.classList.remove('playing');
+            audioStatus.textContent = '○ Tạm dừng';
+            audioStatus.className = 'status-text paused';
+        });
+
+        // Mute
+        muteBtn.addEventListener('click', () => {
+            isMuted = !isMuted;
+            audio.muted = isMuted;
+            muteIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        });
+
+        // Progress
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = percent + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            if (audio.duration) {
+                audio.currentTime = percent * audio.duration;
+            }
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+
+        // Auto-play
+        let audioInitialized = false;
+
+        function initAudio() {
+            if (audioInitialized) return;
+            audioInitialized = true;
+            audio.play().catch(() => {});
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(() => {});
+        });
+
+        document.addEventListener('click', initAudio, { once: true });
+        document.addEventListener('touchstart', initAudio, { once: true });
 
         // ===== 17. KEYBOARD SHORTCUTS =====
         document.addEventListener('keydown', (e) => {
@@ -2434,7 +2405,7 @@
 
             if (e.key === ' ' && !e.target.closest('input') && !e.target.closest('textarea')) {
                 e.preventDefault();
-                spotifyToggle();
+                playBtn.click();
             }
         });
 
@@ -2451,7 +2422,7 @@
         console.log('📍 Nam Định - quê hương tôi');
         console.log('📱 17 tuổi - đang học code');
         console.log('👁️ Visitor: 1 IP = 1 view');
-        console.log('🎵 Spotify: ' + spotifyPlaylist.length + ' bài hát');
+        console.log('🎵 Audio: bg.mp3');
         console.log('⚡ Load siêu nhanh - không loading!');
         console.log('✅ Portfolio đã sẵn sàng!');
 
