@@ -6,7 +6,7 @@
     <title>sixhen · Developer Portfolio · Nam Định</title>
 
     <!-- SEO -->
-    <meta name="description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2. Mục tiêu: giàu từ code 🚀" />
+    <meta name="description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
     <meta name="keywords" content="sixhen, developer, Nam Định, 17 tuổi, học code, HTML, CSS, JavaScript, portfolio" />
     <meta property="og:title" content="sixhen · Developer Portfolio · Nam Định" />
     <meta property="og:description" content="sixhen - Developer 17 tuổi đến từ Nam Định. Tiền là số 1, code là số 2." />
@@ -22,7 +22,7 @@
 
     <style>
         /* ================================================================
-           RESET & BASE - 50 dòng
+           RESET & BASE
            ================================================================ */
         * {
             margin: 0;
@@ -60,7 +60,7 @@
         }
 
         /* ================================================================
-           VIDEO BACKGROUND - 40 dòng
+           VIDEO BACKGROUND
            ================================================================ */
         .video-bg {
             position: fixed;
@@ -92,7 +92,7 @@
         }
 
         /* ================================================================
-           FLOATING SHAPES - 50 dòng
+           FLOATING SHAPES
            ================================================================ */
         .floating-shapes {
             position: fixed;
@@ -145,7 +145,7 @@
         }
 
         /* ================================================================
-           FLOATING EMOJI - 30 dòng
+           FLOATING EMOJI
            ================================================================ */
         .floating-emoji {
             position: fixed;
@@ -170,7 +170,7 @@
         }
 
         /* ================================================================
-           LOADING - 40 dòng
+           LOADING
            ================================================================ */
         #loading {
             position: fixed;
@@ -210,7 +210,7 @@
         }
 
         /* ================================================================
-           PARTICLES - 30 dòng
+           PARTICLES
            ================================================================ */
         #particles {
             position: fixed;
@@ -235,13 +235,13 @@
         }
 
         /* ================================================================
-           SCROLLBAR - 10 dòng
+           SCROLLBAR
            ================================================================ */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(88, 101, 242, 0.3); border-radius: 10px; }
 
         /* ================================================================
-           CARD - 60 dòng
+           CARD
            ================================================================ */
         .card {
             position: relative;
@@ -290,7 +290,7 @@
         }
 
         /* ================================================================
-           BANNER NÂNG CẤP - 80 dòng
+           BANNER - NÂNG CẤP
            ================================================================ */
         .banner {
             height: 160px;
@@ -382,32 +382,7 @@
             z-index: 5;
             display: flex;
             gap: 8px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
         }
-
-        .banner-btn {
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
-            color: var(--text-primary);
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .banner-btn:hover {
-            background: rgba(88, 101, 242, 0.2);
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .banner-btn i { font-size: 13px; }
 
         .theme-toggle-btn {
             background: rgba(0, 0, 0, 0.4);
@@ -431,7 +406,7 @@
         }
 
         /* ================================================================
-           PROFILE & AVATAR - 100 dòng
+           PROFILE - NÂNG CẤP
            ================================================================ */
         .profile {
             padding: 0 28px 28px;
@@ -439,6 +414,7 @@
             margin-top: -40px;
         }
 
+        /* ===== AVATAR 3D ===== */
         .avatar-wrapper {
             position: relative;
             width: 120px;
@@ -454,7 +430,7 @@
             position: absolute;
             inset: -20px;
             border-radius: 50%;
-            background: radial-gradient(circle at center, rgba(88, 101, 242, 0.2), transparent 70%);
+            background: radial-gradient(circle at center, rgba(88, 101, 242, 0.25), transparent 70%);
             opacity: 0;
             transition: opacity 0.5s ease;
             filter: blur(30px);
@@ -540,9 +516,7 @@
 
         .online-badge i { font-size: 12px; color: white; }
 
-        /* ================================================================
-           USERNAME & NAME - 80 dòng
-           ================================================================ */
+        /* ===== USERNAME & NAME ===== */
         .username-tag {
             text-align: center;
             margin-top: 8px;
@@ -658,7 +632,7 @@
         }
 
         /* ================================================================
-           TYPING TEXT - 20 dòng
+           TYPING TEXT
            ================================================================ */
         .typing-text {
             display: inline-block;
@@ -678,7 +652,7 @@
         }
 
         /* ================================================================
-           CONTACT - 60 dòng
+           CONTACT
            ================================================================ */
         .contact-info {
             display: flex;
@@ -740,124 +714,7 @@
         .copy-btn.copied { color: #23a55a; }
 
         /* ================================================================
-           AUTH SECTION - 80 dòng
-           ================================================================ */
-        .auth-section {
-            margin-top: 12px;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .auth-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .auth-title {
-            font-size: 13px;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        .auth-title i { color: var(--primary); margin-right: 6px; }
-
-        .auth-buttons {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .auth-btn {
-            padding: 6px 16px;
-            border-radius: 20px;
-            border: none;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .auth-btn-login {
-            background: rgba(88, 101, 242, 0.2);
-            color: var(--primary);
-        }
-
-        .auth-btn-login:hover {
-            background: rgba(88, 101, 242, 0.3);
-            transform: scale(1.05);
-        }
-
-        .auth-btn-register {
-            background: var(--primary);
-            color: white;
-        }
-
-        .auth-btn-register:hover {
-            background: var(--primary-dark);
-            transform: scale(1.05);
-        }
-
-        .auth-btn-logout {
-            background: rgba(239, 68, 68, 0.15);
-            color: #ef4444;
-        }
-
-        .auth-btn-logout:hover {
-            background: rgba(239, 68, 68, 0.25);
-            transform: scale(1.05);
-        }
-
-        .auth-btn-change-pw {
-            background: rgba(88, 101, 242, 0.1);
-            color: var(--primary);
-        }
-
-        .auth-btn-change-pw:hover {
-            background: rgba(88, 101, 242, 0.2);
-            transform: scale(1.05);
-        }
-
-        .auth-user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .auth-user-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .auth-user-name {
-            color: var(--text-primary);
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .auth-user-role {
-            color: var(--text-muted);
-            font-size: 11px;
-        }
-
-        /* ================================================================
-           TOAST - 40 dòng
+           TOAST
            ================================================================ */
         .toast-container {
             position: fixed;
@@ -907,7 +764,7 @@
         }
 
         /* ================================================================
-           STATUS BAR - 50 dòng
+           STATUS BAR
            ================================================================ */
         .status-bar {
             display: flex;
@@ -971,7 +828,7 @@
         .status-activity i { color: var(--primary); font-size: 11px; }
 
         /* ================================================================
-           BIO - 70 dòng
+           BIO
            ================================================================ */
         .bio {
             margin-top: 16px;
@@ -1079,7 +936,7 @@
         }
 
         /* ================================================================
-           SKILL PROGRESS - 40 dòng
+           SKILL PROGRESS
            ================================================================ */
         .skill-progress {
             margin-top: 12px;
@@ -1120,7 +977,7 @@
         }
 
         /* ================================================================
-           VISITOR COUNTER - GỌN NHẸ - 30 dòng
+           VISITOR COUNTER
            ================================================================ */
         .visitor-counter {
             display: flex;
@@ -1162,7 +1019,7 @@
         }
 
         /* ================================================================
-           BUTTONS - 80 dòng
+           BUTTONS
            ================================================================ */
         .btn-group {
             display: flex;
@@ -1273,7 +1130,7 @@
         }
 
         /* ================================================================
-           RIPPLE - 20 dòng
+           RIPPLE
            ================================================================ */
         .ripple {
             position: absolute;
@@ -1289,157 +1146,334 @@
         }
 
         /* ================================================================
-           SPOTIFY - 80 dòng
+           SPOTIFY - NOW PLAYING
            ================================================================ */
-        .spotify {
+        .spotify-now {
             margin-top: 16px;
-            background: rgba(18, 18, 30, 0.6);
-            border-radius: 28px;
-            padding: 16px 20px 20px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #1a1a2e, #1db95415, #0a0a0f);
+            border-radius: 24px;
+            border: 1px solid rgba(29, 185, 84, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .spotify-now:hover {
+            border-color: rgba(29, 185, 84, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(29, 185, 84, 0.05);
+        }
+
+        .spotify-now .spotify-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .spotify-now .spotify-header i {
+            font-size: 20px;
+            color: #1db954;
+        }
+
+        .spotify-now .spotify-header span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1db954;
+            letter-spacing: 1px;
+        }
+
+        .spotify-now .spotify-header .live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #1db954;
+            animation: pulseDot 1.5s infinite;
+            display: inline-block;
+        }
+
+        .spotify-track {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .spotify-track .track-artwork {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1db954, #1ed760);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
+        }
+
+        .spotify-track .track-info {
+            flex: 1;
+        }
+
+        .spotify-track .track-info .track-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .spotify-track .track-info .track-artist {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .spotify-track .track-info .track-album {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .spotify-progress {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .spotify-progress .progress-track {
+            flex: 1;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: height 0.2s;
+        }
+
+        .spotify-progress .progress-track:hover {
+            height: 5px;
+        }
+
+        .spotify-progress .progress-track .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .spotify-progress .time {
+            font-size: 11px;
+            color: var(--text-secondary);
+            min-width: 35px;
+        }
+
+        .spotify-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .spotify-controls button {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 6px;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spotify-controls button:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .spotify-controls .play-btn {
+            font-size: 22px;
+            color: #1db954;
+            width: 44px;
+            height: 44px;
+        }
+
+        .spotify-controls .play-btn:hover {
+            color: #1ed760;
+            background: rgba(29, 185, 84, 0.1);
+        }
+
+        .spotify-controls .play-btn.playing {
+            color: #1ed760;
+        }
+
+        /* ================================================================
+           GUESTBOOK
+           ================================================================ */
+        .guestbook-section {
+            margin-top: 16px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
             border: 1px solid var(--border-color);
         }
 
-        .spotify-head {
-            color: #1db954;
+        .guestbook-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .guestbook-header .guestbook-title {
+            font-size: 13px;
             font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 1px;
+            color: var(--text-primary);
+        }
+
+        .guestbook-header .guestbook-title i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .guestbook-header .guestbook-count {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .guestbook-messages {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+
+        .guestbook-messages::-webkit-scrollbar {
+            width: 3px;
+        }
+        .guestbook-messages::-webkit-scrollbar-thumb {
+            background: rgba(88, 101, 242, 0.2);
+            border-radius: 10px;
+        }
+
+        .guestbook-message {
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            animation: messageIn 0.3s ease;
+        }
+
+        @keyframes messageIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .guestbook-message .msg-header {
             display: flex;
             align-items: center;
             gap: 8px;
             margin-bottom: 4px;
         }
 
-        .spotify-head i { font-size: 16px; }
-
-        .spotify-head .live-dot {
-            width: 5px;
-            height: 5px;
-            background: #1db954;
+        .guestbook-message .msg-header .msg-avatar {
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            animation: pulseDot 1.5s infinite;
-            display: inline-block;
-        }
-
-        .song { color: white; font-weight: 600; font-size: 16px; }
-        .artist { color: var(--text-secondary); font-size: 13px; margin-bottom: 10px; }
-
-        /* ===== VISUALIZER ===== */
-        .visualizer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
-            gap: 3px;
-            height: 25px;
-            margin-top: 6px;
             justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: white;
         }
 
-        .visualizer .bar {
-            width: 3px;
-            background: linear-gradient(180deg, #1db954, #1ed760);
-            border-radius: 2px;
-            animation: visualizerAnim 0.8s ease-in-out infinite alternate;
+        .guestbook-message .msg-header .msg-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-primary);
         }
 
-        .visualizer .bar:nth-child(1) { height: 12px; animation-delay: 0s; }
-        .visualizer .bar:nth-child(2) { height: 20px; animation-delay: 0.1s; }
-        .visualizer .bar:nth-child(3) { height: 16px; animation-delay: 0.2s; }
-        .visualizer .bar:nth-child(4) { height: 25px; animation-delay: 0.3s; }
-        .visualizer .bar:nth-child(5) { height: 14px; animation-delay: 0.4s; }
-        .visualizer .bar:nth-child(6) { height: 22px; animation-delay: 0.5s; }
-        .visualizer .bar:nth-child(7) { height: 18px; animation-delay: 0.6s; }
-        .visualizer .bar:nth-child(8) { height: 10px; animation-delay: 0.7s; }
-
-        .visualizer.paused .bar {
-            animation-play-state: paused;
-            height: 8px !important;
+        .guestbook-message .msg-header .msg-time {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-left: auto;
         }
 
-        @keyframes visualizerAnim {
-            0% { transform: scaleY(0.3); }
-            100% { transform: scaleY(1); }
-        }
-
-        .audio-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .audio-controls button {
-            background: none;
-            border: none;
+        .guestbook-message .msg-content {
+            font-size: 13px;
             color: var(--text-secondary);
-            font-size: 18px;
+            padding-left: 32px;
+            word-break: break-word;
+        }
+
+        .guestbook-form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .guestbook-form .form-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .guestbook-form input,
+        .guestbook-form textarea {
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            transition: all 0.3s;
+            outline: none;
+            width: 100%;
+        }
+
+        .guestbook-form input:focus,
+        .guestbook-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
+        }
+
+        .guestbook-form .form-row input:first-child {
+            flex: 1;
+        }
+
+        .guestbook-form .form-row input:last-child {
+            flex: 2;
+        }
+
+        .guestbook-form textarea {
+            resize: vertical;
+            min-height: 50px;
+        }
+
+        .guestbook-form .guestbook-submit {
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            padding: 4px;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            align-self: flex-end;
         }
 
-        .audio-controls button:hover {
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
+        .guestbook-form .guestbook-submit:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
         }
-
-        .audio-controls .play-btn {
-            color: #1db954;
-            font-size: 24px;
-        }
-
-        .audio-controls .play-btn:hover {
-            color: #1ed760;
-            background: rgba(29, 185, 84, 0.1);
-        }
-
-        .audio-controls .progress-container {
-            flex: 1;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            cursor: pointer;
-            position: relative;
-            transition: height 0.2s;
-        }
-
-        .audio-controls .progress-container:hover { height: 5px; }
-
-        .audio-controls .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #1db954, #1ed760);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-
-        .audio-controls .time {
-            color: var(--text-secondary);
-            font-size: 11px;
-            min-width: 35px;
-            text-align: center;
-        }
-
-        .audio-status {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 6px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            justify-content: center;
-        }
-
-        .audio-status .status-text { font-size: 11px; }
-        .audio-status .status-text.playing { color: #1db954; }
-        .audio-status .status-text.paused { color: var(--text-secondary); }
 
         /* ================================================================
-           QR CODE - 40 dòng
+           QR CODE
            ================================================================ */
         .qr-section {
             margin-top: 16px;
@@ -1494,7 +1528,7 @@
         .qr-label .highlight { color: var(--primary); font-weight: 600; }
 
         /* ================================================================
-           PROJECT GALLERY - 50 dòng
+           PROJECT GALLERY
            ================================================================ */
         .gallery-section {
             margin-top: 12px;
@@ -1572,7 +1606,7 @@
         }
 
         /* ================================================================
-           MODAL - 60 dòng
+           MODAL
            ================================================================ */
         .modal-overlay {
             position: fixed;
@@ -1655,61 +1689,7 @@
         }
 
         /* ================================================================
-           FORM - 40 dòng
-           ================================================================ */
-        .form-group { margin-bottom: 14px; }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 10px 14px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            color: var(--text-primary);
-            font-size: 14px;
-            transition: all 0.3s;
-            outline: none;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 70px;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-secondary);
-            border: none;
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* ================================================================
-           FOOTER - 30 dòng
+           FOOTER
            ================================================================ */
         .footer {
             text-align: center;
@@ -1740,7 +1720,7 @@
         .footer .namdinh-flag { color: #f59e0b; }
 
         /* ================================================================
-           LIGHT MODE - 100 dòng
+           LIGHT MODE
            ================================================================ */
         body.light-mode .card {
             background: rgba(255, 255, 255, 0.75);
@@ -1763,10 +1743,10 @@
         body.light-mode .status-bar,
         body.light-mode .visitor-counter,
         body.light-mode .qr-section,
-        body.light-mode .spotify,
+        body.light-mode .spotify-now,
         body.light-mode .gallery-section,
         body.light-mode .modal-container,
-        body.light-mode .auth-section {
+        body.light-mode .guestbook-section {
             background: rgba(0, 0, 0, 0.03);
             border-color: rgba(0, 0, 0, 0.05);
         }
@@ -1786,7 +1766,10 @@
         body.light-mode .footer .text-muted,
         body.light-mode .gallery-item span,
         body.light-mode .modal-body,
-        body.light-mode .auth-user-role {
+        body.light-mode .guestbook-message .msg-content,
+        body.light-mode .guestbook-message .msg-time,
+        body.light-mode .spotify-track .track-artist,
+        body.light-mode .spotify-track .track-album {
             color: #475569;
         }
 
@@ -1796,7 +1779,8 @@
         body.light-mode .username-tag .highlight,
         body.light-mode .typing-text,
         body.light-mode .modal-header h2,
-        body.light-mode .auth-user-name {
+        body.light-mode .guestbook-message .msg-name,
+        body.light-mode .spotify-track .track-name {
             color: #0a0a0f;
         }
 
@@ -1805,7 +1789,6 @@
             color: var(--primary);
         }
 
-        body.light-mode .banner-btn,
         body.light-mode .theme-toggle-btn {
             background: rgba(255, 255, 255, 0.8);
             color: #0a0a0f;
@@ -1820,20 +1803,19 @@
             color: var(--primary);
         }
 
-        body.light-mode .form-group input,
-        body.light-mode .form-group textarea,
-        body.light-mode .form-group select {
-            background: rgba(0, 0, 0, 0.03);
-            color: #0a0a0f;
-        }
-
         body.light-mode .toast {
             background: rgba(255, 255, 255, 0.95);
             color: #0a0a0f;
         }
 
+        body.light-mode .guestbook-form input,
+        body.light-mode .guestbook-form textarea {
+            background: rgba(0, 0, 0, 0.03);
+            color: #0a0a0f;
+        }
+
         /* ================================================================
-           RESPONSIVE - 80 dòng
+           RESPONSIVE
            ================================================================ */
         @media (max-width: 520px) {
             body { padding: 12px; }
@@ -1849,8 +1831,6 @@
             .contact-item { font-size: 12px; }
             .btn { padding: 10px 14px; font-size: 13px; gap: 8px; }
             .btn i { font-size: 16px; width: 18px; }
-            .spotify { padding: 12px 16px 16px; }
-            .song { font-size: 15px; }
             .bio { padding: 14px 16px; }
             .bio-text { font-size: 14px; }
             .bio-text .highlight-money { font-size: 15px; }
@@ -1858,24 +1838,22 @@
             .status-activity { margin-left: 0; width: 100%; }
             .visitor-counter .count { font-size: 16px; }
             .qr-code { width: 120px; height: 120px; padding: 8px; }
-            .audio-controls button { width: 28px; height: 28px; font-size: 16px; }
-            .audio-controls .play-btn { font-size: 20px; }
-            .audio-controls .time { font-size: 10px; min-width: 30px; }
             .floating-emoji { display: none; }
-            .visualizer .bar { width: 3px; }
             .floating-shapes .shape { display: none; }
             .username-tag { font-size: 12px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .tag .nam-dinh-badge { font-size: 10px; padding: 1px 8px; }
             .modal-container { padding: 20px; margin: 12px; }
-            .banner-top-right { top: 10px; right: 10px; gap: 4px; }
-            .banner-btn { padding: 4px 10px; font-size: 10px; }
-            .auth-section { padding: 12px 14px; }
-            .auth-header { flex-direction: column; align-items: flex-start; }
-            .auth-buttons { width: 100%; }
-            .auth-btn { flex: 1; justify-content: center; font-size: 11px; padding: 5px 10px; }
-            .auth-user-info { width: 100%; }
+            .banner-top-right { top: 10px; right: 10px; }
             .theme-toggle-btn { width: 30px; height: 30px; font-size: 14px; }
+            .spotify-now { padding: 12px 16px; }
+            .spotify-track .track-artwork { width: 44px; height: 44px; font-size: 18px; }
+            .guestbook-section { padding: 12px 14px; }
+            .guestbook-form .form-row { flex-direction: column; }
+            .guestbook-form .guestbook-submit { width: 100%; }
+            .guestbook-message .msg-content { padding-left: 0; }
+            .spotify-controls button { width: 30px; height: 30px; font-size: 14px; }
+            .spotify-controls .play-btn { width: 38px; height: 38px; font-size: 18px; }
         }
 
         @media (max-width: 380px) {
@@ -1897,7 +1875,7 @@
         }
 
         /* ================================================================
-           REDUCED MOTION - 30 dòng
+           REDUCED MOTION
            ================================================================ */
         @media (prefers-reduced-motion: reduce) {
             *,
@@ -1910,28 +1888,27 @@
             .particle { display: none; }
             .shape { display: none; }
             .floating-emoji { display: none; }
-            .visualizer .bar { animation: none; height: 12px !important; }
             .name::before,
             .name::after { display: none; }
-            .mouse-trail { display: none; }
             .toast { animation: none !important; }
             .modal-container { animation: none !important; }
             .video-bg { display: none; }
             .video-overlay { background: var(--bg-dark); }
+            .guestbook-message { animation: none !important; }
+            .spotify-progress .progress-fill { transition: none !important; }
         }
 
         /* ================================================================
-           FOCUS - 10 dòng
+           FOCUS
            ================================================================ */
         .btn:focus-visible,
         .copy-btn:focus-visible,
-        .audio-controls button:focus-visible,
-        .banner-btn:focus-visible,
-        .auth-btn:focus-visible,
         .theme-toggle-btn:focus-visible,
         .modal-close:focus-visible,
-        .form-group input:focus-visible,
-        .form-group textarea:focus-visible {
+        .guestbook-form input:focus-visible,
+        .guestbook-form textarea:focus-visible,
+        .guestbook-submit:focus-visible,
+        .spotify-controls button:focus-visible {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
         }
@@ -2007,7 +1984,7 @@
     <main class="card" role="main" id="mainCard">
 
         <!-- ============================================================
-        BANNER NÂNG CẤP
+        BANNER
         ============================================================ -->
         <header class="banner" role="banner">
             <img src="assets/bg.jpg" alt="Banner" class="banner-img" id="bannerImg" />
@@ -2016,12 +1993,6 @@
             <div class="banner-glow" aria-hidden="true"></div>
 
             <div class="banner-top-right">
-                <button class="banner-btn" onclick="showAuthModal()">
-                    <i class="fas fa-user-plus"></i> Đăng ký
-                </button>
-                <button class="banner-btn" onclick="showLoginModal()">
-                    <i class="fas fa-sign-in-alt"></i> Đăng nhập
-                </button>
                 <button class="theme-toggle-btn" id="themeToggle" aria-label="Đổi theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
@@ -2058,14 +2029,14 @@
             ======================================================== -->
             <div class="username-tag">
                 <i class="fas fa-at" aria-hidden="true"></i>
-                <span class="highlight" id="displayUsername">@sixhen</span>
+                <span class="highlight">@sixhen</span>
             </div>
 
             <!-- ========================================================
             NAME
             ======================================================== -->
             <div class="name-section">
-                <h1 class="name" data-text="sixhen" id="displayName">sixhen</h1>
+                <h1 class="name" data-text="sixhen">sixhen</h1>
                 <span class="badge-learning">✦ học code</span>
             </div>
 
@@ -2073,7 +2044,7 @@
                 <i class="fas fa-map-pin" aria-hidden="true"></i>
                 <span class="nam-dinh-badge">📍 Nam Định</span>
                 <span class="divider">·</span>
-                <i class="fas fa-calendar" aria-hidden="true"></i> <span id="displayAge">17</span>
+                <i class="fas fa-calendar" aria-hidden="true"></i> 17
                 <span class="divider">·</span>
                 <i class="fas fa-graduation-cap" aria-hidden="true"></i> mới bắt đầu
             </div>
@@ -2084,56 +2055,24 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone" aria-hidden="true"></i>
-                    <span class="value" id="phoneValue">0328 981 323</span>
+                    <span class="value">0328 981 323</span>
                     <button class="copy-btn" data-copy="0328 981 323" aria-label="Sao chép số điện thoại">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span class="value" id="emailValue">dmh190229@gmail.com</span>
+                    <span class="value">dmh190229@gmail.com</span>
                     <button class="copy-btn" data-copy="dmh190229@gmail.com" aria-label="Sao chép email">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-discord" aria-hidden="true"></i>
-                    <span class="value" id="discordValue">@sixhen</span>
+                    <span class="value">@sixhen</span>
                     <button class="copy-btn" data-copy="@sixhen" aria-label="Sao chép Discord">
                         <i class="fas fa-copy" aria-hidden="true"></i>
                     </button>
-                </div>
-            </div>
-
-            <!-- ================================================================
-            AUTH SECTION - HỆ THỐNG TÀI KHOẢN
-            ================================================================ -->
-            <div class="auth-section" id="authSection">
-                <div class="auth-header">
-                    <div class="auth-title">
-                        <i class="fas fa-users"></i> Thành viên
-                    </div>
-                    <div class="auth-buttons" id="authButtons">
-                        <button class="auth-btn auth-btn-login" onclick="showLoginModal()">
-                            <i class="fas fa-sign-in-alt"></i> Đăng nhập
-                        </button>
-                        <button class="auth-btn auth-btn-register" onclick="showAuthModal()">
-                            <i class="fas fa-user-plus"></i> Đăng ký
-                        </button>
-                    </div>
-                    <div class="auth-user-info" id="authUserInfo" style="display:none;">
-                        <div class="auth-user-avatar" id="authUserAvatar">S</div>
-                        <div>
-                            <div class="auth-user-name" id="authUserName">sixhen</div>
-                            <div class="auth-user-role" id="authUserRole">👑 Chủ sở hữu</div>
-                        </div>
-                        <button class="auth-btn auth-btn-change-pw" onclick="showChangePasswordModal()" title="Đổi mật khẩu">
-                            <i class="fas fa-key"></i>
-                        </button>
-                        <button class="auth-btn auth-btn-logout" onclick="logoutUser()" title="Đăng xuất">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
 
@@ -2248,7 +2187,7 @@
             </div>
 
             <!-- ========================================================
-            VISITOR COUNTER - GỌN NHẸ
+            VISITOR COUNTER
             ======================================================== -->
             <div class="visitor-counter" role="status" aria-label="Lượt xem">
                 <i class="fas fa-eye" aria-hidden="true"></i>
@@ -2292,47 +2231,81 @@
                 </button>
             </div>
 
-            <!-- ========================================================
-            SPOTIFY
-            ======================================================== -->
-            <div class="spotify">
-                <div class="spotify-head">
-                    <i class="fas fa-headphones" aria-hidden="true"></i>
-                    đang nghe
-                    <span class="live-dot" aria-hidden="true"></span>
-                </div>
-                <div class="song">bg.mp3</div>
-                <div class="artist">✦ playlist của sixhen</div>
-
-                <div class="visualizer" id="visualizer">
-                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                    <span class="bar"></span><span class="bar"></span>
+            <!-- ================================================================
+            SPOTIFY NOW PLAYING
+            ================================================================ -->
+            <div class="spotify-now">
+                <div class="spotify-header">
+                    <i class="fas fa-headphones"></i>
+                    <span>NOW PLAYING</span>
+                    <span class="live-dot"></span>
                 </div>
 
-                <div class="audio-controls">
-                    <button class="play-btn" id="playBtn" aria-label="Phát/Nhạc">
-                        <i class="fas fa-play" id="playIcon" aria-hidden="true"></i>
-                    </button>
-                    <div class="progress-container" id="progressContainer" role="slider">
-                        <div class="progress-bar" id="progressBar"></div>
+                <div class="spotify-track">
+                    <div class="track-artwork">
+                        <i class="fas fa-music"></i>
                     </div>
-                    <span class="time" id="currentTime">0:00</span>
-                    <button id="muteBtn" aria-label="Tắt/Bật âm thanh">
-                        <i class="fas fa-volume-up" id="muteIcon" aria-hidden="true"></i>
+                    <div class="track-info">
+                        <div class="track-name" id="spotifyTrackName">Lofi Chill</div>
+                        <div class="track-artist" id="spotifyArtist">sixhen</div>
+                        <div class="track-album" id="spotifyAlbum">✦ Playlist cá nhân</div>
+                    </div>
+                </div>
+
+                <div class="spotify-progress">
+                    <span class="time" id="spotifyCurrentTime">0:00</span>
+                    <div class="progress-track" id="spotifyProgressTrack">
+                        <div class="progress-fill" id="spotifyProgressFill"></div>
+                    </div>
+                    <span class="time" id="spotifyDuration">0:00</span>
+                </div>
+
+                <div class="spotify-controls">
+                    <button onclick="spotifyPrev()" aria-label="Bài trước">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="play-btn" id="spotifyPlayBtn" onclick="spotifyToggle()" aria-label="Play/Pause">
+                        <i class="fas fa-play" id="spotifyPlayIcon"></i>
+                    </button>
+                    <button onclick="spotifyNext()" aria-label="Bài tiếp">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button onclick="spotifyShuffle()" aria-label="Shuffle" id="spotifyShuffleBtn">
+                        <i class="fas fa-random"></i>
                     </button>
                 </div>
-                <div class="audio-status">
-                    <span class="status-text playing" id="audioStatus">● Đang phát</span>
-                </div>
-                <audio id="bgAudio" loop autoplay>
-                    <source src="assets/bg.mp3" type="audio/mpeg" />
-                </audio>
             </div>
 
-            <!-- ========================================================
+            <!-- ================================================================
+            GUESTBOOK
+            ================================================================ -->
+            <div class="guestbook-section">
+                <div class="guestbook-header">
+                    <div class="guestbook-title">
+                        <i class="fas fa-book"></i> Sổ lưu bút
+                    </div>
+                    <div class="guestbook-count" id="guestbookCount">0 lời nhắn</div>
+                </div>
+
+                <div class="guestbook-messages" id="guestbookMessages">
+                    <!-- Messages sẽ được render ở đây -->
+                </div>
+
+                <div class="guestbook-form">
+                    <div class="form-row">
+                        <input type="text" id="guestName" placeholder="Tên của bạn..." maxlength="30" />
+                        <input type="text" id="guestEmail" placeholder="Email (tùy chọn)..." />
+                    </div>
+                    <textarea id="guestMessage" placeholder="Viết lời nhắn của bạn..." maxlength="500" rows="2"></textarea>
+                    <button class="guestbook-submit" onclick="submitGuestbook()">
+                        <i class="fas fa-paper-plane"></i> Gửi lời nhắn
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
             QR CODE
-            ======================================================== -->
+            ================================================================ -->
             <div class="qr-section">
                 <div class="qr-title">
                     <i class="fas fa-qrcode" aria-hidden="true"></i>
@@ -2347,9 +2320,9 @@
                 </div>
             </div>
 
-            <!-- ========================================================
+            <!-- ================================================================
             FOOTER
-            ======================================================== -->
+            ================================================================ -->
             <footer class="footer">
                 <i class="fas fa-crown" aria-hidden="true"></i>
                 <span class="text-muted">sixhen</span>
@@ -2367,7 +2340,7 @@
     </main>
 
     <!-- ================================================================
-    JAVASCRIPT - 700+ dòng
+    JAVASCRIPT
     ================================================================ -->
     <script>
         // ================================================================
@@ -2522,82 +2495,7 @@
         });
 
         // ================================================================
-        // 10. AUDIO PLAYER
-        // ================================================================
-        const audio = document.getElementById('bgAudio');
-        const playBtn = document.getElementById('playBtn');
-        const playIcon = document.getElementById('playIcon');
-        const muteBtn = document.getElementById('muteBtn');
-        const muteIcon = document.getElementById('muteIcon');
-        const progressBar = document.getElementById('progressBar');
-        const progressContainer = document.getElementById('progressContainer');
-        const currentTimeEl = document.getElementById('currentTime');
-        const audioStatus = document.getElementById('audioStatus');
-        const visualizer = document.getElementById('visualizer');
-
-        let isPlaying = false,
-            isMuted = false;
-
-        playBtn.addEventListener('click', () => {
-            if (isPlaying) { audio.pause(); } else { audio.play().catch(() => {}); }
-        });
-
-        audio.addEventListener('play', () => {
-            isPlaying = true;
-            playIcon.className = 'fas fa-pause';
-            audioStatus.textContent = '● Đang phát';
-            audioStatus.className = 'status-text playing';
-            visualizer.classList.remove('paused');
-        });
-
-        audio.addEventListener('pause', () => {
-            isPlaying = false;
-            playIcon.className = 'fas fa-play';
-            audioStatus.textContent = '○ Tạm dừng';
-            audioStatus.className = 'status-text paused';
-            visualizer.classList.add('paused');
-        });
-
-        muteBtn.addEventListener('click', () => {
-            isMuted = !isMuted;
-            audio.muted = isMuted;
-            muteIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-        });
-
-        audio.addEventListener('timeupdate', () => {
-            if (audio.duration) {
-                const percent = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = percent + '%';
-                currentTimeEl.textContent = formatTime(audio.currentTime);
-            }
-        });
-
-        progressContainer.addEventListener('click', (e) => {
-            const rect = progressContainer.getBoundingClientRect();
-            const percent = (e.clientX - rect.left) / rect.width;
-            if (audio.duration) { audio.currentTime = percent * audio.duration; }
-        });
-
-        function formatTime(seconds) {
-            if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return mins + ':' + (secs < 10 ? '0' : '') + secs;
-        }
-
-        let audioInitialized = false;
-
-        function initAudio() {
-            if (audioInitialized) return;
-            audioInitialized = true;
-            audio.play().catch(() => {});
-        }
-        document.addEventListener('DOMContentLoaded', () => { audio.play().catch(() => {}); });
-        document.addEventListener('click', initAudio, { once: true });
-        document.addEventListener('touchstart', initAudio, { once: true });
-
-        // ================================================================
-        // 11. TYPING EFFECT
+        // 10. TYPING EFFECT
         // ================================================================
         function typeWriter() {
             const texts = ['tiền là số 1', 'kiếm tiền là số 1', '💰 là số 1', 'từ Nam Định', '💰 + code = giàu'];
@@ -2631,7 +2529,7 @@
         window.addEventListener('load', typeWriter);
 
         // ================================================================
-        // 12. LIVE CLOCK
+        // 11. LIVE CLOCK
         // ================================================================
         function updateClock() {
             const now = new Date();
@@ -2644,7 +2542,7 @@
         updateClock();
 
         // ================================================================
-        // 13. VISITOR COUNTER - GỌN NHẸ
+        // 12. VISITOR COUNTER
         // ================================================================
         async function updateVisitorCount() {
             try {
@@ -2672,7 +2570,7 @@
         updateVisitorCount();
 
         // ================================================================
-        // 14. THEME TOGGLE
+        // 13. THEME TOGGLE
         // ================================================================
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
@@ -2696,7 +2594,7 @@
         }
 
         // ================================================================
-        // 15. MODAL SYSTEM
+        // 14. MODAL SYSTEM
         // ================================================================
         const modalOverlay = document.getElementById('modalOverlay');
         const modalTitle = document.getElementById('modalTitle');
@@ -2733,7 +2631,7 @@
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
         // ================================================================
-        // 16. PROJECT GALLERY
+        // 15. PROJECT GALLERY
         // ================================================================
         function showProject(name, description) {
             showModal(
@@ -2751,7 +2649,7 @@
         }
 
         // ================================================================
-        // 17. CONTACT FORM
+        // 16. CONTACT FORM
         // ================================================================
         function showContactForm() {
             showModal(
@@ -2790,336 +2688,207 @@
         }
 
         // ================================================================
-        // 18. HỆ THỐNG TÀI KHOẢN - BẢO MẬT NÂNG CAO
+        // 17. SPOTIFY NOW PLAYING
         // ================================================================
+        const spotifyPlaylist = [
+            { name: 'Lofi Chill', artist: 'sixhen', album: '✦ Playlist cá nhân' },
+            { name: 'Coding Beats', artist: 'sixhen', album: '✦ Playlist cá nhân' },
+            { name: 'Study Focus', artist: 'sixhen', album: '✦ Playlist cá nhân' },
+            { name: 'Night Drive', artist: 'sixhen', album: '✦ Playlist cá nhân' },
+            { name: 'Dreamy Vibes', artist: 'sixhen', album: '✦ Playlist cá nhân' },
+        ];
 
-        // Mã hóa mật khẩu
-        function hashPassword(password) {
-            let hash = 0;
-            for (let i = 0; i < password.length; i++) {
-                const char = password.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash;
-            }
-            return 'hashed_' + Math.abs(hash).toString(36);
+        let spotifyIndex = 0;
+        let spotifyPlaying = false;
+        let spotifyProgress = 0;
+        let spotifyInterval = null;
+        let spotifyShuffle = false;
+
+        function loadSpotifyTrack(index) {
+            const track = spotifyPlaylist[index];
+            document.getElementById('spotifyTrackName').textContent = track.name;
+            document.getElementById('spotifyArtist').textContent = track.artist;
+            document.getElementById('spotifyAlbum').textContent = track.album;
+            spotifyProgress = 0;
+            document.getElementById('spotifyProgressFill').style.width = '0%';
+            document.getElementById('spotifyCurrentTime').textContent = '0:00';
+            document.getElementById('spotifyDuration').textContent = '3:30';
         }
 
-        function verifyPassword(input, hashed) {
-            return hashPassword(input) === hashed;
-        }
+        function spotifyToggle() {
+            const btn = document.getElementById('spotifyPlayBtn');
+            const icon = document.getElementById('spotifyPlayIcon');
 
-        // Khởi tạo users
-        let users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
-
-        if (users.length === 0) {
-            const ownerPassword = 'Sixhen@2026';
-            users.push({
-                id: 'admin',
-                username: 'sixhen',
-                password: hashPassword(ownerPassword),
-                name: 'sixhen',
-                email: 'dmh190229@gmail.com',
-                age: '17',
-                role: 'owner',
-                avatar: 'S',
-                created: new Date().toISOString(),
-                lastLogin: null,
-                passwordChanged: false
-            });
-            localStorage.setItem('sixhen_users', JSON.stringify(users));
-            console.log('🔐 Tài khoản owner: sixhen / Sixhen@2026');
-        }
-
-        let currentUser = JSON.parse(sessionStorage.getItem('sixhen_current_user')) || null;
-
-        function loginUser(username, password) {
-            const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
-            const user = users.find(u => u.username === username);
-
-            if (!user) {
-                return { success: false, message: '❌ Tên đăng nhập không tồn tại!' };
-            }
-
-            if (verifyPassword(password, user.password)) {
-                user.lastLogin = new Date().toISOString();
-                localStorage.setItem('sixhen_users', JSON.stringify(users));
-
-                if (!user.passwordChanged && user.role === 'owner') {
-                    return {
-                        success: true,
-                        user: user,
-                        requireChange: true,
-                        message: '🔐 Vui lòng đổi mật khẩu để bảo mật hơn!'
-                    };
-                }
-
-                return { success: true, user: user };
-            }
-
-            return { success: false, message: '❌ Sai mật khẩu!' };
-        }
-
-        function changePassword(username, oldPassword, newPassword) {
-            const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
-            const userIndex = users.findIndex(u => u.username === username);
-
-            if (userIndex === -1) {
-                return { success: false, message: '❌ Không tìm thấy tài khoản!' };
-            }
-
-            const user = users[userIndex];
-
-            if (!verifyPassword(oldPassword, user.password)) {
-                return { success: false, message: '❌ Mật khẩu cũ không đúng!' };
-            }
-
-            if (newPassword.length < 8) {
-                return { success: false, message: '⚠️ Mật khẩu mới phải có ít nhất 8 ký tự!' };
-            }
-
-            users[userIndex].password = hashPassword(newPassword);
-            users[userIndex].passwordChanged = true;
-            localStorage.setItem('sixhen_users', JSON.stringify(users));
-
-            return { success: true, message: '✅ Đổi mật khẩu thành công!' };
-        }
-
-        function updateAuthUI() {
-            const authButtons = document.getElementById('authButtons');
-            const authUserInfo = document.getElementById('authUserInfo');
-            const authUserName = document.getElementById('authUserName');
-            const authUserAvatar = document.getElementById('authUserAvatar');
-            const authUserRole = document.getElementById('authUserRole');
-            const displayUsername = document.getElementById('displayUsername');
-            const displayName = document.getElementById('displayName');
-            const displayAge = document.getElementById('displayAge');
-
-            if (currentUser) {
-                authButtons.style.display = 'none';
-                authUserInfo.style.display = 'flex';
-                authUserName.textContent = currentUser.name || currentUser.username;
-                authUserAvatar.textContent = (currentUser.name || currentUser.username)[0].toUpperCase();
-                authUserRole.textContent = currentUser.role === 'owner' ? '👑 Chủ sở hữu' : '👤 Thành viên';
-                displayUsername.textContent = '@' + currentUser.username;
-                displayName.textContent = currentUser.name || currentUser.username;
-                displayAge.textContent = currentUser.age || '17';
+            spotifyPlaying = !spotifyPlaying;
+            if (spotifyPlaying) {
+                icon.className = 'fas fa-pause';
+                btn.classList.add('playing');
+                spotifyInterval = setInterval(() => {
+                    spotifyProgress += 0.5;
+                    if (spotifyProgress >= 100) {
+                        spotifyProgress = 0;
+                        spotifyNext();
+                    }
+                    document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
+                    const seconds = Math.floor((spotifyProgress / 100) * 210);
+                    document.getElementById('spotifyCurrentTime').textContent =
+                        Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
+                }, 300);
+                showToast('🎵 Đang phát: ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
             } else {
-                authButtons.style.display = 'flex';
-                authUserInfo.style.display = 'none';
-                displayUsername.textContent = '@sixhen';
-                displayName.textContent = 'sixhen';
-                displayAge.textContent = '17';
+                icon.className = 'fas fa-play';
+                btn.classList.remove('playing');
+                clearInterval(spotifyInterval);
             }
         }
 
-        function showAuthModal() {
-            showModal(
-                '📝 Đăng ký tài khoản',
-                `
-                <div class="form-group">
-                    <label>Tên đăng nhập *</label>
-                    <input type="text" id="regUsername" placeholder="Chọn tên đăng nhập..." />
-                </div>
-                <div class="form-group">
-                    <label>Mật khẩu *</label>
-                    <input type="password" id="regPassword" placeholder="Nhập mật khẩu (≥ 8 ký tự)..." />
-                </div>
-                <div class="form-group">
-                    <label>Tên hiển thị</label>
-                    <input type="text" id="regName" placeholder="Tên của bạn..." />
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="regEmail" placeholder="Email..." />
-                </div>
-                <div class="form-group">
-                    <label>Tuổi</label>
-                    <input type="number" id="regAge" placeholder="Tuổi..." />
-                </div>
-                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
-                    <i class="fas fa-info-circle"></i> Mật khẩu nên có chữ hoa, chữ thường, số và ký tự đặc biệt
-                </div>
-                `,
-                'Đăng ký',
-                'Hủy',
-                () => {
-                    const username = document.getElementById('regUsername')?.value.trim();
-                    const password = document.getElementById('regPassword')?.value.trim();
-                    const name = document.getElementById('regName')?.value.trim() || username;
-                    const email = document.getElementById('regEmail')?.value.trim() || '';
-                    const age = document.getElementById('regAge')?.value.trim() || '';
-
-                    if (!username || !password) {
-                        showToast('⚠️ Vui lòng nhập tên và mật khẩu!', 'warning');
-                        return;
-                    }
-
-                    if (username.length < 3) {
-                        showToast('⚠️ Tên phải có ít nhất 3 ký tự!', 'warning');
-                        return;
-                    }
-
-                    if (password.length < 8) {
-                        showToast('⚠️ Mật khẩu phải có ít nhất 8 ký tự!', 'warning');
-                        return;
-                    }
-
-                    const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
-                    if (users.find(u => u.username === username)) {
-                        showToast('⚠️ Tên đăng nhập đã tồn tại!', 'warning');
-                        return;
-                    }
-
-                    const newUser = {
-                        id: Date.now().toString(),
-                        username,
-                        password: hashPassword(password),
-                        name,
-                        email,
-                        age,
-                        role: 'user',
-                        avatar: (name || username)[0].toUpperCase(),
-                        created: new Date().toISOString(),
-                        lastLogin: null,
-                        passwordChanged: true
-                    };
-
-                    users.push(newUser);
-                    localStorage.setItem('sixhen_users', JSON.stringify(users));
-
-                    currentUser = newUser;
-                    sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
-                    updateAuthUI();
-                    closeModal();
-                    showToast('🎉 Đăng ký thành công!', 'success');
-                }
-            );
+        function spotifyNext() {
+            if (spotifyShuffle) {
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
+                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
+                spotifyIndex = newIndex;
+            } else {
+                spotifyIndex = (spotifyIndex + 1) % spotifyPlaylist.length;
+            }
+            loadSpotifyTrack(spotifyIndex);
+            if (spotifyPlaying) {
+                spotifyProgress = 0;
+                document.getElementById('spotifyProgressFill').style.width = '0%';
+                document.getElementById('spotifyCurrentTime').textContent = '0:00';
+            }
+            showToast('⏭️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
         }
 
-        function showLoginModal() {
-            showModal(
-                '🔑 Đăng nhập',
-                `
-                <div class="form-group">
-                    <label>Tên đăng nhập</label>
-                    <input type="text" id="loginUsername" placeholder="Nhập tên đăng nhập..." />
-                </div>
-                <div class="form-group">
-                    <label>Mật khẩu</label>
-                    <input type="password" id="loginPassword" placeholder="Nhập mật khẩu..." />
-                </div>
-                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
-                    <i class="fas fa-info-circle"></i> Tài khoản mặc định: sixhen / Sixhen@2026
-                </div>
-                `,
-                'Đăng nhập',
-                'Hủy',
-                () => {
-                    const username = document.getElementById('loginUsername')?.value.trim();
-                    const password = document.getElementById('loginPassword')?.value.trim();
-
-                    if (!username || !password) {
-                        showToast('⚠️ Vui lòng nhập đầy đủ!', 'warning');
-                        return;
-                    }
-
-                    const result = loginUser(username, password);
-
-                    if (!result.success) {
-                        showToast(result.message, 'error');
-                        return;
-                    }
-
-                    currentUser = result.user;
-                    sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
-                    updateAuthUI();
-                    closeModal();
-                    showToast(`👋 Chào mừng ${result.user.name || result.user.username}!`, 'success');
-
-                    if (result.requireChange) {
-                        setTimeout(() => {
-                            showToast('🔐 Vui lòng đổi mật khẩu để bảo mật!', 'warning', 5000);
-                            setTimeout(showChangePasswordModal, 1500);
-                        }, 1000);
-                    }
-                }
-            );
+        function spotifyPrev() {
+            if (spotifyShuffle) {
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * spotifyPlaylist.length);
+                } while (newIndex === spotifyIndex && spotifyPlaylist.length > 1);
+                spotifyIndex = newIndex;
+            } else {
+                spotifyIndex = (spotifyIndex - 1 + spotifyPlaylist.length) % spotifyPlaylist.length;
+            }
+            loadSpotifyTrack(spotifyIndex);
+            if (spotifyPlaying) {
+                spotifyProgress = 0;
+                document.getElementById('spotifyProgressFill').style.width = '0%';
+                document.getElementById('spotifyCurrentTime').textContent = '0:00';
+            }
+            showToast('⏮️ ' + spotifyPlaylist[spotifyIndex].name, 'info', 1500);
         }
 
-        function showChangePasswordModal() {
-            if (!currentUser) {
-                showToast('⚠️ Vui lòng đăng nhập trước!', 'warning');
+        function spotifyShuffle() {
+            spotifyShuffle = !spotifyShuffle;
+            const btn = document.getElementById('spotifyShuffleBtn');
+            if (spotifyShuffle) {
+                btn.style.color = '#1db954';
+                showToast('🔀 Shuffle: BẬT', 'success', 1500);
+            } else {
+                btn.style.color = '';
+                showToast('🔀 Shuffle: TẮT', 'info', 1500);
+            }
+        }
+
+        // Click trên progress để tua
+        document.getElementById('spotifyProgressTrack').addEventListener('click', (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const percent = ((e.clientX - rect.left) / rect.width) * 100;
+            spotifyProgress = Math.max(0, Math.min(100, percent));
+            document.getElementById('spotifyProgressFill').style.width = spotifyProgress + '%';
+            const seconds = Math.floor((spotifyProgress / 100) * 210);
+            document.getElementById('spotifyCurrentTime').textContent =
+                Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
+        });
+
+        // Load track đầu tiên
+        loadSpotifyTrack(0);
+
+        // ================================================================
+        // 18. GUESTBOOK
+        // ================================================================
+        let guestbookMessages = JSON.parse(localStorage.getItem('sixhen_guestbook')) || [];
+
+        function renderGuestbook() {
+            const container = document.getElementById('guestbookMessages');
+            if (guestbookMessages.length === 0) {
+                container.innerHTML =
+                    `<div style="text-align:center;padding:20px;color:var(--text-muted);font-size:13px;">📭 Chưa có lời nhắn nào. Hãy là người đầu tiên!</div>`;
+                document.getElementById('guestbookCount').textContent = '0 lời nhắn';
                 return;
             }
 
-            showModal(
-                '🔐 Đổi mật khẩu',
-                `
-                <div class="form-group">
-                    <label>Mật khẩu cũ</label>
-                    <input type="password" id="oldPassword" placeholder="Nhập mật khẩu cũ..." />
+            container.innerHTML = guestbookMessages.map(msg => `
+                <div class="guestbook-message">
+                    <div class="msg-header">
+                        <div class="msg-avatar">${(msg.name || 'A')[0].toUpperCase()}</div>
+                        <span class="msg-name">${msg.name || 'Ẩn danh'}</span>
+                        <span class="msg-time">${msg.time}</span>
+                    </div>
+                    <div class="msg-content">${msg.message}</div>
                 </div>
-                <div class="form-group">
-                    <label>Mật khẩu mới</label>
-                    <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới (≥ 8 ký tự)..." />
-                </div>
-                <div class="form-group">
-                    <label>Xác nhận mật khẩu mới</label>
-                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới..." />
-                </div>
-                <div style="font-size:12px; color:var(--text-muted); margin-top:8px;">
-                    <i class="fas fa-info-circle"></i> Mật khẩu nên có: chữ hoa, chữ thường, số, ký tự đặc biệt
-                </div>
-                `,
-                'Đổi mật khẩu',
-                'Hủy',
-                () => {
-                    const oldPwd = document.getElementById('oldPassword')?.value || '';
-                    const newPwd = document.getElementById('newPassword')?.value || '';
-                    const confirmPwd = document.getElementById('confirmPassword')?.value || '';
+            `).join('');
 
-                    if (!oldPwd || !newPwd || !confirmPwd) {
-                        showToast('⚠️ Vui lòng điền đầy đủ!', 'warning');
-                        return;
-                    }
-
-                    if (newPwd !== confirmPwd) {
-                        showToast('⚠️ Mật khẩu mới không khớp!', 'warning');
-                        return;
-                    }
-
-                    if (newPwd.length < 8) {
-                        showToast('⚠️ Mật khẩu phải có ít nhất 8 ký tự!', 'warning');
-                        return;
-                    }
-
-                    const result = changePassword(currentUser.username, oldPwd, newPwd);
-
-                    if (result.success) {
-                        showToast(result.message, 'success');
-                        closeModal();
-
-                        const users = JSON.parse(localStorage.getItem('sixhen_users')) || [];
-                        const updatedUser = users.find(u => u.username === currentUser.username);
-                        if (updatedUser) {
-                            currentUser = updatedUser;
-                            sessionStorage.setItem('sixhen_current_user', JSON.stringify(currentUser));
-                        }
-                    } else {
-                        showToast(result.message, 'error');
-                    }
-                }
-            );
+            document.getElementById('guestbookCount').textContent = guestbookMessages.length + ' lời nhắn';
+            container.scrollTop = container.scrollHeight;
         }
 
-        function logoutUser() {
-            currentUser = null;
-            sessionStorage.removeItem('sixhen_current_user');
-            updateAuthUI();
-            showToast('👋 Đã đăng xuất!', 'info');
+        function submitGuestbook() {
+            const nameInput = document.getElementById('guestName');
+            const emailInput = document.getElementById('guestEmail');
+            const messageInput = document.getElementById('guestMessage');
+
+            const name = nameInput.value.trim() || 'Ẩn danh';
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (!message) {
+                showToast('⚠️ Vui lòng nhập lời nhắn!', 'warning');
+                messageInput.focus();
+                return;
+            }
+
+            const now = new Date();
+            const time = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0') + ' ' +
+                now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+
+            guestbookMessages.unshift({
+                name: name,
+                email: email,
+                message: message,
+                time: time
+            });
+
+            localStorage.setItem('sixhen_guestbook', JSON.stringify(guestbookMessages));
+            renderGuestbook();
+
+            nameInput.value = '';
+            emailInput.value = '';
+            messageInput.value = '';
+
+            showToast('✅ Cảm ơn bạn đã gửi lời nhắn! ❤️', 'success');
+
+            // Animation cho tin nhắn mới
+            const firstMsg = document.querySelector('.guestbook-message');
+            if (firstMsg) {
+                firstMsg.style.animation = 'none';
+                setTimeout(() => {
+                    firstMsg.style.animation = 'messageIn 0.3s ease';
+                }, 10);
+            }
         }
 
-        updateAuthUI();
+        // Enter để gửi tin nhắn
+        document.getElementById('guestMessage').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                submitGuestbook();
+            }
+        });
+
+        renderGuestbook();
 
         // ================================================================
         // 19. KEYBOARD SHORTCUTS
@@ -3131,31 +2900,12 @@
                     '⌨️ Phím tắt',
                     `
                     <p><strong>Ctrl + K</strong> - Trợ giúp</p>
-                    <p><strong>Ctrl + 1</strong> - Play/Pause nhạc</p>
-                    <p><strong>Ctrl + Shift + M</strong> - Modal test</p>
-                    <p><strong>Escape</strong> - Đóng modal</p>
                     <p><strong>Ctrl + D</strong> - Dark/Light mode</p>
-                    <p><strong>Ctrl + L</strong> - Đăng nhập nhanh</p>
+                    <p><strong>Space</strong> - Play/Pause nhạc (khi hover Spotify)</p>
+                    <p><strong>Escape</strong> - Đóng modal</p>
                     `,
                     'OK',
                     'Đóng'
-                );
-            }
-
-            if (e.ctrlKey && e.key === '1') {
-                e.preventDefault();
-                playBtn.click();
-                showToast(`🎵 ${isPlaying ? 'Tạm dừng' : 'Đang phát'}`, 'info', 1500);
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'M') {
-                e.preventDefault();
-                showModal(
-                    '🎯 Modal Test',
-                    `<p>Modal test thành công!</p><br><p><strong>✅ Tính năng:</strong> Đẹp, mượt, dễ dùng</p>`,
-                    'Tuyệt',
-                    'Đóng',
-                    () => showToast('🎉 Test thành công!', 'success')
                 );
             }
 
@@ -3164,13 +2914,10 @@
                 themeToggle.click();
             }
 
-            if (e.ctrlKey && e.key === 'l') {
+            // Space để play/pause khi đang focus vào Spotify
+            if (e.key === ' ' && !e.target.closest('input') && !e.target.closest('textarea')) {
                 e.preventDefault();
-                if (currentUser) {
-                    showToast('👋 Bạn đã đăng nhập rồi!', 'info');
-                } else {
-                    showLoginModal();
-                }
+                spotifyToggle();
             }
         });
 
@@ -3181,7 +2928,6 @@
             document.querySelectorAll('.particle').forEach(el => el.remove());
             document.querySelectorAll('.shape').forEach(el => el.remove());
             document.querySelectorAll('.floating-emoji').forEach(el => el.remove());
-            document.querySelectorAll('.mouse-trail').forEach(el => el.remove());
         }
 
         // ================================================================
@@ -3192,23 +2938,18 @@
         console.log('📍 Nam Định - quê hương tôi');
         console.log('📱 17 tuổi - đang học code');
         console.log('👁️ Visitor: 1 IP = 1 view');
-        console.log('👤 Users: ' + JSON.parse(localStorage.getItem('sixhen_users') || '[]').length + ' tài khoản');
-        console.log('🔑 Đăng nhập: sixhen / Sixhen@2026');
+        console.log('🎵 Spotify: ' + spotifyPlaylist.length + ' bài hát');
+        console.log('📖 Guestbook: ' + guestbookMessages.length + ' lời nhắn');
+        console.log('✅ Portfolio đã sẵn sàng!');
 
         // ================================================================
         // 22. WELCOME
         // ================================================================
         window.addEventListener('load', () => {
             setTimeout(() => {
-                if (!currentUser) {
-                    showToast('🚀 Chào mừng! Đăng ký để tạo profile riêng', 'info', 4000);
-                } else {
-                    showToast(`👋 Chào mừng ${currentUser.name || currentUser.username}!`, 'success', 3000);
-                }
+                showToast('🚀 Chào mừng đến với portfolio của tôi!', 'success', 3000);
             }, 1500);
         });
-
-        console.log('✅ Portfolio đã sẵn sàng!');
     </script>
 </body>
 </html>
