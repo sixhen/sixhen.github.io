@@ -150,19 +150,19 @@
                     <div class="quick-commands">
                         <span class="qc-label">Lệnh nhanh (Bấm để copy):</span>
                         <div class="qc-pills">
+                            <button class="qc-btn" onclick="copyText('curl -fsSL https://raw.githubusercontent.com/sixhen/droid-linux/main/setup.sh | bash', 'Lệnh cài đặt droid-linux')">
+                                <i class="fab fa-linux"></i>
+                                <span>Cài Linux 1 chạm: curl -fsSL ... | bash</span>
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
                             <button class="qc-btn" onclick="copyText('pkg update && pkg install -y git nodejs python curl zsh', 'Lệnh cài đặt Termux')">
                                 <i class="fas fa-box"></i>
                                 <span>pkg install -y git nodejs python curl zsh</span>
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
-                            <button class="qc-btn" onclick="copyText('git add . && git commit -m "update" && git push', 'Lệnh Git Push')">
+                            <button class="qc-btn" onclick="copyText('git add . && git commit -m &quot;update&quot; && git push', 'Lệnh Git Push')">
                                 <i class="fab fa-git-alt"></i>
-                                <span>git commit -m "update" && git push</span>
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                            <button class="qc-btn" onclick="copyText('python -m http.server 8080', 'Lệnh Web Server')">
-                                <i class="fab fa-python"></i>
-                                <span>python -m http.server 8080</span>
+                                <span>git commit -m &quot;update&quot; && git push</span>
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
                         </div>
@@ -176,33 +176,43 @@
             <div class="section-label">03 / DỰ ÁN & MÃ NGUỒN</div>
 
             <div class="works-list">
-                <a href="https://github.com/sixhen/sixhen.github.io" target="_blank" rel="noopener noreferrer" class="work-item">
+                <a href="https://github.com/sixhen/droid-linux" target="_blank" rel="noopener noreferrer" class="work-item">
                     <div class="work-num">01</div>
+                    <div class="work-info">
+                        <h3 class="work-title">droid-linux</h3>
+                        <p class="work-desc">Môi trường Linux (Ubuntu LTS) hoàn chỉnh trên Android qua Termux chỉ với 1 dòng lệnh. Tích hợp giao diện đồ họa XFCE4 & VNC.</p>
+                    </div>
+                    <div class="work-tag">Shell &bull; Ubuntu &bull; PRoot &bull; XFCE4</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://github.com/sixhen/termux-nexus" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">02</div>
+                    <div class="work-info">
+                        <h3 class="work-title">termux-nexus</h3>
+                        <p class="work-desc">Bộ công cụ giám sát phần cứng di động, tối ưu bộ nhớ đệm, DNS và tinh chỉnh hệ điều hành Termux tốc độ cao.</p>
+                    </div>
+                    <div class="work-tag">Bash &bull; Linux CLI &bull; Tuning</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://github.com/sixhen/mc-pulse" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">03</div>
+                    <div class="work-info">
+                        <h3 class="work-title">mc-pulse</h3>
+                        <p class="work-desc">Hệ thống watchdog giám sát & tối ưu Minecraft Server (Paper/Purpur), duy trì 20 TPS ổn định và giải phóng tài nguyên tự động.</p>
+                    </div>
+                    <div class="work-tag">Python &bull; Minecraft &bull; 20 TPS</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://github.com/sixhen/sixhen.github.io" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">04</div>
                     <div class="work-info">
                         <h3 class="work-title">sixhen.github.io</h3>
                         <p class="work-desc">Personal Portfolio thiết kế chuẩn phong cách Apple/Awwwards với Three.js WebGL 3D tương tác.</p>
                     </div>
                     <div class="work-tag">HTML5 &bull; CSS3 &bull; Three.js</div>
-                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
-                </a>
-
-                <a href="https://github.com/sixhen" target="_blank" rel="noopener noreferrer" class="work-item">
-                    <div class="work-num">02</div>
-                    <div class="work-info">
-                        <h3 class="work-title">Termux Android Tools</h3>
-                        <p class="work-desc">Tập lệnh Shell & Python tự động hóa môi trường phát triển trên Android Termux.</p>
-                    </div>
-                    <div class="work-tag">Shell &bull; Linux &bull; Zsh</div>
-                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
-                </a>
-
-                <a href="https://github.com/sixhen" target="_blank" rel="noopener noreferrer" class="work-item">
-                    <div class="work-num">03</div>
-                    <div class="work-info">
-                        <h3 class="work-title">Minecraft Server Optimization</h3>
-                        <p class="work-desc">Cấu hình tối ưu Purpur / Paper cho hiệu năng mượt mà 20 TPS ổn định.</p>
-                    </div>
-                    <div class="work-tag">Java &bull; Paper &bull; YAML</div>
                     <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
                 </a>
             </div>
