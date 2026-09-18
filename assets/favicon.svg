@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="neonFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="#0c0d14" />
+  <rect x="2" y="2" width="124" height="124" rx="30" fill="none" stroke="url(#glowGrad)" stroke-width="2.5" opacity="0.8" />
+  <g filter="url(#neonFilter)">
+    <path d="M 44 36 C 34 36 28 46 28 62 C 28 78 36 92 48 92 C 58 92 66 84 66 74 C 66 64 58 56 48 56 C 42 56 36 60 34 66 C 34 50 40 44 46 44 C 50 44 52 42 52 39 C 52 37 48 36 44 36 Z M 46 64 C 52 64 56 68 56 74 C 56 80 52 84 46 84 C 40 84 36 80 36 74 C 36 68 40 64 46 64 Z" fill="url(#glowGrad)" />
+    <path d="M 76 38 C 76 36 78 35 80 35 C 82 35 84 36 84 38 L 84 58 L 96 58 L 96 38 C 96 36 98 35 100 35 C 102 35 104 36 104 38 L 104 90 C 104 92 102 93 100 93 C 98 93 96 92 96 90 L 96 66 L 84 66 L 84 90 C 84 92 82 93 80 93 C 78 93 76 92 76 90 Z" fill="url(#glowGrad)" />
+  </g>
+  <circle cx="98" cy="30" r="4" fill="#06b6d4" />
+</svg>

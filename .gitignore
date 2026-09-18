@@ -1,0 +1,5 @@
+projects/
+*.zip
+*.zip.bak
+sixhen.github.io-main/
+.system_generated/

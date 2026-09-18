@@ -1,0 +1,22 @@
+{
+  "name": "sixhen · Premium Portfolio",
+  "short_name": "sixhen",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07070b",
+  "theme_color": "#07070b",
+  "description": "Portfolio cá nhân của sixhen. Ít nói. Quan sát nhiều. Lọ đúng lúc.",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/avatar.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

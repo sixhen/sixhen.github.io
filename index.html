@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sixhen · Minimalist Luxury Portfolio</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="sixhen - Portfolio cá nhân. Ít nói. Quan sát nhiều. Lọ đúng lúc." />
+    <meta name="author" content="sixhen" />
+    <meta name="theme-color" content="#030305" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- 3D WebGL Background Canvas -->
+    <canvas id="threeCanvas3D" aria-hidden="true"></canvas>
+
+    <!-- Ambient Subtle Fog / Glow -->
+    <div class="ambient-vignette" aria-hidden="true"></div>
+
+    <!-- ===== SITE HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#hero" class="brand">sixhen<span>.</span></a>
+
+            <nav class="nav-links">
+                <a href="#about" class="nav-item">Giới thiệu</a>
+                <a href="#termux" class="nav-item">Termux</a>
+                <a href="#works" class="nav-item">Dự án</a>
+                <a href="#connect" class="nav-item">Liên hệ</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#connect" class="btn-pill">
+                    <span>Kết nối</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content-wrapper">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-meta">
+                <span class="status-dot"></span>
+                <span>NAM ĐỊNH, VIỆT NAM · DEVELOPER</span>
+            </div>
+
+            <h1 class="hero-headline">
+                Ít nói.<br />
+                Quan sát nhiều.<br />
+                <span class="text-gradient">Lọ đúng lúc.</span>
+            </h1>
+
+            <p class="hero-subtext">
+                Xin chào, mình là <b>sixhen</b>. Đam mê tinh gọn hóa hệ thống dòng lệnh Linux/Termux, xây dựng trải nghiệm web tối giản đỉnh cao và thế giới sáng tạo Minecraft.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#termux" class="btn-apple primary">
+                    <span>Khám phá Termux</span>
+                    <i class="fas fa-terminal"></i>
+                </a>
+                <button class="btn-apple secondary" onclick="copyText('dmh190229@gmail.com', 'Email')">
+                    <span>Sao chép Email</span>
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <!-- 3D Interactive Instruction Indicator -->
+            <div class="interactive-hint">
+                <i class="fas fa-hand-pointer"></i>
+                <span>Kéo chuột hoặc ngón tay để tương tác xoay vật thể 3D</span>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT & PHILOSOPHY ===== -->
+        <section class="section section-about" id="about">
+            <div class="section-label">01 / TRIẾT LÝ & THÔNG TIN</div>
+
+            <div class="about-grid">
+                <div class="about-statement">
+                    Sự tinh tế không đến từ việc thêm vào những thứ thừa thãi, mà đến từ việc loại bỏ tất cả những gì không cần thiết cho đến khi chỉ còn lại sự thuần khiết.
+                </div>
+
+                <div class="stats-list">
+                    <div class="stat-card">
+                        <div class="stat-num">Nam Định</div>
+                        <div class="stat-desc">Quê hương & Nơi làm việc</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">Termux CLI</div>
+                        <div class="stat-desc">Môi trường Linux trên Android aarch64</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">sixhen</div>
+                        <div class="stat-desc">Minecraft Java Edition IGN</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TERMUX & LINUX (MINIMALIST CODE CARD) ===== -->
+        <section class="section section-termux" id="termux">
+            <div class="section-label">02 / MÔI TRƯỜNG DÒNG LỆNH</div>
+
+            <div class="termux-window">
+                <div class="termux-window__header">
+                    <div class="window-dots">
+                        <span class="w-dot red"></span>
+                        <span class="w-dot yellow"></span>
+                        <span class="w-dot green"></span>
+                    </div>
+                    <span class="window-title">sixhen@termux ~ zsh</span>
+                    <div class="window-badge">aarch64</div>
+                </div>
+
+                <div class="termux-window__content">
+                    <div class="code-block">
+                        <div class="code-line"><span class="c-prompt">❯</span> <span class="c-cmd">uname -mrs && whoami</span></div>
+                        <div class="code-output">Linux 5.15.x-android-sixhen aarch64 &bull; sixhen</div>
+                        
+                        <div class="code-line"><span class="c-prompt">❯</span> <span class="c-cmd">cat ~/.sixhen/profile.json</span></div>
+                        <div class="code-output json-output">
+{
+  <span class="j-key">"name"</span>: <span class="j-str">"sixhen"</span>,
+  <span class="j-key">"origin"</span>: <span class="j-str">"Nam Định, Việt Nam 🇻🇳"</span>,
+  <span class="j-key">"philosophy"</span>: <span class="j-str">"Ít nói. Quan sát nhiều. Lọ đúng lúc."</span>,
+  <span class="j-key">"stack"</span>: [<span class="j-str">"Linux"</span>, <span class="j-str">"Termux"</span>, <span class="j-str">"Python"</span>, <span class="j-str">"JavaScript"</span>, <span class="j-str">"Git"</span>],
+  <span class="j-key">"status"</span>: <span class="j-str">"Active & Online"</span>
+}</div>
+                    </div>
+
+                    <!-- Clean Quick Command Pills -->
+                    <div class="quick-commands">
+                        <span class="qc-label">Lệnh nhanh (Bấm để copy):</span>
+                        <div class="qc-pills">
+                            <button class="qc-btn" onclick="copyText('pkg update && pkg install -y git nodejs python curl zsh', 'Lệnh cài đặt Termux')">
+                                <i class="fas fa-box"></i>
+                                <span>pkg install -y git nodejs python curl zsh</span>
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                            <button class="qc-btn" onclick="copyText('git add . && git commit -m "update" && git push', 'Lệnh Git Push')">
+                                <i class="fab fa-git-alt"></i>
+                                <span>git commit -m "update" && git push</span>
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                            <button class="qc-btn" onclick="copyText('python -m http.server 8080', 'Lệnh Web Server')">
+                                <i class="fab fa-python"></i>
+                                <span>python -m http.server 8080</span>
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SELECTED WORKS / PROJECTS ===== -->
+        <section class="section section-works" id="works">
+            <div class="section-label">03 / DỰ ÁN & MÃ NGUỒN</div>
+
+            <div class="works-list">
+                <a href="https://github.com/sixhen/sixhen.github.io" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">01</div>
+                    <div class="work-info">
+                        <h3 class="work-title">sixhen.github.io</h3>
+                        <p class="work-desc">Personal Portfolio thiết kế chuẩn phong cách Apple/Awwwards với Three.js WebGL 3D tương tác.</p>
+                    </div>
+                    <div class="work-tag">HTML5 &bull; CSS3 &bull; Three.js</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://github.com/sixhen" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">02</div>
+                    <div class="work-info">
+                        <h3 class="work-title">Termux Android Tools</h3>
+                        <p class="work-desc">Tập lệnh Shell & Python tự động hóa môi trường phát triển trên Android Termux.</p>
+                    </div>
+                    <div class="work-tag">Shell &bull; Linux &bull; Zsh</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://github.com/sixhen" target="_blank" rel="noopener noreferrer" class="work-item">
+                    <div class="work-num">03</div>
+                    <div class="work-info">
+                        <h3 class="work-title">Minecraft Server Optimization</h3>
+                        <p class="work-desc">Cấu hình tối ưu Purpur / Paper cho hiệu năng mượt mà 20 TPS ổn định.</p>
+                    </div>
+                    <div class="work-tag">Java &bull; Paper &bull; YAML</div>
+                    <div class="work-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== CONNECT & SUPPORT ===== -->
+        <section class="section section-connect" id="connect">
+            <div class="section-label">04 / KẾT NỐI & ỦNG HỘ</div>
+
+            <div class="connect-grid">
+                <!-- Left: Direct Contact -->
+                <div class="connect-box">
+                    <h2 class="connect-title">Liên hệ trực tiếp</h2>
+                    <p class="connect-sub">Kết nối với sixhen qua các kênh liên lạc chính thức:</p>
+
+                    <div class="connect-items">
+                        <div class="c-row">
+                            <div class="c-row__icon"><i class="fas fa-phone"></i></div>
+                            <div class="c-row__info">
+                                <span class="c-row__label">Điện thoại / Zalo</span>
+                                <span class="c-row__val">0328 981 323</span>
+                            </div>
+                            <div class="c-row__actions">
+                                <a href="tel:0328981323" class="action-circle" title="Gọi ngay"><i class="fas fa-phone-volume"></i></a>
+                                <button class="action-circle" onclick="copyText('0328981323', 'Số điện thoại')" title="Sao chép"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="c-row">
+                            <div class="c-row__icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-row__info">
+                                <span class="c-row__label">Email</span>
+                                <span class="c-row__val">dmh190229@gmail.com</span>
+                            </div>
+                            <div class="c-row__actions">
+                                <a href="mailto:dmh190229@gmail.com" class="action-circle" title="Gửi mail"><i class="fas fa-envelope-open-text"></i></a>
+                                <button class="action-circle" onclick="copyText('dmh190229@gmail.com', 'Email')" title="Sao chép"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Network Links -->
+                    <div class="social-strip">
+                        <a href="https://www.facebook.com/S1xHen" target="_blank" rel="noopener noreferrer" class="social-pill" title="Facebook">
+                            <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+                        </a>
+                        <a href="https://discord.com/users/490720573480239104" target="_blank" rel="noopener noreferrer" class="social-pill" title="Discord">
+                            <i class="fab fa-discord"></i> <span>Discord</span>
+                        </a>
+                        <a href="https://github.com/sixhen" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub">
+                            <i class="fab fa-github"></i> <span>GitHub</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@six.hen" target="_blank" rel="noopener noreferrer" class="social-pill" title="TikTok">
+                            <i class="fab fa-tiktok"></i> <span>TikTok</span>
+                        </a>
+                        <a href="https://www.instagram.com/sixhen1" target="_blank" rel="noopener noreferrer" class="social-pill" title="Instagram">
+                            <i class="fab fa-instagram"></i> <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: VietQR Donate Box -->
+                <div class="donate-box">
+                    <div class="donate-header">
+                        <span class="donate-tag"><i class="fas fa-heart"></i> MB Bank VietQR</span>
+                    </div>
+
+                    <div class="donate-inner">
+                        <div class="qr-frame">
+                            <img src="https://img.vietqr.io/image/MB-0328981323-compact2.png?accountName=DINH%20MINH%20HIEN&amount=0&addInfo=sixhen%20donate" alt="Mã VietQR Donate MB Bank" class="qr-image" id="qrImage" title="Bấm để phóng to" />
+                        </div>
+                        <div class="donate-meta">
+                            <div class="donate-bank">Ngân hàng Quân Đội (MB Bank)</div>
+                            <div class="donate-name">DINH MINH HIEN</div>
+                            <div class="donate-stk">0328 981 323</div>
+                            <button class="btn-apple primary copy-stk-btn" onclick="copyText('0328981323', 'Số tài khoản MB Bank')">
+                                <i class="fas fa-copy"></i>
+                                <span>Sao chép STK</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SITE FOOTER ===== -->
+        <footer class="site-footer">
+            <div class="footer-copy">
+                <span>© 2026 sixhen. Nam Định, Việt Nam.</span>
+            </div>
+            <div class="footer-quote">
+                “Ít nói. Quan sát nhiều. Lọ đúng lúc.”
+            </div>
+            <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
+
+    </main>
+
+    <!-- QR Modal -->
+    <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-label="Mã VietQR">
+        <img src="" alt="Mã VietQR" id="qrModalImg" />
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer" role="alert" aria-live="polite"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
